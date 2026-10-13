@@ -81,6 +81,16 @@ editor writes it; nothing needs to be written by hand.
 - **Ice Lake** (`ice-lake-by-hxyy`), submitted by YYY: the original title
   credits hxyy.
 
+- **Japanese Archipelago** (`japanese-archipelago`): generated with the
+  game's China/Europe geography pipeline from [Natural Earth 1:10m vectors](https://www.naturalearthdata.com/downloads/10m-physical-vectors/)
+  (coastlines, islands, rivers, lakes and the continental shelf), its
+  [country outlines and populated places](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/),
+  and [NASA's GEBCO elevation raster](https://eoimages.gsfc.nasa.gov/images/imagerecords/73000/73934/gebco_08_rev_elev_21600x10800.png).
+  Uses an Albers equal-area projection at about 4.7 km per tile, covering
+  Hokkaido through the Ryukyus and the Izu–Ogasawara chain; remote
+  Minami-Tori-shima is outside the frame. Roads, clearings, resource deposits
+  and narrow straits are adapted for play.
+
 ## Licence
 
 The tooling is MIT. Each map is published under CC-BY-4.0 and belongs to its
