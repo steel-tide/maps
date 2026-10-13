@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-10-12T12:04:22.053Z",
+  "generated": "2026-10-13T00:54:43.535Z",
   "maps": [
     {
       "slug": "1v1v1v1",
@@ -144,7 +144,7 @@
       "deposits": 30,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 66,
+      "downloads": 67,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -708,7 +708,7 @@
       "deposits": 103,
       "decor": 18,
       "updated": "2026-10-08T12:37:42+08:00",
-      "downloads": 19,
+      "downloads": 20,
       "thumb": {
         "w": 64,
         "h": 35,
@@ -1548,7 +1548,7 @@
       "deposits": 265,
       "decor": 318,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 395,
+      "downloads": 406,
       "thumb": {
         "w": 56,
         "h": 64,
@@ -2676,7 +2676,7 @@
       "deposits": 46,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 28,
+      "downloads": 30,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -3204,7 +3204,7 @@
       "deposits": 52,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 92,
+      "downloads": 94,
       "thumb": {
         "w": 64,
         "h": 54,
@@ -4008,7 +4008,7 @@
       "deposits": 301,
       "decor": 271,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 253,
+      "downloads": 261,
       "thumb": {
         "w": 63,
         "h": 64,
@@ -5280,7 +5280,7 @@
       "deposits": 78,
       "decor": 0,
       "updated": "2026-10-08T12:37:44+08:00",
-      "downloads": 14,
+      "downloads": 15,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -6764,6 +6764,610 @@
       }
     },
     {
+      "slug": "japanese-archipelago",
+      "name": "Japanese Archipelago",
+      "description": "Forested mountains rise above coastal cities, with narrow straits between the main islands and the Ryukyu chain stretching into the southern seas.",
+      "translations": {
+        "en": {
+          "name": "Japanese Archipelago",
+          "description": "Forested mountains rise above coastal cities, with narrow straits between the main islands and the Ryukyu chain stretching into the southern seas."
+        },
+        "zh": {
+          "name": "日本列岛",
+          "description": "森林覆盖的山脉耸立于沿海城市上方，狭窄海峡分隔主要岛屿，琉球群岛一路延伸至南方海域。"
+        },
+        "ko": {
+          "name": "일본 열도",
+          "description": "해안 도시 뒤로 숲으로 덮인 산맥이 솟아 있고, 좁은 해협이 주요 섬들을 가른다. 류큐 열도는 남쪽 바다로 길게 이어진다."
+        }
+      },
+      "author": "René Wang",
+      "w": 464,
+      "h": 512,
+      "spawns": 8,
+      "deposits": 134,
+      "decor": 65,
+      "updated": "2026-10-13T08:54:22+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 58,
+        "h": 64,
+        "terrain": "AwQCAwEEDAMCBAIDAgQBAwIEBgMGBAEBBwAFAQYAAgQBAwIEDwMDBAIDAQQCAwIBAgMFBAEDAQEIAAEBAQMEAQUABQQNAwkEAQMCAQIDBQQBAQcABAEBAwQBBAABBAEDAgQNAwkEBAMBBAEDBQQBAQcABAEBAwEEAwEDAAEBAQQBAwMEDQMEBAEDAwQGAwMEAQMBAQoAAgECBAIDBQEBBAMDAgQHAwEEAQMBBAIDCAQDAwIEAQMDBAEBCwABAQMDAgQDAwIBBAQBAwEEBwMBBAEDAQQBAwoEAQMGBAEBDAABAQIDBAQCAwIBBgQGAw4EAQMCAQEEAQMCBAEBDAABAwEBAQMCBAMDAQcCAQEABgQFAwEEAQMDBAIDBgQCAwQBAQQCAQwAAQEDAwEEAwMBAQQAAQQBAwIEBwMBBAEDAQQBAwYEAQMCBAEDBAEQAAEDAQEBAwIBAgMBAQUAAgQIAwIEAQMCBAEDAwQBAwEEAQMBBAEBFQABAwIBAwACAQUACQMNBAEBFgACAwEBAwACAQUAAQQBAwQBAwMGBAQDAQQBBQEEAQMWAAMBCgABAwUBAQMCBAEDAQQBAwIEAgMDBAEDAgQXAAMBCgAFAQIEBAMDBAEDAgQBBQMEAQEXAAEBAgMBAQkABAEKAwYEAQEYAAEDAgQBAwEBCAAEAQEDBwEDAwIEAgEZAAEBAgMCBAEBCAAMAQIDAgQBAwIBGQABAQEDAgQCAwgADAECAwMEAgEaAAIDAwQIAAwBAgMBBAEDAgQBARkAAQEEBAEBCAALAQQDBAQZAAEBBAMBAQgAAgMJAQICAwMDBBgAAQEEAwEBCQAFAwkBAQIBAwQEFQABAwIBAQQCAwIBCQADAwwBAgMDBBIAAQECAAIBBQMBAQkADwECAwQEEAADAQIAAwMBBAIDAQEJAA4BAwMCBAEDAQQQAAEBAQICAAIDBQQBAQkADgEFAwIEAQEPAAEBAQMBBgEFAQMCBQMEAQEKAA4BBQMBBAEBCAABAQYAAgEBAwEFAgQFAwEBCgAOAQEDAgQEAwcAAwEFAAEDAwQBAwIEBAMBAQoADQEHAwIBAgACAQEABAECAAMBAgQBAwEEAwUEAwEBCgANAQIDAQQEAwkBAgQIAwIEAQUDAwEBAQMBAQoADQEBAgEDDAEEBAEDAQQBAwEEBAMDBAEDAQEBAAIBCwAaAQEEAQMCBAIDAQEDAwEEAgECAwEBEAAYAQEDBAQGAQEDAQQBAwIBEgAaAQEDAwEBBAEDAgEDBBUAFgECAwQBBAMCAQIEFgAVAQQDAgEBAwEEAQMBAQEDGgAVAQEDAQEDAwIBAQQBARwAAQMQAQEABQECAwEBAgABAR0AEQEDAAIBAgMBBAEBIAABAxABAwACAQMDIQARAQQAAQECAwEBIQAQAQYAAwEhABABBgACASIADwEHAAIBIgAPAQcAAQEjAA4BLAAOASwADQEtAAwBLgAMAQcAAQEmAAsBBwABAScACgEwAAkBMQAIATIABgEIAAIBKgAFAQcAAwGmAAEBNwACATUAAQGrAA==",
+        "spawns": [
+          {
+            "x": 44,
+            "y": 29
+          },
+          {
+            "x": 48,
+            "y": 7
+          },
+          {
+            "x": 22,
+            "y": 35
+          },
+          {
+            "x": 47,
+            "y": 21
+          },
+          {
+            "x": 34,
+            "y": 32
+          },
+          {
+            "x": 43,
+            "y": 23
+          },
+          {
+            "x": 29,
+            "y": 35
+          },
+          {
+            "x": 22,
+            "y": 41
+          }
+        ],
+        "deposits": [
+          {
+            "x": 43,
+            "y": 28
+          },
+          {
+            "x": 45,
+            "y": 28
+          },
+          {
+            "x": 43,
+            "y": 29
+          },
+          {
+            "x": 45,
+            "y": 27
+          },
+          {
+            "x": 46,
+            "y": 28
+          },
+          {
+            "x": 46,
+            "y": 8
+          },
+          {
+            "x": 49,
+            "y": 6
+          },
+          {
+            "x": 47,
+            "y": 8
+          },
+          {
+            "x": 49,
+            "y": 7
+          },
+          {
+            "x": 48,
+            "y": 6
+          },
+          {
+            "x": 23,
+            "y": 36
+          },
+          {
+            "x": 23,
+            "y": 35
+          },
+          {
+            "x": 24,
+            "y": 36
+          },
+          {
+            "x": 23,
+            "y": 36
+          },
+          {
+            "x": 21,
+            "y": 36
+          },
+          {
+            "x": 48,
+            "y": 20
+          },
+          {
+            "x": 46,
+            "y": 20
+          },
+          {
+            "x": 46,
+            "y": 20
+          },
+          {
+            "x": 48,
+            "y": 21
+          },
+          {
+            "x": 46,
+            "y": 22
+          },
+          {
+            "x": 35,
+            "y": 33
+          },
+          {
+            "x": 33,
+            "y": 32
+          },
+          {
+            "x": 34,
+            "y": 33
+          },
+          {
+            "x": 35,
+            "y": 32
+          },
+          {
+            "x": 36,
+            "y": 33
+          },
+          {
+            "x": 44,
+            "y": 23
+          },
+          {
+            "x": 43,
+            "y": 24
+          },
+          {
+            "x": 44,
+            "y": 24
+          },
+          {
+            "x": 43,
+            "y": 25
+          },
+          {
+            "x": 44,
+            "y": 23
+          },
+          {
+            "x": 28,
+            "y": 36
+          },
+          {
+            "x": 31,
+            "y": 35
+          },
+          {
+            "x": 31,
+            "y": 35
+          },
+          {
+            "x": 31,
+            "y": 35
+          },
+          {
+            "x": 28,
+            "y": 37
+          },
+          {
+            "x": 22,
+            "y": 39
+          },
+          {
+            "x": 24,
+            "y": 41
+          },
+          {
+            "x": 22,
+            "y": 40
+          },
+          {
+            "x": 23,
+            "y": 41
+          },
+          {
+            "x": 23,
+            "y": 40
+          },
+          {
+            "x": 32,
+            "y": 30
+          },
+          {
+            "x": 34,
+            "y": 31
+          },
+          {
+            "x": 51,
+            "y": 9
+          },
+          {
+            "x": 47,
+            "y": 15
+          },
+          {
+            "x": 54,
+            "y": 5
+          },
+          {
+            "x": 51,
+            "y": 5
+          },
+          {
+            "x": 24,
+            "y": 33
+          },
+          {
+            "x": 24,
+            "y": 38
+          },
+          {
+            "x": 37,
+            "y": 29
+          },
+          {
+            "x": 45,
+            "y": 12
+          },
+          {
+            "x": 27,
+            "y": 36
+          },
+          {
+            "x": 30,
+            "y": 31
+          },
+          {
+            "x": 29,
+            "y": 32
+          },
+          {
+            "x": 54,
+            "y": 6
+          },
+          {
+            "x": 42,
+            "y": 27
+          },
+          {
+            "x": 22,
+            "y": 34
+          },
+          {
+            "x": 24,
+            "y": 37
+          },
+          {
+            "x": 28,
+            "y": 31
+          },
+          {
+            "x": 47,
+            "y": 17
+          },
+          {
+            "x": 22,
+            "y": 36
+          },
+          {
+            "x": 45,
+            "y": 15
+          },
+          {
+            "x": 39,
+            "y": 29
+          },
+          {
+            "x": 23,
+            "y": 42
+          },
+          {
+            "x": 46,
+            "y": 24
+          },
+          {
+            "x": 21,
+            "y": 38
+          },
+          {
+            "x": 52,
+            "y": 7
+          },
+          {
+            "x": 48,
+            "y": 17
+          },
+          {
+            "x": 18,
+            "y": 50
+          },
+          {
+            "x": 49,
+            "y": 5
+          },
+          {
+            "x": 26,
+            "y": 33
+          },
+          {
+            "x": 46,
+            "y": 27
+          },
+          {
+            "x": 46,
+            "y": 30
+          },
+          {
+            "x": 50,
+            "y": 3
+          },
+          {
+            "x": 49,
+            "y": 9
+          },
+          {
+            "x": 20,
+            "y": 37
+          },
+          {
+            "x": 22,
+            "y": 38
+          },
+          {
+            "x": 47,
+            "y": 16
+          },
+          {
+            "x": 42,
+            "y": 30
+          },
+          {
+            "x": 23,
+            "y": 39
+          },
+          {
+            "x": 45,
+            "y": 18
+          },
+          {
+            "x": 45,
+            "y": 21
+          },
+          {
+            "x": 38,
+            "y": 27
+          },
+          {
+            "x": 55,
+            "y": 5
+          },
+          {
+            "x": 31,
+            "y": 34
+          },
+          {
+            "x": 24,
+            "y": 37
+          },
+          {
+            "x": 15,
+            "y": 55
+          },
+          {
+            "x": 27,
+            "y": 37
+          },
+          {
+            "x": 27,
+            "y": 32
+          },
+          {
+            "x": 51,
+            "y": 4
+          },
+          {
+            "x": 32,
+            "y": 34
+          },
+          {
+            "x": 45,
+            "y": 10
+          },
+          {
+            "x": 45,
+            "y": 25
+          },
+          {
+            "x": 40,
+            "y": 32
+          },
+          {
+            "x": 38,
+            "y": 29
+          },
+          {
+            "x": 24,
+            "y": 35
+          },
+          {
+            "x": 43,
+            "y": 27
+          },
+          {
+            "x": 21,
+            "y": 42
+          },
+          {
+            "x": 23,
+            "y": 38
+          },
+          {
+            "x": 49,
+            "y": 19
+          },
+          {
+            "x": 25,
+            "y": 37
+          },
+          {
+            "x": 27,
+            "y": 38
+          },
+          {
+            "x": 19,
+            "y": 32
+          },
+          {
+            "x": 37,
+            "y": 31
+          },
+          {
+            "x": 43,
+            "y": 30
+          },
+          {
+            "x": 45,
+            "y": 16
+          },
+          {
+            "x": 49,
+            "y": 2
+          },
+          {
+            "x": 41,
+            "y": 22
+          },
+          {
+            "x": 24,
+            "y": 40
+          },
+          {
+            "x": 46,
+            "y": 13
+          },
+          {
+            "x": 28,
+            "y": 35
+          },
+          {
+            "x": 31,
+            "y": 30
+          },
+          {
+            "x": 53,
+            "y": 7
+          },
+          {
+            "x": 20,
+            "y": 36
+          },
+          {
+            "x": 46,
+            "y": 9
+          },
+          {
+            "x": 35,
+            "y": 30
+          },
+          {
+            "x": 41,
+            "y": 26
+          },
+          {
+            "x": 21,
+            "y": 37
+          },
+          {
+            "x": 53,
+            "y": 5
+          },
+          {
+            "x": 48,
+            "y": 3
+          },
+          {
+            "x": 39,
+            "y": 31
+          },
+          {
+            "x": 50,
+            "y": 6
+          },
+          {
+            "x": 41,
+            "y": 23
+          },
+          {
+            "x": 32,
+            "y": 31
+          },
+          {
+            "x": 43,
+            "y": 32
+          },
+          {
+            "x": 24,
+            "y": 36
+          },
+          {
+            "x": 14,
+            "y": 55
+          },
+          {
+            "x": 41,
+            "y": 22
+          },
+          {
+            "x": 19,
+            "y": 33
+          },
+          {
+            "x": 23,
+            "y": 44
+          },
+          {
+            "x": 22,
+            "y": 44
+          },
+          {
+            "x": 17,
+            "y": 52
+          },
+          {
+            "x": 7,
+            "y": 60
+          },
+          {
+            "x": 3,
+            "y": 60
+          },
+          {
+            "x": 2,
+            "y": 60
+          }
+        ]
+      }
+    },
+    {
       "slug": "map-013370",
       "name": "Lakeside Ring",
       "description": "Grasslands encircle a lake dotted with small ore islands; lava borders the outer corners.",
@@ -6960,7 +7564,7 @@
       "deposits": 52,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 89,
+      "downloads": 94,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -7388,7 +7992,7 @@
       "deposits": 35,
       "decor": 0,
       "updated": "2026-10-04T11:38:06+08:00",
-      "downloads": 42,
+      "downloads": 43,
       "thumb": {
         "w": 64,
         "h": 36,
@@ -7916,7 +8520,7 @@
       "deposits": 83,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 60,
+      "downloads": 61,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -8316,7 +8920,7 @@
       "deposits": 324,
       "decor": 24,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 61,
+      "downloads": 62,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -9680,7 +10284,7 @@
       "deposits": 20,
       "decor": 0,
       "updated": "2026-10-04T11:37:14+08:00",
-      "downloads": 10,
+      "downloads": 11,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -9812,7 +10416,7 @@
       "deposits": 28,
       "decor": 13,
       "updated": "2026-10-04T11:48:40+08:00",
-      "downloads": 44,
+      "downloads": 46,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -9968,7 +10572,7 @@
       "deposits": 70,
       "decor": 0,
       "updated": "2026-10-04T11:37:31+08:00",
-      "downloads": 28,
+      "downloads": 29,
       "thumb": {
         "w": 64,
         "h": 36,
@@ -10576,7 +11180,7 @@
       "deposits": 13,
       "decor": 0,
       "updated": "2026-10-04T11:37:22+08:00",
-      "downloads": 13,
+      "downloads": 16,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -11260,7 +11864,7 @@
       "deposits": 271,
       "decor": 0,
       "updated": "2026-10-04T11:37:06+08:00",
-      "downloads": 39,
+      "downloads": 41,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -12412,7 +13016,7 @@
       "deposits": 280,
       "decor": 0,
       "updated": "2026-10-08T12:37:40+08:00",
-      "downloads": 32,
+      "downloads": 33,
       "thumb": {
         "w": 64,
         "h": 45,
@@ -13600,7 +14204,7 @@
       "deposits": 91,
       "decor": 0,
       "updated": "2026-10-08T12:37:24+08:00",
-      "downloads": 22,
+      "downloads": 23,
       "thumb": {
         "w": 64,
         "h": 25,
@@ -14032,7 +14636,7 @@
       "deposits": 126,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 66,
+      "downloads": 67,
       "thumb": {
         "w": 64,
         "h": 30,
@@ -14604,7 +15208,7 @@
       "deposits": 24,
       "decor": 10,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 52,
+      "downloads": 54,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -15780,7 +16384,7 @@
       "deposits": 32,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 129,
+      "downloads": 131,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -16440,7 +17044,7 @@
       "deposits": 12,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 26,
+      "downloads": 27,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -16556,7 +17160,7 @@
       "deposits": 22,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 31,
+      "downloads": 33,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -16812,7 +17416,7 @@
       "deposits": 22,
       "decor": 0,
       "updated": "2026-10-08T12:37:26+08:00",
-      "downloads": 10,
+      "downloads": 12,
       "thumb": {
         "w": 64,
         "h": 64,
