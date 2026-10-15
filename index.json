@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-10-15T05:23:36.174Z",
+  "generated": "2026-10-15T09:11:18.527Z",
   "maps": [
     {
       "slug": "1v1v1v1",
@@ -2588,7 +2588,7 @@
       "deposits": 265,
       "decor": 318,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 459,
+      "downloads": 466,
       "thumb": {
         "w": 56,
         "h": 64,
@@ -3716,7 +3716,7 @@
       "deposits": 46,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 32,
+      "downloads": 33,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -5048,7 +5048,7 @@
       "deposits": 301,
       "decor": 271,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 288,
+      "downloads": 289,
       "thumb": {
         "w": 63,
         "h": 64,
@@ -6692,7 +6692,7 @@
       "deposits": 26,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 39,
+      "downloads": 41,
       "thumb": {
         "w": 64,
         "h": 59,
@@ -8604,7 +8604,7 @@
       "deposits": 52,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 100,
+      "downloads": 101,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -9032,7 +9032,7 @@
       "deposits": 35,
       "decor": 0,
       "updated": "2026-10-04T11:38:06+08:00",
-      "downloads": 55,
+      "downloads": 57,
       "thumb": {
         "w": 64,
         "h": 36,
@@ -11456,7 +11456,7 @@
       "deposits": 28,
       "decor": 13,
       "updated": "2026-10-04T11:48:40+08:00",
-      "downloads": 59,
+      "downloads": 60,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -12320,7 +12320,7 @@
       "deposits": 129,
       "decor": 34,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 80,
+      "downloads": 81,
       "thumb": {
         "w": 64,
         "h": 40,
@@ -12904,7 +12904,7 @@
       "deposits": 271,
       "decor": 0,
       "updated": "2026-10-04T11:37:06+08:00",
-      "downloads": 48,
+      "downloads": 49,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -15244,7 +15244,7 @@
       "deposits": 91,
       "decor": 0,
       "updated": "2026-10-08T12:37:24+08:00",
-      "downloads": 30,
+      "downloads": 31,
       "thumb": {
         "w": 64,
         "h": 25,
@@ -17424,7 +17424,7 @@
       "deposits": 32,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 146,
+      "downloads": 147,
       "thumb": {
         "w": 64,
         "h": 57,
