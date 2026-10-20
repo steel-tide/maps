@@ -21,9 +21,10 @@ var Terrain = /* @__PURE__ */ ((Terrain2) => {
   Terrain2[Terrain2["City"] = 16] = "City";
   Terrain2[Terrain2["Shallows"] = 17] = "Shallows";
   Terrain2[Terrain2["Ice"] = 18] = "Ice";
+  Terrain2[Terrain2["Bridge"] = 19] = "Bridge";
   return Terrain2;
 })(Terrain || {});
-const TERRAIN_KINDS = 19;
+const TERRAIN_KINDS = 20;
 ({
   /** open pasture — the generator's old, and still most common, ground */
   meadow: { ground: Terrain.Grass, shore: Terrain.Sand, hollow: Terrain.Mud, height: Terrain.Mountain },
@@ -113,19 +114,20 @@ const DEFS = {
     aliases: ["eng", "builder"],
     domain: "ground",
     tier: 1,
-    cost: 200,
+    cost: 150,
     buildTime: 8,
     pop: 1,
     power: -1,
     hp: 200,
     armor: "light",
+    detect: 3,
     speed: 70,
     turnRate: 5,
     vision: 7,
     radius: 8,
     weapons: [],
     body: { r: 8, len: 12 },
-    builds: ["extractor", "platform", "power", "factory", "airbase", "navyard", "mgturret", "cannonturret", "aaturret", "interceptor", "repairtower", "sandbag", "warlab", "radar", "reactor", "nukesilo", "hq"],
+    builds: ["extractor", "platform", "power", "factory", "factory3", "navyard", "navyard3", "airbase", "airbase3", "mgturret", "cannonturret", "aaturret", "interceptor", "repairtower", "sandbag", "landmine", "warlab", "radar", "veil", "reactor", "nukesilo", "hq"],
     buildRate: 30,
     trail: "tread",
     sprite: "u.engineer"
@@ -143,6 +145,7 @@ const DEFS = {
     power: -1,
     hp: 150,
     armor: "light",
+    detect: 4,
     speed: 120,
     turnRate: 6,
     vision: 10,
@@ -225,7 +228,7 @@ const DEFS = {
     sprite: "u.mbt",
     turretSprite: "tur.mbt",
     // on the commander's hatch, measured on `tur.mbt`
-    airMount: { sprite: "tur.pintle", x: -3.2, y: 0.5 }
+    airMount: { sprite: "tur.pintle", x: -2.6, y: 0.54 }
   },
   htank: {
     id: "htank",
@@ -258,9 +261,9 @@ const DEFS = {
       targets: ["ground", "ship"],
       mult: { heavy: 1.1, structure: 1 },
       turret: true,
-      muzzleOffset: 41.3,
+      muzzleOffset: 40.47,
       bores: 2,
-      boreSpacing: 10.56,
+      boreSpacing: 11.05,
       splash: 14,
       burst: 2,
       burstDelay: 0.18,
@@ -269,8 +272,8 @@ const DEFS = {
     trail: "tread",
     sprite: "u.htank",
     turretSprite: "tur.htank",
-    // on the right-hand hatch, measured on `tur.htank`
-    airMount: { sprite: "tur.pintle", x: 3.1, y: -0.9 }
+    // on the right-hand roof mounting plate, measured on `tur.htank`
+    airMount: { sprite: "tur.pintle", x: 3.58, y: -1.12 }
   },
   td: {
     id: "td",
@@ -299,9 +302,13 @@ const DEFS = {
       range: 7,
       projectile: "missile",
       speed: 300,
+      // Twin canisters: concealed pivot (512,916), tips y=202, centres x=364/660;
+      // a 16 × 18 art frame at scale 1.5625. One missile per reload, alternating.
       targets: ["ground", "ship"],
       turret: true,
-      muzzleOffset: 12.6,
+      muzzleOffset: 13.0737,
+      bores: 2,
+      boreSpacing: 7.2266,
       homing: true,
       interceptable: true,
       sound: "missile"
@@ -679,7 +686,7 @@ const DEFS = {
     power: -2,
     hp: 260,
     armor: "medium",
-    speed: 84,
+    speed: 73.6,
     turnRate: 4.8,
     vision: 6,
     radius: 10,
@@ -726,7 +733,7 @@ const DEFS = {
    * water, `terrCostAmphib`). Afloat it is a *ship* to every gun — a
    * torpedo, an anti-ship missile and a naval gun all find it — and ashore
    * a vehicle, judged by the tile under it (`targetCat`); it is medium
-   * armour either way, and a flak gun never reaches it. It never boards a
+   * armour either way, and a Flak Track reaches it on both. It never boards a
    * transport: it is its own.
    *
    * Built at the level-2 naval yard *and* the level-2 war factory — it
@@ -734,10 +741,9 @@ const DEFS = {
    * and the one off the ramp already rolling — and priced against the
    * landing it replaces. Its gun is the Wolf's class — a 30 mm autocannon, soft skins
    * and light armour, half value against heavy plate and a wall — on a hull
-   * a quarter tougher, at twice the price and twice the population: two
-   * Wolves beat one Gator on land, plainly, and that gap is what the swim
-   * costs. Against the landing craft it is even by the metal (three Gators
-   * for a craft and four Wolves) and different in kind: no beach to load
+   * a quarter tougher, at 200 metal and twice the population: five Wolves
+   * beat three Gators on land at equal metal. Three Gators cost 600 against
+   * 700 for a landing craft and four Wolves, with no beach to load
    * from and none to unload onto, no hull that takes four tanks down with
    * it, and a crossing at 44 px/s against the craft's 70. A raider from the
    * sea — the howitzer line, the air defence, the engineer's outlying
@@ -753,7 +759,7 @@ const DEFS = {
     domain: "amphibious",
     tier: 2,
     ability: "smoke",
-    cost: 240,
+    cost: 200,
     buildTime: 15,
     pop: 2,
     power: -2,
@@ -840,6 +846,7 @@ const DEFS = {
     lowFlying: true,
     limit: 10,
     requires: ["suicideDrones"],
+    remoteVision: true,
     weapons: [w({
       // the charge: its range is the touch, and its shot is the drone itself
       id: "charge",
@@ -926,7 +933,7 @@ const DEFS = {
     weapons: [w({
       id: "tbm",
       cls: "he",
-      dmg: 260,
+      dmg: 400,
       reload: 30,
       range: 18,
       minRange: 6,
@@ -934,7 +941,7 @@ const DEFS = {
       speed: 230,
       targets: ["ground", "ship"],
       muzzleOffset: 6,
-      splash: 52,
+      splash: 64,
       arc: true,
       spread: 30,
       burst: 2,
@@ -1032,15 +1039,16 @@ const DEFS = {
     domain: "ship",
     tier: 2,
     ability: "damageControl",
-    cost: 600,
-    buildTime: 30,
-    pop: 2,
-    power: -2,
+    cost: 700,
+    buildTime: 34,
+    pop: 3,
+    power: -3,
     hp: 900,
     armor: "ship",
     speed: 65,
     turnRate: 2.6,
     vision: 10,
+    sonar: 9,
     radius: 13,
     // measured at the ship's display scale (core/metrics.ts): a beam of 42
     // world px, over a tile, so it needs two tiles of water abeam
@@ -1057,7 +1065,7 @@ const DEFS = {
         speed: 420,
         targets: ["ground", "ship"],
         turret: true,
-        muzzleOffset: 17.71875,
+        muzzleOffset: 14.36,
         splash: 10,
         sound: "cannon"
       }),
@@ -1076,17 +1084,36 @@ const DEFS = {
         range: 8.5,
         projectile: "missile",
         speed: 430,
+        // Hatch grid centre: 8.2 art px forward at the hull's 2.625 scale.
         targets: ["air"],
         homing: true,
         vertical: true,
-        muzzleOffset: 15.75,
+        muzzleOffset: 21.525,
         sound: "missile"
+      }),
+      w({
+        // The escort's torpedoes screen submerged threats; surface fighting
+        // stays with its light deck gun and the fleet's offensive ships.
+        id: "torpedo",
+        cls: "torpedo",
+        dmg: 160,
+        reload: 3.2,
+        range: 7,
+        projectile: "torpedo",
+        speed: 150,
+        targets: ["sub"],
+        mult: { sub: 1.9 },
+        homing: true,
+        sound: "torpedo"
       })
     ],
     trail: "wake",
     sprite: "u.frigate",
-    turretSprite: "tur.frigate"
+    turretSprite: "tur.frigate",
+    // Measured forward ring: 422 / 2016 down the 42 px hull sheet.
+    turretMounts: [{ x: 0, y: -12.2 }]
   },
+  // Retained for existing saves and authored scenarios; absent from yard menus.
   destroyer: {
     id: "destroyer",
     kind: "unit",
@@ -1145,7 +1172,8 @@ const DEFS = {
     trail: "wake",
     sprite: "u.destroyer",
     turretSprite: "tur.destroyer",
-    turretMounts: [{ x: 0, y: -5 }]
+    // Measured gun ring: 620 / 1920 down the 48 px hull sheet.
+    turretMounts: [{ x: 0, y: -8.5 }]
   },
   /**
    * The Barracuda hunts ships and nothing else. It carried a warhead of its
@@ -1170,7 +1198,7 @@ const DEFS = {
     sonar: 8,
     radius: 12,
     underwater: true,
-    body: { r: 7, len: 38 },
+    body: { r: 7, len: 78 },
     weapons: [w({
       id: "torpedo",
       cls: "torpedo",
@@ -1197,9 +1225,9 @@ const DEFS = {
    * about the ship's numbers moved with the mounts: the reach and the shell
    * are what they were, and `radius` is still the collision circle rather
    * than the beam, so the fleet packs and closes exactly as it did. The
-   * reload went 5 → 7 s afterwards, on its own: a salvo every seven seconds
-   * is the pace of a ship that levels a base rather than one that fights a
-   * fleet, and at 5 it was doing both.
+   * reload went 5 → 7 s afterwards, then to 20 s on 2026-10-08 alongside
+   * a wider firing envelope (4–17 tiles) and the move to the Deepwater
+   * Yard: a slower siege salvo with a larger blind zone close to the hull.
    *
    * The secondaries are its answer to the sky (since 2026-09-27): four
    * Cobras used to sink it without a loss and two Albatrosses likewise.
@@ -1235,19 +1263,19 @@ const DEFS = {
       id: "bigguns",
       cls: "he",
       dmg: 120,
-      reload: 7,
-      range: 14,
-      minRange: 2.5,
+      reload: 20,
+      range: 17,
+      minRange: 4,
       projectile: "shell",
       speed: 300,
       targets: ["ground", "ship"],
       mult: { heavy: 1, ship: 1.2 },
-      // measured from the ring the gun turns on, not the hull's centre, at the
-      // display scale the gun is drawn at
+      // 1024 × 1536 turret master: pivot y=921.6, tips y=86, barrel centres
+      // x=425/598, mapped to the original 10 × 16 art frame at scale 3.8.
       turret: true,
-      muzzleOffset: 33.6,
+      muzzleOffset: 33.076,
       bores: 2,
-      boreSpacing: 6.6,
+      boreSpacing: 6.42,
       splash: 54,
       arc: true,
       burst: 3,
@@ -1269,14 +1297,14 @@ const DEFS = {
     trail: "wake",
     sprite: "u.btlship",
     turretSprite: "tur.btlship",
-    // measured off the barbettes painted on `u.btlship`, which the code-drawn
-    // hull in gfx/art/ships.ts puts at the same three rows
+    // Rings measured at y=537/788/1739 on the 800 × 2400 master, mapped to
+    // its 62 art-px height. The code-drawn hull uses the same offsets.
     turretMounts: [
-      { x: 0, y: -17, arc: BROADSIDE },
+      { x: 0, y: -17.1275, arc: BROADSIDE },
       // A, over the bow
-      { x: 0, y: -11, arc: BROADSIDE },
+      { x: 0, y: -10.6433, arc: BROADSIDE },
       // B, superfiring behind A
-      { x: 0, y: 14, rest: Math.PI, arc: BROADSIDE }
+      { x: 0, y: 13.9242, rest: Math.PI, arc: BROADSIDE }
       // X, abaft the bridge
     ]
   },
@@ -1387,13 +1415,14 @@ const DEFS = {
     power: -1,
     hp: 260,
     armor: "ship",
+    detect: 3,
     speed: 75,
     turnRate: 3.2,
     vision: 7,
     radius: 9,
     weapons: [],
     body: { r: 6, len: 18 },
-    builds: ["extractor", "platform", "power", "factory", "airbase", "navyard", "mgturret", "cannonturret", "aaturret", "interceptor", "repairtower", "sandbag", "warlab", "radar", "reactor", "nukesilo", "hq"],
+    builds: ["extractor", "platform", "power", "factory", "factory3", "navyard", "navyard3", "airbase", "airbase3", "mgturret", "cannonturret", "aaturret", "interceptor", "repairtower", "sandbag", "landmine", "watermine", "warlab", "radar", "veil", "reactor", "nukesilo", "hq"],
     buildRate: 30,
     reach: 64,
     trail: "wake",
@@ -1439,7 +1468,7 @@ const DEFS = {
     radius: 13,
     underwater: true,
     requires: ["radar"],
-    body: { r: 11, len: 44 },
+    body: { r: 9, len: 110 },
     nukeCapacity: 1,
     nukeCost: 2500,
     nukeTime: 180,
@@ -1495,7 +1524,7 @@ const DEFS = {
     // more give than the landing craft's 1.1 (2026-09-27): a squad boards
     // from further up the beach, and the hold sets it down a tile further out
     cargoReach: 1.5,
-    body: { r: 8, len: 33 },
+    body: { r: 8, len: 70 },
     weapons: [],
     sprite: "u.moray"
   },
@@ -1506,6 +1535,7 @@ const DEFS = {
     aliases: ["scout", "uav"],
     domain: "air",
     tier: 1,
+    remoteVision: true,
     cost: 40,
     buildTime: 4,
     pop: 1,
@@ -1544,7 +1574,7 @@ const DEFS = {
     weapons: [w({
       id: "aam",
       cls: "aa",
-      dmg: 100,
+      dmg: 150,
       reload: 2.2,
       range: 6,
       projectile: "missile",
@@ -1776,7 +1806,7 @@ const DEFS = {
     buildTime: 60,
     pop: 5,
     power: -5,
-    hp: 1300,
+    hp: 1100,
     armor: "air",
     speed: 90,
     turnRate: 1.6,
@@ -1786,18 +1816,18 @@ const DEFS = {
     requires: ["radar"],
     rearmTime: 25,
     weapons: [w({
-      // the T3 generalist: pays for a cannon that has no bad matchup. A
-      // drum of 150 bursts, a minute of fire (`ammo`): at eighty it went
-      // home in the middle of every fight it was in
+      // Sustained fire support, strongest against light and medium armor.
+      // The 150-round drum keeps it on station; heavy armor, fortifications
+      // and ships call for the air wing's specialist weapons.
       id: "gatcannon",
       cls: "autocannon",
-      dmg: 35,
+      dmg: 28,
       reload: 0.45,
       range: 5.5,
       projectile: "shell",
       speed: 480,
       targets: ["ground", "ship"],
-      mult: { light: 1.2, medium: 1.2, heavy: 1.1, structure: 1, ship: 1 },
+      mult: { light: 1.2, medium: 1.2, heavy: 0.8, structure: 0.8, ship: 0.7 },
       ammo: 150,
       // side-firing: the gunship shoots out of its orbit instead of nose-on
       turret: true,
@@ -1920,8 +1950,9 @@ const DEFS = {
   /**
    * The nuclear warhead in flight. Not built at any factory: a silo or a
    * Kraken launches one, and from then on it is an aircraft with no
-   * gun and no orders, flying a straight line at the point it was sent to
-   * (`Game.tickWarhead`). Two things may shoot it down: a *veteran* — a unit
+   * gun and no orders, flying a straight line at the point it was sent to:
+   * a slow launch, cruise, then a faster terminal approach
+   * (`Game.tickWarhead`, `warheadTravel`). Two things may shoot it down: a *veteran* — a unit
    * of rank 2 or better whose weapons reach the sky (`canEngage` in
    * combat.ts, `WARHEAD_MIN_RANK`) — and the SAM Site, the one emplacement a
    * def flag clears for the job (`antiWarhead`). A green unit and every other
@@ -2038,8 +2069,8 @@ const DEFS = {
   /**
    * The headquarters defends itself, the way a tower does in a lane game:
    * a twin heavy machine gun on the roof ring where the helipad was, a
-   * shade stronger than the Gatling (79 dps to its 71) and reaching two
-   * tiles past it (7 tiles, measured from a centre that is already two
+   * shade stronger than the Gatling (79 dps to its 71) and reaching farther
+   * (7 tiles, measured from a centre that is already two
    * tiles from the wall, so five past it), so a buggy, a light tank, a
    * gunship or a machine-gun turret that comes for it pays while a howitzer
    * or a launcher standing off still outranges it. It was the Gatling's 5
@@ -2086,8 +2117,55 @@ const DEFS = {
     })],
     produces: ["engineer"],
     power: 10,
+    metalRate: 0.5,
+    upgradesTo: "hq2",
+    upgradeCost: 15e3,
+    upgradeTime: 180,
     sprite: "u.hq",
     turretSprite: "tur.hq",
+    turretMounts: [{ x: 26, y: -36 }]
+  },
+  hq2: {
+    id: "hq2",
+    kind: "building",
+    domain: "none",
+    tier: 2,
+    isHQ: true,
+    upgradeOnly: true,
+    cost: 17500,
+    buildTime: 240,
+    pop: 0,
+    hp: 6e3,
+    armor: "structure",
+    speed: 0,
+    turnRate: 0,
+    vision: 10,
+    radius: 60,
+    fw: 4,
+    fh: 3,
+    weapons: [w({
+      id: "hqgun",
+      cls: "mg",
+      dmg: 19.25,
+      reload: 0.14,
+      range: 7,
+      projectile: "bullet",
+      speed: 520,
+      targets: ["ground", "ship", "air"],
+      mult: { medium: 0.9, heavy: 0.5, air: 0.8, ship: 0.7, structure: 0.3 },
+      turret: true,
+      muzzleOffset: 45,
+      bores: 2,
+      boreSpacing: 8.4,
+      sound: "mg"
+    })],
+    produces: ["engineer"],
+    power: 10,
+    metalRate: 0.5,
+    requires: ["radar"],
+    sound: "bld-hq",
+    sprite: "u.hq2",
+    turretSprite: "tur.hq2",
     turretMounts: [{ x: 26, y: -36 }]
   },
   extractor: {
@@ -2438,7 +2516,7 @@ const DEFS = {
     kind: "building",
     domain: "none",
     tier: 1,
-    cost: 350,
+    cost: 380,
     buildTime: 24,
     pop: 0,
     hp: 1400,
@@ -2482,7 +2560,8 @@ const DEFS = {
     upgradesTo: "airbase3",
     upgradeCost: 950,
     upgradeTime: 48,
-    sprite: "u.airbase2"
+    sprite: "u.airbase2",
+    sound: "bld-airbase"
   },
   airbase3: {
     id: "airbase3",
@@ -2505,14 +2584,15 @@ const DEFS = {
     power: -20,
     requires: ["radar"],
     produces: ["drone", "heli", "theli", "fighter", "jet", "mjet", "bomber", "c47", "gunship", "hornet", "wraith", "cormorant"],
-    sprite: "u.airbase3"
+    sprite: "u.airbase3",
+    sound: "bld-airbase"
   },
   navyard: {
     id: "navyard",
     kind: "building",
     domain: "none",
     tier: 1,
-    cost: 380,
+    cost: 350,
     buildTime: 22,
     pop: 0,
     hp: 1500,
@@ -2551,7 +2631,7 @@ const DEFS = {
     fh: 3,
     weapons: [],
     power: -12,
-    produces: ["engboat", "gunboat", "mboat", "seatrans", "frigate", "destroyer", "sub", "gator", "btlship"],
+    produces: ["engboat", "gunboat", "mboat", "seatrans", "frigate", "sub", "gator"],
     upgradesTo: "navyard3",
     upgradeCost: 950,
     upgradeTime: 48,
@@ -2578,7 +2658,7 @@ const DEFS = {
     weapons: [],
     power: -20,
     requires: ["radar"],
-    produces: ["engboat", "gunboat", "mboat", "seatrans", "frigate", "destroyer", "sub", "gator", "btlship", "kraken", "moray", "carrier"],
+    produces: ["engboat", "gunboat", "mboat", "seatrans", "frigate", "sub", "gator", "btlship", "kraken", "moray", "carrier"],
     sprite: "u.navyard3",
     sound: "unit-ship"
   },
@@ -2592,7 +2672,7 @@ const DEFS = {
    * more damage a second): a gun feeding two barrels in turn is faster than
    * one feeding a single barrel, and the pad wanted the help. It stops short
    * of the Gatling it upgrades into, which reloads in 0.14 and has to stay
-   * worth the 260 metal.
+   * worth the upgrade.
    */
   mgturret: {
     id: "mgturret",
@@ -2628,7 +2708,7 @@ const DEFS = {
       sound: "mg"
     })],
     upgradesTo: "gatling",
-    upgradeCost: 260,
+    upgradeCost: 200,
     upgradeTime: 16,
     sprite: "u.mgturret",
     turretSprite: "tur.mg",
@@ -2641,7 +2721,7 @@ const DEFS = {
     domain: "none",
     tier: 2,
     upgradeOnly: true,
-    cost: 390,
+    cost: 330,
     buildTime: 26,
     pop: 0,
     hp: 700,
@@ -2658,7 +2738,7 @@ const DEFS = {
       cls: "mg",
       dmg: 10,
       reload: 0.14,
-      range: 5,
+      range: 6.5,
       projectile: "bullet",
       speed: 520,
       targets: ["ground", "ship", "air"],
@@ -2706,7 +2786,7 @@ const DEFS = {
       sound: "cannon"
     })],
     upgradesTo: "cannonturret2",
-    upgradeCost: 420,
+    upgradeCost: 340,
     upgradeTime: 22,
     sprite: "u.cannonturret",
     turretSprite: "tur.cannon",
@@ -2718,10 +2798,10 @@ const DEFS = {
     domain: "none",
     tier: 2,
     upgradeOnly: true,
-    cost: 740,
+    cost: 660,
     buildTime: 40,
     pop: 0,
-    hp: 1200,
+    hp: 1500,
     armor: "structure",
     speed: 0,
     turnRate: 0,
@@ -2939,6 +3019,71 @@ const DEFS = {
     weapons: [],
     sprite: "u.sandbag"
   },
+  landmine: {
+    id: "landmine",
+    kind: "building",
+    domain: "none",
+    tier: 1,
+    cost: 60,
+    buildTime: 4,
+    pop: 0,
+    hp: 45,
+    armor: "light",
+    speed: 0,
+    turnRate: 0,
+    vision: 0,
+    radius: 6,
+    fw: 1,
+    fh: 1,
+    mine: 3,
+    stealth: 0.5,
+    weapons: [w({
+      id: "mineblast",
+      cls: "he",
+      dmg: 200,
+      reload: 1,
+      range: 0.65,
+      projectile: "shell",
+      speed: 0,
+      splash: 1.5 * 32,
+      targets: ["ground"],
+      mult: { light: 1.2, medium: 1, heavy: 0.25, structure: 0.1, ship: 0 }
+    })],
+    sprite: "u.landmine"
+  },
+  watermine: {
+    id: "watermine",
+    kind: "building",
+    domain: "none",
+    tier: 1,
+    cost: 60,
+    buildTime: 4,
+    pop: 0,
+    hp: 45,
+    armor: "ship",
+    speed: 0,
+    turnRate: 0,
+    vision: 0,
+    radius: 6,
+    fw: 1,
+    fh: 1,
+    mine: 3,
+    stealth: 0.5,
+    offshore: true,
+    weapons: [w({
+      id: "navalmineblast",
+      cls: "he",
+      dmg: 200,
+      reload: 1,
+      range: 0.65,
+      projectile: "shell",
+      speed: 0,
+      splash: 1.5 * 32,
+      targets: ["ship", "sub"],
+      mult: { light: 1.2, medium: 1, heavy: 0.25, structure: 0, ship: 1, sub: 1, air: 0 }
+    })],
+    sprite: "u.watermine"
+  },
   /**
    * One tile, like a gun pad: a base wants it beside the turret line and at
    * the staging point, and a 2×2 was a footprint that did not fit either.
@@ -3030,6 +3175,30 @@ const DEFS = {
     sprite: "u.warlab",
     sound: "bld-radar"
   },
+  veil: {
+    id: "veil",
+    kind: "building",
+    domain: "none",
+    tier: 2,
+    cost: 600,
+    buildTime: 35,
+    pop: 0,
+    hp: 900,
+    armor: "structure",
+    speed: 0,
+    turnRate: 0,
+    vision: 6,
+    radius: 30,
+    fw: 2,
+    fh: 2,
+    weapons: [],
+    power: -20,
+    requires: ["radar"],
+    jamRange: 8,
+    sprite: "u.veil",
+    turretSprite: "tur.veil",
+    turretSpins: true
+  },
   /**
    * The reactor breeds the cores a warhead is built round: with a radar it is
    * what a silo needs to be built, and what a silo or a submarine needs to
@@ -3101,11 +3270,17 @@ function mapUnitRect(u) {
   const def = getDef(u.id);
   return def.kind === "building" ? { x: u.x, y: u.y, fw: def.fw ?? 1, fh: def.fh ?? 1 } : { x: u.x, y: u.y, fw: 1, fh: 1 };
 }
+function normalizeTerrainLayers(m) {
+  for (let i = 0; i < m.terrain.length; i++) if (m.terrain[i] === Terrain.Bridge) {
+    (m.overlays ??= new Uint8Array(m.w * m.h))[i] = Terrain.Bridge;
+    m.terrain[i] = Terrain.Water;
+  }
+}
 const DECOR = {
   pole: { fw: 1, fh: 1, sprite: "d.pole", color: [96, 78, 58], hp: 20, shadow: 6 },
-  tower: { fw: 1, fh: 1, sprite: "d.tower", color: [76, 80, 86], hp: 90, shadow: 15 },
+  tower: { fw: 1, fh: 1, sprite: "d.tower", color: [76, 80, 86], hp: 90, shadow: 14 },
   /** a date palm: the one tree that stands on sand, an obstacle a tile wide; three drawings, mixed */
-  palm: { fw: 1, fh: 1, sprite: "d.palm", color: [86, 120, 60], hp: 40, variants: 3, shadow: 10 },
+  palm: { fw: 1, fh: 1, sprite: "d.palm", color: [86, 120, 60], hp: 40, variants: 3, shadow: 9 },
   /** a canvas field tent, sandbagged: the camp round a staging post */
   tent: { fw: 2, fh: 2, sprite: "d.tent", color: [128, 116, 84], hp: 90 },
   /** an arched aircraft shelter of concrete: what an airfield keeps beside its strip */
@@ -3169,6 +3344,39 @@ function rleDecodeInto(s, out) {
   if (oi < len) out.fill(0, oi);
   return out;
 }
+const TERRAIN_BASES = Object.freeze({
+  grass: Terrain.Grass,
+  sand: Terrain.Sand,
+  road: Terrain.Road,
+  mud: Terrain.Mud,
+  marsh: Terrain.Marsh,
+  snow: Terrain.Snow,
+  rubble: Terrain.Rubble,
+  ice: Terrain.Ice,
+  city: Terrain.City
+});
+const VARIANT_ID_RE = /^[a-z0-9][a-z0-9_-]{1,39}$/;
+function readTerrainAssignments(value, path, issues) {
+  if (value === void 0) return void 0;
+  const start = issues.length;
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    issues.push({ path, message: "must be an object of terrain base → variant id" });
+    return void 0;
+  }
+  const entries = Object.entries(value);
+  if (entries.length > Object.keys(TERRAIN_BASES).length) {
+    issues.push({ path, message: `at most ${Object.keys(TERRAIN_BASES).length} terrain bindings` });
+    return void 0;
+  }
+  const out = {};
+  for (const [base, id] of entries) {
+    if (!Object.hasOwn(TERRAIN_BASES, base)) issues.push({ path: `${path}.${base}`, message: "unsupported terrain base" });
+    else if (typeof id !== "string" || !VARIANT_ID_RE.test(id) || !id.includes("-"))
+      issues.push({ path: `${path}.${base}`, message: "must be a namespaced terrain variant id, 2–40 characters" });
+    else out[base] = id;
+  }
+  return issues.length === start && entries.length > 0 ? out : void 0;
+}
 const CUSTOM_MAP_FORMAT = "steel-tide-map";
 const CUSTOM_MAP_VERSION = 1;
 const CUSTOM_MAP_EXT = ".steel-tide-map";
@@ -3186,6 +3394,8 @@ function encodeMapUnit(u) {
   return { id: u.id, owner: u.owner, x: u.x, y: u.y, ...u.a !== void 0 ? { a: u.a } : {} };
 }
 function encodeCustomMap(map, name, description = "", translations) {
+  map = { ...map, terrain: map.terrain.slice(), overlays: map.overlays?.slice() };
+  normalizeTerrainLayers(map);
   const blurb = cleanDescription(description);
   const given = cleanTranslations(translations);
   return {
@@ -3197,6 +3407,8 @@ function encodeCustomMap(map, name, description = "", translations) {
     w: map.w,
     h: map.h,
     terrain: rleEncode(map.terrain),
+    ...map.terrainVariants && Object.keys(map.terrainVariants).length ? { terrainVariants: { ...map.terrainVariants } } : {},
+    ...map.overlays?.some(Boolean) ? { overlays: rleEncode(map.overlays) } : {},
     deposits: map.deposits.map((d) => ({ x: d.x, y: d.y })),
     spawns: map.spawns.map((s) => ({ x: s.x, y: s.y })),
     ...map.decor?.length ? { decor: map.decor.map((d) => ({ kind: d.kind, x: d.x, y: d.y })) } : {},
@@ -3204,16 +3416,20 @@ function encodeCustomMap(map, name, description = "", translations) {
   };
 }
 function customMapToGameMap(data, lang) {
-  return {
+  const map = {
     nameKey: lang ? mapText(data, lang).name : data.name,
     w: data.w,
     h: data.h,
     terrain: rleDecode(data.terrain, data.w * data.h),
+    ...data.terrainVariants && Object.keys(data.terrainVariants).length ? { terrainVariants: { ...data.terrainVariants } } : {},
+    ...data.overlays ? { overlays: rleDecode(data.overlays, data.w * data.h) } : {},
     deposits: data.deposits.map((d) => ({ x: d.x, y: d.y })),
     spawns: data.spawns.map((s) => ({ x: s.x, y: s.y })),
     ...data.decor?.length ? { decor: data.decor.map((d) => ({ kind: d.kind, x: d.x, y: d.y })) } : {},
     ...data.units?.length ? { units: data.units.map(encodeMapUnit) } : {}
   };
+  normalizeTerrainLayers(map);
+  return map;
 }
 function readDecor(list, w2, h) {
   if (list === void 0) return [];
@@ -3340,6 +3556,22 @@ function parseCustomMap(json, opts = {}) {
   for (let i = 0; i < terrain.length; i++) {
     if (terrain[i] >= TERRAIN_KINDS) return { ok: false, error: "the map uses a terrain this build does not know" };
   }
+  const variantIssues = [];
+  const terrainVariants = readTerrainAssignments(r.terrainVariants, "terrainVariants", variantIssues);
+  if (variantIssues.length) return { ok: false, error: `${variantIssues[0].path}: ${variantIssues[0].message}` };
+  let overlays;
+  if (r.overlays !== void 0) {
+    if (typeof r.overlays !== "string") return { ok: false, error: "bad overlay data" };
+    try {
+      overlays = rleDecode(r.overlays, w2 * h);
+    } catch {
+      return { ok: false, error: "bad overlay data" };
+    }
+    if (overlays.some((t) => t !== 0 && t !== Terrain.Bridge)) return { ok: false, error: "the map uses an overlay this build does not know" };
+  }
+  const layers = { w: w2, h, terrain, overlays };
+  normalizeTerrainLayers(layers);
+  overlays = layers.overlays;
   const points2 = (list, max, what) => {
     if (list === void 0) return [];
     if (!Array.isArray(list)) return `bad ${what}`;
@@ -3382,6 +3614,8 @@ function parseCustomMap(json, opts = {}) {
       w: w2,
       h,
       terrain: rleEncode(terrain),
+      ...terrainVariants ? { terrainVariants } : {},
+      ...overlays?.some(Boolean) ? { overlays: rleEncode(overlays) } : {},
       deposits,
       spawns,
       ...decor.length ? { decor } : {},
@@ -3426,6 +3660,10 @@ function thumbOf(data) {
   const scale = Math.min(1, THUMB_MAX / Math.max(data.w, data.h));
   const w2 = Math.max(1, Math.round(data.w * scale)), h = Math.max(1, Math.round(data.h * scale));
   const tiles = rleDecode(data.terrain, data.w * data.h);
+  if (data.overlays) {
+    const overlays = rleDecode(data.overlays, tiles.length);
+    for (let i = 0; i < tiles.length; i++) if (overlays[i]) tiles[i] = overlays[i];
+  }
   const kinds = TERRAIN_KINDS;
   const votes = new Uint16Array(w2 * h * kinds);
   for (let y = 0; y < data.h; y++) {
