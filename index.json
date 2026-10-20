@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-10-20T14:59:35.477Z",
+  "generated": "2026-10-20T15:07:01.180Z",
   "maps": [
     {
       "slug": "1v1v1v1",
@@ -419,6 +419,460 @@
           {
             "x": 33,
             "y": 49
+          }
+        ]
+      }
+    },
+    {
+      "slug": "6p",
+      "name": "忘却前线",
+      "description": "复刻《全球行动》的六人3v3战场：左侧1/3/5号位（蓝/绿/青）同队，对阵右侧2/4/6号位（红/黄/粉）。通过中央城镇、桥梁及南北通道推进，争夺沿线矿点。",
+      "author": "Shuangjue3072",
+      "w": 250,
+      "h": 250,
+      "spawns": 6,
+      "deposits": 102,
+      "decor": 4,
+      "updated": "2026-10-20T23:06:27+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 64,
+        "terrain": "BwUICQYFCQkBEQYJEwUDCQsFCQkGBQkJAREGCQoFBQkCBQUJCQUMCQQFCgkBEQcJBAUTCQYFFgkDBQIJAREDCQMFCwkFBQgJBQUVCQUFBQEBCQMFCwkFBQkJBAUJCQQFCAkDBQgBAwULCQQFBQkBBQQJCAUFCQUFCAkCBQcBBAULCQEDAQkBBQUJAwUDCQMFCAkIBQgJAgUCCQIRAgkEBRIJBAUDCQMFCwkFBQgJAQUECQERGAkEBQMJBAULCQQFDQkBERkJAwUDCQMFDQkBBQ8JAREZCQMFAwkCBQ4JAQUNCQcFFgkCBQMJAgUaCQoFGQkDBRkJCwUZCQMFGAkNBRgJBQUMCQEFCQkNBRkJBAUMCQEFCgkDBQYJBAUYCQQFCwkCBQoJAQUKCQEFDgkEBQcJAwULCQMFIQkIBQcJAQUKCQYFCQkCBQkJAQUKCQkFBQkDBQIJBAUDCQIFAQkDBQoJDQUCCQEFBgkIBQUJCgUGCQEFDAkKBQIJAQECCQMFBAkHBQYJCQUUCQoFAQkDAQEJBAUECQYFBgkIBRkJBgUBCQMBAgkDBQYJAQUJCQgFEAkCBQ8JAwECCQEFEgkHBQ8JAwURCQEBFQkHBQ4JBAUBAQIJAQUjCQYFDwkDBQMBAgUBCQEQCgYBEBkJAwUOCQMFAwEBCQMFARABBgMQAgYDEAEGARAZCQIFDwkCBQQBAQkDBQEQJAYUCQMBAQkDBQEQJAYVCQEFAQkDBQEJARABBgMQAgYDEAEGARAwCQIFAgkBEAEGAxACBgMQAQYBEAUJAwURCSYGARACCQEFAQEFBSsJARABBgMQAgYDEAEGARABCQQBBAUQCQMFGAkBEAEGAxACBgMQAQYBEAEJAwEGBQ8JAwUTCQMFAgkBEAoGARADAQYFEAkDBRMJAgUQCQEBBwUNCQUFEwkDBQMBDAkFBQ4JBgUUCQQFBAEECQQFFgkGBQkJAwUJCQQFAwEDCQUFFQkHBQkJAwUJCQUFAgEDCQUFFQkFBQoJBAUKCQQFAQkDBQEJBwUKCQMFAQkDBQIJAwUDCQIFBgkEBQ0JBAUCCQYFAQkBBQkJBAUBCQEFAQkBBQgJAwUXCQEFFAkGBQoJBAUsCQUFCwkEBSMJAQUICQQFDAkFBRYJBAUGCQQFBwkEBQwJBQUWCQ4FBwkDBQ0JBQUWCQ4FBwkDBQ0JBQUXCQwFCgkBBQ4JBAUaCQcFGwkDBQIJBAUXCQIRHgkDBQEJBgUWCQIRDwkBBQ0JBAUBCQYFFgkBBQERDwkBBQ0JBAUBCQUFBgkDBQkJAQUDCQYFDAkEBQsJAwUDCQMFBQkFBQgJAgUFAQEFDQkGBQoJAwUKCQYFBwkDBQgBCwkIBQMJCAUKCQYFCAkDBQcBCwkFBQwJAQUMCQMFDwkCER8JAQUWCQMFBgkCEQIJAwUYCQMFEwkFBQcJAhEBCQUFAwkCBRAJCQUFCQIFBgkOBQIRCwUKCQEFAwkKBQMJBQUFCQ4FAhELBQkJAwUBCQQF",
+        "spawns": [
+          {
+            "x": 7,
+            "y": 13
+          },
+          {
+            "x": 49,
+            "y": 12
+          },
+          {
+            "x": 7,
+            "y": 32
+          },
+          {
+            "x": 58,
+            "y": 32
+          },
+          {
+            "x": 13,
+            "y": 50
+          },
+          {
+            "x": 56,
+            "y": 50
+          }
+        ],
+        "deposits": [
+          {
+            "x": 9,
+            "y": 50
+          },
+          {
+            "x": 9,
+            "y": 50
+          },
+          {
+            "x": 9,
+            "y": 49
+          },
+          {
+            "x": 9,
+            "y": 49
+          },
+          {
+            "x": 9,
+            "y": 49
+          },
+          {
+            "x": 9,
+            "y": 49
+          },
+          {
+            "x": 9,
+            "y": 50
+          },
+          {
+            "x": 9,
+            "y": 50
+          },
+          {
+            "x": 10,
+            "y": 50
+          },
+          {
+            "x": 10,
+            "y": 50
+          },
+          {
+            "x": 10,
+            "y": 49
+          },
+          {
+            "x": 10,
+            "y": 49
+          },
+          {
+            "x": 3,
+            "y": 31
+          },
+          {
+            "x": 3,
+            "y": 32
+          },
+          {
+            "x": 3,
+            "y": 32
+          },
+          {
+            "x": 3,
+            "y": 33
+          },
+          {
+            "x": 3,
+            "y": 31
+          },
+          {
+            "x": 3,
+            "y": 32
+          },
+          {
+            "x": 3,
+            "y": 32
+          },
+          {
+            "x": 3,
+            "y": 33
+          },
+          {
+            "x": 2,
+            "y": 33
+          },
+          {
+            "x": 2,
+            "y": 32
+          },
+          {
+            "x": 2,
+            "y": 32
+          },
+          {
+            "x": 2,
+            "y": 31
+          },
+          {
+            "x": 4,
+            "y": 11
+          },
+          {
+            "x": 4,
+            "y": 12
+          },
+          {
+            "x": 4,
+            "y": 12
+          },
+          {
+            "x": 4,
+            "y": 11
+          },
+          {
+            "x": 3,
+            "y": 11
+          },
+          {
+            "x": 3,
+            "y": 11
+          },
+          {
+            "x": 3,
+            "y": 12
+          },
+          {
+            "x": 3,
+            "y": 12
+          },
+          {
+            "x": 4,
+            "y": 11
+          },
+          {
+            "x": 4,
+            "y": 11
+          },
+          {
+            "x": 4,
+            "y": 12
+          },
+          {
+            "x": 4,
+            "y": 12
+          },
+          {
+            "x": 52,
+            "y": 11
+          },
+          {
+            "x": 52,
+            "y": 11
+          },
+          {
+            "x": 52,
+            "y": 12
+          },
+          {
+            "x": 52,
+            "y": 12
+          },
+          {
+            "x": 53,
+            "y": 12
+          },
+          {
+            "x": 53,
+            "y": 12
+          },
+          {
+            "x": 53,
+            "y": 11
+          },
+          {
+            "x": 53,
+            "y": 11
+          },
+          {
+            "x": 52,
+            "y": 11
+          },
+          {
+            "x": 52,
+            "y": 11
+          },
+          {
+            "x": 52,
+            "y": 12
+          },
+          {
+            "x": 52,
+            "y": 12
+          },
+          {
+            "x": 61,
+            "y": 31
+          },
+          {
+            "x": 61,
+            "y": 31
+          },
+          {
+            "x": 62,
+            "y": 31
+          },
+          {
+            "x": 61,
+            "y": 32
+          },
+          {
+            "x": 61,
+            "y": 32
+          },
+          {
+            "x": 62,
+            "y": 32
+          },
+          {
+            "x": 61,
+            "y": 32
+          },
+          {
+            "x": 61,
+            "y": 32
+          },
+          {
+            "x": 62,
+            "y": 32
+          },
+          {
+            "x": 61,
+            "y": 33
+          },
+          {
+            "x": 61,
+            "y": 33
+          },
+          {
+            "x": 62,
+            "y": 33
+          },
+          {
+            "x": 61,
+            "y": 33
+          },
+          {
+            "x": 61,
+            "y": 33
+          },
+          {
+            "x": 62,
+            "y": 33
+          },
+          {
+            "x": 59,
+            "y": 49
+          },
+          {
+            "x": 59,
+            "y": 50
+          },
+          {
+            "x": 59,
+            "y": 50
+          },
+          {
+            "x": 59,
+            "y": 51
+          },
+          {
+            "x": 59,
+            "y": 49
+          },
+          {
+            "x": 59,
+            "y": 50
+          },
+          {
+            "x": 59,
+            "y": 50
+          },
+          {
+            "x": 59,
+            "y": 51
+          },
+          {
+            "x": 60,
+            "y": 49
+          },
+          {
+            "x": 60,
+            "y": 50
+          },
+          {
+            "x": 60,
+            "y": 50
+          },
+          {
+            "x": 60,
+            "y": 51
+          },
+          {
+            "x": 29,
+            "y": 25
+          },
+          {
+            "x": 29,
+            "y": 24
+          },
+          {
+            "x": 29,
+            "y": 24
+          },
+          {
+            "x": 28,
+            "y": 24
+          },
+          {
+            "x": 28,
+            "y": 24
+          },
+          {
+            "x": 28,
+            "y": 25
+          },
+          {
+            "x": 28,
+            "y": 25
+          },
+          {
+            "x": 28,
+            "y": 24
+          },
+          {
+            "x": 28,
+            "y": 24
+          },
+          {
+            "x": 35,
+            "y": 38
+          },
+          {
+            "x": 35,
+            "y": 37
+          },
+          {
+            "x": 35,
+            "y": 37
+          },
+          {
+            "x": 35,
+            "y": 37
+          },
+          {
+            "x": 35,
+            "y": 37
+          },
+          {
+            "x": 35,
+            "y": 38
+          },
+          {
+            "x": 2,
+            "y": 30
+          },
+          {
+            "x": 3,
+            "y": 30
+          },
+          {
+            "x": 3,
+            "y": 30
+          },
+          {
+            "x": 27,
+            "y": 24
+          },
+          {
+            "x": 27,
+            "y": 24
+          },
+          {
+            "x": 27,
+            "y": 25
+          },
+          {
+            "x": 36,
+            "y": 37
+          },
+          {
+            "x": 36,
+            "y": 37
+          },
+          {
+            "x": 36,
+            "y": 38
+          },
+          {
+            "x": 36,
+            "y": 37
+          },
+          {
+            "x": 36,
+            "y": 37
+          },
+          {
+            "x": 36,
+            "y": 38
           }
         ]
       }
@@ -2472,7 +2926,7 @@
       "deposits": 12,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 37,
+      "downloads": 38,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -11456,7 +11910,7 @@
       "deposits": 28,
       "decor": 13,
       "updated": "2026-10-04T11:48:40+08:00",
-      "downloads": 117,
+      "downloads": 118,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -16334,7 +16788,7 @@
       "deposits": 24,
       "decor": 10,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 76,
+      "downloads": 77,
       "thumb": {
         "w": 64,
         "h": 57,
