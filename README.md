@@ -78,6 +78,30 @@ editor writes it; nothing needs to be written by hand.
 - **Two Coast Lanes** (2v2, 3v3 and 4v4): inspired by the Rusted Warfare
   maps Across the Shore (隔岸之争) and Coastline (海岸线).
 
+- **Ice Lake** (`ice-lake-by-hxyy`), submitted by YYY: the original title
+  credits hxyy.
+
+- **Japanese Archipelago** (`japanese-archipelago`): generated with the
+  game's China/Europe geography pipeline from [Natural Earth 1:10m vectors](https://www.naturalearthdata.com/downloads/10m-physical-vectors/)
+  (coastlines, islands, rivers, lakes and the continental shelf), its
+  [country outlines and populated places](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/),
+  and [NASA's GEBCO elevation raster](https://eoimages.gsfc.nasa.gov/images/imagerecords/73000/73934/gebco_08_rev_elev_21600x10800.png).
+  Uses an Albers equal-area projection at about 4.7 km per tile, covering
+  Hokkaido through the Ryukyus and the Izu–Ogasawara chain; remote
+  Minami-Tori-shima is outside the frame. Roads, clearings, resource deposits
+  and narrow straits are adapted for play.
+
+- **Antarctic** (`antarctic`): generated from [Natural Earth 1:10m vectors](https://www.naturalearthdata.com/downloads/10m-physical-vectors/),
+  [research-station coordinates](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/),
+  and [NASA's GEBCO elevation raster](https://eoimages.gsfc.nasa.gov/images/imagerecords/73000/73934/gebco_08_rev_elev_21600x10800.png).
+  The [ice-shelf layer](https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-antarctic-ice-shelves/)
+  is based on the 2003–2004 Mosaic of Antarctica; it does not depict current
+  or seasonal ice extent. Byrd Surface Camp's coordinates come from the
+  [USAP 2019–2020 science plan](https://www.usap.gov/scienceSupport/documents/2019-2020%20Science%20Planning%20Summaries.pdf).
+  Uses a South-Pole-centred Lambert azimuthal equal-area projection at about
+  11 km per tile. Starting clearings sit near the reference stations;
+  resources, snow passes and camp props are adapted for play.
+
 ## Licence
 
 The tooling is MIT. Each map is published under CC-BY-4.0 and belongs to its
