@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-10-20T15:10:45.473Z",
+  "generated": "2026-10-21T02:30:56.610Z",
   "maps": [
     {
       "slug": "1v1v1v1",
@@ -121,19 +121,19 @@
     },
     {
       "slug": "2v2",
-      "name": "Swamp Gorge (2v2)",
+      "name": "Swamp Gorge",
       "description": "Marshland fills a tight gorge, crossed by roads and shallow channels between rocky ridges.",
       "translations": {
         "en": {
-          "name": "Swamp Gorge (2v2)",
+          "name": "Swamp Gorge",
           "description": "Marshland fills a tight gorge, crossed by roads and shallow channels between rocky ridges."
         },
         "zh": {
-          "name": "沼泽峡谷（2v2）",
+          "name": "沼泽峡谷",
           "description": "沼泽铺满狭窄峡谷，道路与浅水河道穿行于岩石山脊之间。"
         },
         "ko": {
-          "name": "늪지 협곡 (2v2)",
+          "name": "늪지 협곡",
           "description": "좁은 협곡을 늪지가 채우고, 바위 능선 사이로 도로와 얕은 물길이 지나간다."
         }
       },
@@ -143,7 +143,7 @@
       "spawns": 4,
       "deposits": 30,
       "decor": 0,
-      "updated": "2026-10-03T11:34:45+08:00",
+      "updated": "2026-10-21T10:15:28+08:00",
       "downloads": 102,
       "thumb": {
         "w": 64,
@@ -293,19 +293,19 @@
     },
     {
       "slug": "2v2v2v2",
-      "name": "Ring (2v2v2v2)",
+      "name": "Ring",
       "description": "Paired bases occupy a narrow grass ring between a central lake and the surrounding mountains.",
       "translations": {
         "en": {
-          "name": "Ring (2v2v2v2)",
+          "name": "Ring",
           "description": "Paired bases occupy a narrow grass ring between a central lake and the surrounding mountains."
         },
         "zh": {
-          "name": "环形战场（2v2v2v2）",
+          "name": "环形战场",
           "description": "成对的驻地分布在狭窄草环上，内侧是湖泊，外侧是群山。"
         },
         "ko": {
-          "name": "환형 전장 (2v2v2v2)",
+          "name": "환형 전장",
           "description": "중앙 호수와 주변 산 사이의 좁은 초원 고리에 기지가 쌍으로 자리 잡고 있다."
         }
       },
@@ -315,7 +315,7 @@
       "spawns": 8,
       "deposits": 16,
       "decor": 0,
-      "updated": "2026-10-03T11:34:45+08:00",
+      "updated": "2026-10-21T10:15:28+08:00",
       "downloads": 16,
       "thumb": {
         "w": 64,
@@ -351,7 +351,7 @@
             "y": 8
           },
           {
-            "x": 35,
+            "x": 34,
             "y": 8
           }
         ],
@@ -434,7 +434,7 @@
       "deposits": 102,
       "decor": 4,
       "updated": "2026-10-20T23:06:27+08:00",
-      "downloads": 0,
+      "downloads": 2,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -2201,7 +2201,7 @@
       "spawns": 8,
       "deposits": 103,
       "decor": 18,
-      "updated": "2026-10-08T12:37:42+08:00",
+      "updated": "2026-10-21T09:59:44+08:00",
       "downloads": 49,
       "thumb": {
         "w": 64,
@@ -2682,7 +2682,7 @@
       "deposits": 48,
       "decor": 22,
       "updated": "2026-10-08T12:37:31+08:00",
-      "downloads": 30,
+      "downloads": 32,
       "thumb": {
         "w": 64,
         "h": 54,
@@ -3028,7 +3028,7 @@
       "deposits": 240,
       "decor": 0,
       "updated": "2026-10-20T23:10:11+08:00",
-      "downloads": 0,
+      "downloads": 2,
       "thumb": {
         "w": 50,
         "h": 30,
@@ -4056,7 +4056,7 @@
       "deposits": 265,
       "decor": 318,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 691,
+      "downloads": 697,
       "thumb": {
         "w": 56,
         "h": 64,
@@ -5436,7 +5436,7 @@
       "deposits": 56,
       "decor": 1,
       "updated": "2026-10-08T12:37:36+08:00",
-      "downloads": 21,
+      "downloads": 22,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -5711,8 +5711,8 @@
       "spawns": 8,
       "deposits": 52,
       "decor": 0,
-      "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 128,
+      "updated": "2026-10-21T10:04:30+08:00",
+      "downloads": 129,
       "thumb": {
         "w": 64,
         "h": 54,
@@ -5739,15 +5739,15 @@
             "y": 7
           },
           {
-            "x": 31,
+            "x": 32,
             "y": 46
           },
           {
-            "x": 9,
+            "x": 8,
             "y": 27
           },
           {
-            "x": 54,
+            "x": 55,
             "y": 26
           }
         ],
@@ -6516,7 +6516,7 @@
       "deposits": 301,
       "decor": 271,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 426,
+      "downloads": 430,
       "thumb": {
         "w": 63,
         "h": 64,
@@ -7788,7 +7788,7 @@
       "deposits": 78,
       "decor": 0,
       "updated": "2026-10-08T12:37:44+08:00",
-      "downloads": 30,
+      "downloads": 33,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -8159,7 +8159,7 @@
       "spawns": 4,
       "deposits": 26,
       "decor": 0,
-      "updated": "2026-10-03T11:34:45+08:00",
+      "updated": "2026-10-21T10:04:30+08:00",
       "downloads": 50,
       "thumb": {
         "w": 64,
@@ -8179,7 +8179,7 @@
             "y": 10
           },
           {
-            "x": 11,
+            "x": 12,
             "y": 48
           }
         ],
@@ -9152,7 +9152,7 @@
       "deposits": 23,
       "decor": 0,
       "updated": "2026-10-08T12:37:28+08:00",
-      "downloads": 34,
+      "downloads": 35,
       "thumb": {
         "w": 64,
         "h": 59,
@@ -9296,7 +9296,7 @@
       "deposits": 134,
       "decor": 65,
       "updated": "2026-10-13T08:54:22+08:00",
-      "downloads": 53,
+      "downloads": 54,
       "thumb": {
         "w": 58,
         "h": 64,
@@ -10071,19 +10071,19 @@
       "spawns": 4,
       "deposits": 52,
       "decor": 0,
-      "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 158,
+      "updated": "2026-10-21T09:59:44+08:00",
+      "downloads": 161,
       "thumb": {
         "w": 64,
         "h": 53,
-        "terrain": "CAMuARIDLgESAy4BEgMuARIDLgESAy4BEgMuARIDLgEKA/8B/wH/Af8B/wH/Af8B/wH/AQkDNwERAy8BEQMvAREDLwERAy8BEQMvAREDLwERAy8BEQMvAQkD",
+        "terrain": "CAMwARADMAEQAzABEAMwARADMAEQAzABEAMwARADMAEIA/8B/wH/Af8B/wH/Af8B/wH/AUkBCAMwARADMAEQAzABEAMwARADMAEQAzABEAMwARADMAEIAw==",
         "spawns": [
           {
             "x": 57,
-            "y": 45
+            "y": 46
           },
           {
-            "x": 56,
+            "x": 57,
             "y": 6
           },
           {
@@ -10157,7 +10157,7 @@
             "y": 0
           },
           {
-            "x": 2,
+            "x": 3,
             "y": 0
           },
           {
@@ -10169,7 +10169,7 @@
             "y": 1
           },
           {
-            "x": 2,
+            "x": 3,
             "y": 1
           },
           {
@@ -10181,11 +10181,11 @@
             "y": 3
           },
           {
-            "x": 2,
+            "x": 3,
             "y": 3
           },
           {
-            "x": 1,
+            "x": 2,
             "y": 2
           },
           {
@@ -10197,7 +10197,7 @@
             "y": 0
           },
           {
-            "x": 1,
+            "x": 2,
             "y": 0
           },
           {
@@ -10500,7 +10500,7 @@
       "deposits": 35,
       "decor": 0,
       "updated": "2026-10-04T11:38:06+08:00",
-      "downloads": 104,
+      "downloads": 107,
       "thumb": {
         "w": 64,
         "h": 36,
@@ -10708,7 +10708,7 @@
       "deposits": 63,
       "decor": 0,
       "updated": "2026-10-04T11:37:40+08:00",
-      "downloads": 51,
+      "downloads": 52,
       "thumb": {
         "w": 64,
         "h": 34,
@@ -11027,12 +11027,12 @@
       "spawns": 8,
       "deposits": 83,
       "decor": 0,
-      "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 96,
+      "updated": "2026-10-21T09:59:44+08:00",
+      "downloads": 97,
       "thumb": {
         "w": 64,
         "h": 53,
-        "terrain": "kAAEARgABAETAAEBDAIFAQcCBwAIAgUBDAIBAQYAAQIMAwUBCAMFAAUDAREDAwUBDAMBAQYAAQIGAwEGBQMEAQMDAQIGAwQACQMFAQUDAQYGAwEBBgABAgEDAQYCAgcDBQEDAwECBgMDAAsDBQEEAwECAgMBAgEDAQYBAwEBBgABAgQDAgIDAwEHBAMBAQMDAQIFAwERAQMBAgIAAgMBEQQDAgICAwIBBQMBAgEDAwIEAwEBBgABAgEEBQMCAgQDAQIBAwERAQMCAgQDAQIEAwIAAwMBAgUDAQIBAwIRAQMBAgQDAgIEAwIEAQEGAAECAgQFAwECAwMBAQQRAQIBEQUDAgICAwIAAQMCAgcDAQIEEQoDAgQBAQYAAQIDBAcDAwEBEQIBBAMCBQMDBgYDAwEFBQMBAQIRAgEIAwMEAQEGAAECAwQHAwcBAQMBBQEDBQUBAwQGAQMFBQEDAQUBAwYBCAMDBAEBBgABAgMECAMFAQEDAQUHAwIGAhEBBgoDBQEHAwQEAQEGAAECAwQEAwECAQYBAwUBCgMCBgEDAgYLAwQBAQMBBgECBQMDBAEBBgABAgMEBwMFAQMDAxEEAwECBAMBAgQDAhEEAwUBAgMBAgQDAwQBAQYAAQICBAQDAQICAwUBBwMBAgUDAgUCAwECAQMBAgcDBQEBAgIDAQIEAwIEAQEGAAECBQMBAgMDBQEIAwECBAMCBQMDAQIJAwUBAwMBAgUDAQEGAAECBAMBAgQDBQENAwIFBAMBAggDBAEFAwECBAMBAQYAAQIBBgMDAgYDAwUBAQMCBgMDAQYOAwEGAwMBBgEDBQEEAwEGAwMCBgEBBgABAgoDBAEKAwICAQYBAwEGAgIKAwUBCQMBAgEBBgABAgoDBQEGAwICCgMCAgYDBQEKAwEBBgABAgEGCQMFAQUDAQYEAwEBBAMBAQQDAQYFAwQBBQMBBgQDAQYHAAECAQYDAwIGAwMGAQIGAwMBBgMDAQIBAQEABAIEAwEGAwMBBgcBAwMBBgMDAgYBAQYACAECAwkBBgMBAQEAAQECAAEBAQABAgYDCAEDAwgBBQAXAQIDAQEIAAECAgMWAQUAGgEIABkBBQAZAQoAGAEFABoBCAAZAQUAFgEDAwECAQEGAAEBAQIDAxUBBgADAQIDAgEDAwYBAQMBAQcDAQICAQIAAgEBAgcDBwEEAwIBAgMDAQYAAQIBBgMDAgYDAwYBAgYDAwEGBAMGAgQDAQYDAwEGBwEDAwEGAwMCBgcAAQIKAwUBCgMBAQQDAQEKAwQBCgMBAgcAAQIKAwQBBwMCAgEDAQIFAwICAQMBAgcDBQEKAwEBBgABAgEGCQMEAQYDAQYOAwEGBQMFAQQDAQYEAwEGAQEGAAECAQYDAwEGBAMFAQYDAQYGAwEFBwMBBgMDAQYCAwQBBAMBBgECAwMBBgEBBgABAgkDBQEIAwECBAMCBQQDAQIIAwUBAwMBAgUDAQEGAAECBQMBAgMDBQEIAwICAwMCBQMDAgIIAwQBAQICAwECBQMBAgEBBgABAgIEBAMBAgIDAQIEAQUDAREEAwECAgMBBQMDAQICAwECAQMBEQQDBQECAwICAwMDBAEBBgABAgMEBAMBAgIDBQEEAwIRBAMBAgQDAQIEAwIRBAMFAQEGAQMBAgQDAwQBAQYAAQIDBAcDBQEKAwUGCgMFAQcDBAQBAQYAAQIDBAgDBgEBBQMDBAUCBgIRAQYBAwMFBQMGAQcDBAQBAQYAAQIDBAcDBwEDAwMFAgMFBgIDBAUDAwYBCAMDBAEBBgABAgIECAMDAQMRAQMBEQYDAQICBgIDAQYBAgkDAxEDAQcDAwQBAQYAAQICBAUDAQIEAwQRAQIGAwECAwMCAAIDAQIHAwECBBEEAwECBQMCBAEBBgABAgYDAgIDAwICAQMBAQIDBgIDAwECAgADAwcCAQMBAQERAQMBAgUDAQIFAwECAQEGAAECAwMDAgMDAQcDAwERAQEDAwECBQMBEQEDAwALAwIBAwMCBwMDAgIEAwEBBgABAgEDAQYEAwEGBAMFAQMDAQIGAwQACgMEAQUDAQYEAwEGAQMBAQYAAQIMAwUBAwMBEQQDBQAFAwERAwMFAQwDAQEGAAECDAMFAQgDBgAEAwECAwMFAQsDAQIBAQYAFwELABcBxAA=",
+        "terrain": "kAAEARgABAETAAEBDAIFAQcCBwAIAgUBDAIBAQYAAQIMAwUBCAMFAAUDAREDAwUBDAMBAQYAAQIGAwEGBQMEAQMDAQIGAwQACQMFAQUDAQYGAwEBBgABAgEDAQYCAgcDBQEDAwECBgMDAAsDBQEEAwECAgMBAgEDAQYBAwEBBgABAgQDAgIDAwEHBAMBAQMDAQIFAwERAQMBAgIAAgMBEQQDAgICAwIBBQMBAgEDAwIEAwEBBgABAgEEBQMCAgQDAQIBAwERAQMCAgQDAQIEAwIAAwMBAgUDAQIBAwIRAQMBAgQDAgIEAwIEAQEGAAECAgQFAwECAwMBAQQRAQIBEQUDAgICAwIAAQMCAgcDAQIEEQoDAgQBAQYAAQIDBAcDAwEBEQIBBAMCBQMDBgYDAwEFBQMBAQIRAgEIAwMEAQEGAAECAwQHAwcBAQMBBQEDBQUBAwQGAQMFBQEDAQUBAwYBCAMDBAEBBgABAgMECAMFAQEDAQUHAwIGAhEBBgoDBQEHAwQEAQEGAAECAwQEAwECAQYBAwUBCgMCBgEDAgYLAwQBAQMBBgECBQMDBAEBBgABAgMEBwMFAQMDAxEEAwECBAMBAgQDAhEEAwUBAgMBAgQDAwQBAQYAAQICBAQDAQICAwUBBwMBAgUDAgUCAwECAQMBAgcDBQEBAgIDAQIEAwIEAQEGAAECBQMBAgMDBQEIAwECBAMCBQMDAQIJAwUBAwMBAgUDAQEGAAECBAMBAgQDBQENAwIFBAMBAggDBAEFAwECBAMBAQYAAQIBBgMDAgYDAwUBAQMCBgMDAQYOAwEGAwMBBgEDBQEEAwEGAwMCBgEBBgABAgoDBAEKAwICAQYBAwEGAgIKAwUBCQMBAgEBBgABAgoDBQEGAwICCgMCAgYDBQEKAwEBBgABAgEGCQMFAQUDAQYEAwEBBAMBAQQDAQYFAwQBBQMBBgQDAQYHAAECAQYDAwIGAwMGAQIGAwMBBgMDAQIBAQEABAIEAwEGAwMBBgcBAwMBBgMDAgYBAQYACAECAwkBBgMBAQEAAQECAAEBAQABAgYDCAEDAwgBBQAXAQIDAQEIAAECAgMWAQUAGgEIABkBBQAZAQoAGAEFABoBCAAZAQUAFgEDAwECAQEGAAEBAQIDAxUBBgADAQIDAgEDAwYBAQMBAQcDAQICAQIAAgEBAgcDBwEEAwIBAgMDAQYAAQIBBgMDAgYDAwYBAgYDAwEGBAMGAgQDAQYDAwEGBwEDAwEGAwMCBgcAAQIKAwUBCgMBAQQDAQEKAwQBCgMBAgcAAQIKAwQBBwMCAgEDAQIFAwICAQMBAgcDBQEKAwEBBgABAgEGCQMEAQYDAQYOAwEGBQMFAQQDAQYEAwEGAQEGAAECAQYDAwEGBAMFAQYDAQYGAwEFBwMBBgMDAQYCAwQBBAMBBgECAwMBBgEBBgABAgkDBQEIAwECBAMCBQQDAQIIAwUBAwMBAgUDAQEGAAECBQMBAgMDBQEIAwICAwMCBQMDAgIIAwQBAQICAwECBQMBAgEBBgABAgIEBAMBAgIDAQIEAQUDAREEAwECAgMBBQMDAQICAwECAQMBEQQDBQECAwICAwMDBAEBBgABAgMEBAMBAgIDBQEEAwIRBAMBAgQDAQIEAwIRBAMFAQEGAQMBAgQDAwQBAQYAAQIDBAcDBQEKAwUGCgMFAQcDBAQBAQYAAQIDBAgDBgEBBQMDBAUCBgIRAQYBAwMFBQMGAQcDBAQBAQYAAQIDBAcDBwEDAwMFAgMFBgIDBAUDAwYBCAMDBAEBBgABAgIECAMDAQMRAQMBEQYDAQIBBgEDAQIBAwEGAQIJAwMRAwEHAwMEAQEGAAECAgQFAwECBAMEEQECBgMBAgMDAgACAwECBwMBAgQRBAMBAgUDAgQBAQYAAQIGAwICAwMCAgEDAQECAwYCAwMBAgIAAwMHAgEDAQEBEQEDAQIFAwECBQMBAgEBBgABAgMDAwIDAwEHAwMBEQEBAwMBAgUDAREBAwMACwMCAQMDAgcDAwICBAMBAQYAAQIBAwEGBAMBBgQDBQEDAwECBgMEAAoDBAEFAwEGBAMBBgEDAQEGAAECDAMFAQMDAREEAwUABQMBEQMDBQEMAwEBBgABAgwDBQEIAwYABAMBAgMDBQELAwECAQEGABcBCwAXAcQA",
         "spawns": [
           {
             "x": 6,
@@ -11047,7 +11047,7 @@
             "y": 20
           },
           {
-            "x": 56,
+            "x": 57,
             "y": 20
           },
           {
@@ -11063,7 +11063,7 @@
             "y": 32
           },
           {
-            "x": 56,
+            "x": 57,
             "y": 32
           }
         ],
@@ -11428,7 +11428,7 @@
       "deposits": 324,
       "decor": 24,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 106,
+      "downloads": 107,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -12924,7 +12924,7 @@
       "deposits": 28,
       "decor": 13,
       "updated": "2026-10-04T11:48:40+08:00",
-      "downloads": 118,
+      "downloads": 121,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -13080,7 +13080,7 @@
       "deposits": 70,
       "decor": 0,
       "updated": "2026-10-04T11:37:31+08:00",
-      "downloads": 50,
+      "downloads": 51,
       "thumb": {
         "w": 64,
         "h": 36,
@@ -13427,19 +13427,19 @@
       "spawns": 4,
       "deposits": 52,
       "decor": 0,
-      "updated": "2026-10-03T11:34:45+08:00",
+      "updated": "2026-10-21T09:59:44+08:00",
       "downloads": 34,
       "thumb": {
         "w": 64,
         "h": 53,
-        "terrain": "CAIuARICLgESAi4BEgIuARICLgESAi4BEgIuARICLgEKAv8B/wH/Af8B/wH/Af8B/wH/AQkCNwERAi8BEQIvARECLwERAi8BEQIvARECLwERAi8BEQIvAQkC",
+        "terrain": "CAIwARACMAEQAjABEAIwARACMAEQAjABEAIwARACMAEIAv8B/wH/Af8B/wH/Af8B/wH/AUkBCAIwARACMAEQAjABEAIwARACMAEQAjABEAIwARACMAEIAg==",
         "spawns": [
           {
             "x": 57,
-            "y": 45
+            "y": 46
           },
           {
-            "x": 56,
+            "x": 57,
             "y": 6
           },
           {
@@ -13513,7 +13513,7 @@
             "y": 0
           },
           {
-            "x": 2,
+            "x": 3,
             "y": 0
           },
           {
@@ -13525,7 +13525,7 @@
             "y": 1
           },
           {
-            "x": 2,
+            "x": 3,
             "y": 1
           },
           {
@@ -13537,11 +13537,11 @@
             "y": 3
           },
           {
-            "x": 2,
+            "x": 3,
             "y": 3
           },
           {
-            "x": 1,
+            "x": 2,
             "y": 2
           },
           {
@@ -13553,7 +13553,7 @@
             "y": 0
           },
           {
-            "x": 1,
+            "x": 2,
             "y": 0
           },
           {
@@ -13688,7 +13688,7 @@
       "deposits": 13,
       "decor": 0,
       "updated": "2026-10-04T11:37:22+08:00",
-      "downloads": 32,
+      "downloads": 33,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -13774,7 +13774,7 @@
       "deposits": 14,
       "decor": 0,
       "updated": "2026-10-20T22:45:59+08:00",
-      "downloads": 0,
+      "downloads": 1,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -13874,7 +13874,7 @@
       "deposits": 129,
       "decor": 34,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 118,
+      "downloads": 119,
       "thumb": {
         "w": 64,
         "h": 40,
@@ -14458,7 +14458,7 @@
       "deposits": 271,
       "decor": 0,
       "updated": "2026-10-04T11:37:06+08:00",
-      "downloads": 72,
+      "downloads": 73,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -15610,7 +15610,7 @@
       "deposits": 280,
       "decor": 0,
       "updated": "2026-10-08T12:37:40+08:00",
-      "downloads": 56,
+      "downloads": 57,
       "thumb": {
         "w": 64,
         "h": 45,
@@ -16798,7 +16798,7 @@
       "deposits": 91,
       "decor": 0,
       "updated": "2026-10-08T12:37:24+08:00",
-      "downloads": 58,
+      "downloads": 59,
       "thumb": {
         "w": 64,
         "h": 25,
@@ -17801,7 +17801,7 @@
       "spawns": 4,
       "deposits": 24,
       "decor": 10,
-      "updated": "2026-10-03T11:34:45+08:00",
+      "updated": "2026-10-21T10:04:30+08:00",
       "downloads": 77,
       "thumb": {
         "w": 64,
@@ -17813,7 +17813,7 @@
             "y": 9
           },
           {
-            "x": 52,
+            "x": 53,
             "y": 46
           },
           {
@@ -17821,7 +17821,7 @@
             "y": 8
           },
           {
-            "x": 13,
+            "x": 14,
             "y": 48
           }
         ],
@@ -17949,8 +17949,8 @@
       "spawns": 8,
       "deposits": 240,
       "decor": 0,
-      "updated": "2026-10-08T12:37:30+08:00",
-      "downloads": 37,
+      "updated": "2026-10-21T09:59:44+08:00",
+      "downloads": 38,
       "thumb": {
         "w": 50,
         "h": 30,
@@ -17961,7 +17961,7 @@
             "y": 3
           },
           {
-            "x": 42,
+            "x": 43,
             "y": 3
           },
           {
@@ -17969,7 +17969,7 @@
             "y": 8
           },
           {
-            "x": 42,
+            "x": 43,
             "y": 8
           },
           {
@@ -17977,7 +17977,7 @@
             "y": 20
           },
           {
-            "x": 41,
+            "x": 43,
             "y": 20
           },
           {
@@ -17985,7 +17985,7 @@
             "y": 25
           },
           {
-            "x": 41,
+            "x": 43,
             "y": 25
           }
         ],
@@ -18955,19 +18955,19 @@
     },
     {
       "slug": "two-coast-lanes-2v2",
-      "name": "Two Coast Lanes (2v2)",
+      "name": "Two Coast Lanes",
       "description": "Cliff-lined banks flank a central waterway, with narrow land routes linking the opposing shores.",
       "translations": {
         "en": {
-          "name": "Two Coast Lanes (2v2)",
+          "name": "Two Coast Lanes",
           "description": "Cliff-lined banks flank a central waterway, with narrow land routes linking the opposing shores."
         },
         "zh": {
-          "name": "海岸两线（2v2）",
+          "name": "海岸两线",
           "description": "悬崖河岸夹住中央水道，狭窄陆路连接相对的两岸。"
         },
         "ko": {
-          "name": "해안의 두 길 (2v2)",
+          "name": "해안의 두 길",
           "description": "절벽으로 둘러싸인 양안 사이에 중앙 물길이 흐르고, 좁은 육로가 서로 마주한 해안을 잇는다."
         }
       },
@@ -18977,8 +18977,8 @@
       "spawns": 4,
       "deposits": 32,
       "decor": 0,
-      "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 213,
+      "updated": "2026-10-21T10:15:28+08:00",
+      "downloads": 214,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -18994,11 +18994,11 @@
           },
           {
             "x": 59,
-            "y": 13
+            "y": 14
           },
           {
             "x": 59,
-            "y": 39
+            "y": 38
           }
         ],
         "deposits": [
@@ -19028,31 +19028,31 @@
           },
           {
             "x": 54,
-            "y": 39
+            "y": 38
           },
           {
             "x": 54,
-            "y": 13
+            "y": 14
           },
           {
             "x": 63,
-            "y": 13
+            "y": 14
           },
           {
             "x": 63,
-            "y": 11
+            "y": 12
           },
           {
             "x": 63,
-            "y": 15
+            "y": 16
           },
           {
             "x": 63,
-            "y": 39
+            "y": 38
           },
           {
             "x": 63,
-            "y": 37
+            "y": 36
           },
           {
             "x": 63,
@@ -19135,19 +19135,19 @@
     },
     {
       "slug": "two-coast-lanes-3v3",
-      "name": "Two Coast Lanes (3v3)",
+      "name": "Two Coast Lanes: Central Island",
       "description": "Cliff-lined banks flank a central waterway, with narrow land routes linking the opposing shores.",
       "translations": {
         "en": {
-          "name": "Two Coast Lanes (3v3)",
+          "name": "Two Coast Lanes: Central Island",
           "description": "Cliff-lined banks flank a central waterway, with narrow land routes linking the opposing shores."
         },
         "zh": {
-          "name": "海岸两线（3v3）",
+          "name": "海岸两线：中央岛",
           "description": "悬崖河岸夹住中央水道，狭窄陆路连接相对的两岸。"
         },
         "ko": {
-          "name": "해안의 두 길 (3v3)",
+          "name": "해안의 두 길: 중앙 섬",
           "description": "절벽으로 둘러싸인 양안 사이에 중앙 물길이 흐르고, 좁은 육로가 서로 마주한 해안을 잇는다."
         }
       },
@@ -19157,12 +19157,12 @@
       "spawns": 6,
       "deposits": 42,
       "decor": 0,
-      "updated": "2026-10-03T11:34:45+08:00",
+      "updated": "2026-10-21T10:15:28+08:00",
       "downloads": 35,
       "thumb": {
         "w": 64,
         "h": 57,
-        "terrain": "CwMBAgQBAQAFARkABAEBAhcDAQIEAQEAAQEBAgEDAQIBARMAAQEDAgEBAQAEAQECFwMBAgQBAQABAQMCAQETAAEBAQIBAwECAQEBAAQBAQIXAwECBAEBAAUBEwABAQMCAQEBAAQBAQIXAwECBAEZAAUBAQAEAQECFwMBAgQBHwAEAQECFwMBAgQBDQADAQ8ABAEBAhcDAQIEAQ0AAQECAg8ABAEBAhcDAQIEAQ0AAwEPAAQBAQIXAwECBAEfAAQBAQIXAwECBAEfAAQBAQIXAwECBAEFAAQBDQAEAQUABAEBAhcDAQIEAQUAAQECAgEBDQABAQICAQEFAAQBAQIXAwECBAEFAAEBAQIBAwEBDQABAQICAQEFAAQBAQIXAwECBAEFAAEBAgIBAQ0AAQECAgEBBQAEAQECFwMBAgQBBQAEAQ0ABAEFAAQBAQIXAwECBAEfAAQBAQIXAwECBAEfAAQBAQIXAwECBAEfAAQBAQIXAwECBAEfAAQBAQIXAwECBAEfAAQBAQIXAwECBAEfAAQBAQIXAwECBAEfAAQBAQIXAwECBAEfAAQBAQIXAwECBAEfAAQBAQIXAwECBAEDAAQBBQABAQQCAQEHAAMBAwAEAQECFwMBAgQBAwABAQICAQEFAAEBAQICAwECAQEHAAICAQEDAAQBAQIXAwECBAEDAAEBAgIBAQUAAQEBAgIDAQIBAQcAAgIBAQMABAEBAhcDAQIEAQMAAQECAgEBBQABAQECAgMBAgEBBwACAgEBAwAEAQECFwMBAgQBAwABAQICAQEFAAEBBAIBAQcAAgIBAQMABAEBAhcDAQIEAQMABAEFAAYBBwADAQMABAEBAhcDAQIEAR8ABAEBAhcDAQIEAR8ABAEBAhcDAQIEAR8ABAEBAhcDAQIEAR8ABAEBAhcDAQIEAR8ABAEBAhcDAQIEAR8ABAEBAhcDAQIEAR8ABAEBAhcDAQIEAR8ABAEBAhcDAQIEAR8ABAEBAhcDAQIEAR8ABAEBAhcDAQIEAR8ABAEBAhcDAQIEAR8ABAEBAhcDAQIEAQUABAENAAQBBQAEAQECFwMBAgQBBQABAQICAQENAAEBAgIBAQUABAEBAhcDAQIEAQUAAQEBAgEDAQENAAEBAgIBAQUABAEBAhcDAQIEAQUAAQECAgEBDQABAQICAQEFAAQBAQIXAwECBAEFAAQBDQAEAQUABAEBAhcDAQIEAQ4AAwEOAAQBAQIXAwECBAEOAAEBAQIBAQ4ABAEBAhcDAQIEAQ4AAwEOAAQBAQIXAwECBAEBAAUBEwAFAQEABAEBAhcDAQIEAQEAAQEDAgEBEwABAQMCAQEBAAQBAQIXAwECBAEBAAEBAQIBAwECAQETAAEBAQIBAwECAQEBAAQBAQIXAwECBAEBAAEBAwIBARMAAQEDAgEBAQAEAQECFwMBAgQBAQAFARMABQEBAAQBAQIXAwECBAEfAAQBAQIMAw==",
+        "terrain": "CwMBAgQBHwAEAQECFwMBAgQBAQABAQMCAQETAAEBAwIBAQEABAEBAhcDAQIEAQEAAQEBAgEDAQIBARMAAQEBAgEDAQIBAQEABAEBAhcDAQIEAQEAAQEDAgEBEwABAQMCAQEBAAQBAQIXAwECBAEBAAUBEwAFAQEABAEBAhcDAQIEAR8ABAEBAhcDAQIEAQ0AAwEPAAQBAQIXAwECBAENAAEBAgIPAAQBAQIXAwECBAENAAMBDwAEAQECFwMBAgQBHwAEAQECFwMBAgQBHwAEAQECFwMBAgQBBQAEAQ0ABAEFAAQBAQIXAwECBAEFAAEBAgIBAQ0AAQECAgEBBQAEAQECFwMBAgQBBQABAQECAQMBAQ0AAQECAgEBBQAEAQECFwMBAgQBBQABAQICAQENAAEBAgIBAQUABAEBAhcDAQIEAQUABAENAAQBBQAEAQECFwMBAgQBHwAEAQECFwMBAgQBHwAEAQECFwMBAgQBHwAEAQECFwMBAgQBHwAEAQECFwMBAgQBHwAEAQECFwMBAgQBHwAEAQECFwMBAgQBHwAEAQECFwMBAgQBHwAEAQECFwMBAgQBHwAEAQECFwMBAgQBAwAEAQUAAQEEAgEBBwADAQMABAEBAhcDAQIEAQMAAQECAgEBBQABAQECAgMBAgEBBwACAgEBAwAEAQECFwMBAgQBAwABAQICAQEFAAEBAQICAwECAQEHAAICAQEDAAQBAQIXAwECBAEDAAEBAgIBAQUAAQEBAgIDAQIBAQcAAgIBAQMABAEBAhcDAQIEAQMAAQECAgEBBQABAQQCAQEHAAICAQEDAAQBAQIXAwECBAEDAAQBBQAGAQcAAwEDAAQBAQIXAwECBAEfAAQBAQIXAwECBAEfAAQBAQIXAwECBAEfAAQBAQIXAwECBAEfAAQBAQIXAwECBAEfAAQBAQIXAwECBAEfAAQBAQIXAwECBAEfAAQBAQIXAwECBAEfAAQBAQIXAwECBAEfAAQBAQIXAwECBAEfAAQBAQIXAwECBAEfAAQBAQIXAwECBAEfAAQBAQIXAwECBAEFAAQBDQAEAQUABAEBAhcDAQIEAQUAAQECAgEBDQABAQICAQEFAAQBAQIXAwECBAEFAAEBAQIBAwEBDQABAQICAQEFAAQBAQIXAwECBAEFAAEBAgIBAQ0AAQECAgEBBQAEAQECFwMBAgQBBQAEAQ0ABAEFAAQBAQIXAwECBAEOAAMBDgAEAQECFwMBAgQBDgABAQECAQEOAAQBAQIXAwECBAEOAAMBDgAEAQECFwMBAgQBAQAFARMABQEBAAQBAQIXAwECBAEBAAEBAwIBARMAAQEDAgEBAQAEAQECFwMBAgQBAQABAQECAQMBAgEBEwABAQECAQMBAgEBAQAEAQECFwMBAgQBAQABAQMCAQETAAEBAwIBAQEABAEBAhcDAQIEAQEABQETAAUBAQAEAQECFwMBAgQBHwAEAQECDAM=",
         "spawns": [
           {
             "x": 4,
@@ -19182,11 +19182,11 @@
           },
           {
             "x": 59,
-            "y": 26
+            "y": 27
           },
           {
             "x": 59,
-            "y": 47
+            "y": 45
           }
         ],
         "deposits": [
@@ -19256,23 +19256,19 @@
           },
           {
             "x": 63,
-            "y": 26
+            "y": 27
           },
           {
             "x": 63,
-            "y": 24
+            "y": 25
           },
           {
             "x": 63,
-            "y": 28
+            "y": 29
           },
           {
             "x": 54,
-            "y": 26
-          },
-          {
-            "x": 63,
-            "y": 47
+            "y": 27
           },
           {
             "x": 63,
@@ -19280,11 +19276,15 @@
           },
           {
             "x": 63,
-            "y": 48
+            "y": 43
+          },
+          {
+            "x": 63,
+            "y": 47
           },
           {
             "x": 54,
-            "y": 47
+            "y": 45
           },
           {
             "x": 29,
@@ -19304,7 +19304,7 @@
           },
           {
             "x": 19,
-            "y": 1
+            "y": 2
           },
           {
             "x": 43,
@@ -19363,19 +19363,19 @@
     },
     {
       "slug": "two-coast-lanes-4v4",
-      "name": "Two Coast Lanes (4v4)",
+      "name": "Two Coast Lanes: Island Chain",
       "description": "Cliff-lined banks flank a central waterway, with narrow land routes linking the opposing shores.",
       "translations": {
         "en": {
-          "name": "Two Coast Lanes (4v4)",
+          "name": "Two Coast Lanes: Island Chain",
           "description": "Cliff-lined banks flank a central waterway, with narrow land routes linking the opposing shores."
         },
         "zh": {
-          "name": "海岸两线（4v4）",
+          "name": "海岸两线：岛链",
           "description": "悬崖河岸夹住中央水道，狭窄陆路连接相对的两岸。"
         },
         "ko": {
-          "name": "해안의 두 길 (4v4)",
+          "name": "해안의 두 길: 열도",
           "description": "절벽으로 둘러싸인 양안 사이에 중앙 물길이 흐르고, 좁은 육로가 서로 마주한 해안을 잇는다."
         }
       },
@@ -19385,15 +19385,15 @@
       "spawns": 8,
       "deposits": 46,
       "decor": 0,
-      "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 116,
+      "updated": "2026-10-21T10:15:28+08:00",
+      "downloads": 117,
       "thumb": {
         "w": 64,
         "h": 57,
         "terrain": "CwMBAgQBHwAEAQECFwMBAgQBAgAFARIABAECAAQBAQIXAwECBAECAAEBAwIBARIAAwIBAQIABAEBAhcDAQIEAQIAAQEBAgEDAQIBARIAAQIBAwECAQECAAQBAQIXAwECBAECAAEBAwIBARIAAwIBAQIABAEBAhcDAQIEAQIABQESAAQBAgAEAQECFwMBAgQBDgACAQ8ABAEBAhcDAQIEAQ0ABAEOAAQBAQIXAwECBAEMAAIBAgICAQ0ABAEBAhcDAQIEAQwAAgECAgIBDQAEAQECFwMBAgQBDQAEAQ4ABAEBAhcDAQIEAQ4AAgEPAAQBAQIXAwECBAEfAAQBAQIXAwECBAECAAUBEgAEAQIABAEBAhcDAQIEAQIAAQEDAgEBEgADAgEBAgAEAQECFwMBAgQBAgABAQECAQMBAgEBEgABAgEDAQIBAQIABAEBAhcDAQIEAQIABQESAAQBAgAEAQECFwMBAgQBDgACAQ8ABAEBAhcDAQIEAQ0ABAEOAAQBAQIXAwECBAEMAAIBAgICAQ0ABAEBAhcDAQIEAQwAAgEBAgEDAgENAAQBAQIXAwECBAEMAAIBAgICAQ0ABAEBAhcDAQIEAQ0ABAEOAAQBAQIXAwECBAEOAAIBDwAEAQECFwMBAgQBHwAEAQECFwMBAgQBAgABAQMCAQESAAMCAQECAAQBAQIXAwECBAECAAEBAQIBAwECAQESAAECAQMBAgEBAgAEAQECFwMBAgQBAgABAQMCAQESAAMCAQECAAQBAQIXAwECBAECAAUBEgAEAQIABAEBAhcDAQIEAQ4AAgEPAAQBAQIXAwECBAENAAQBDgAEAQECFwMBAgQBDAACAQICAgENAAQBAQIXAwECBAEMAAIBAgICAQ0ABAEBAhcDAQIEAQ0ABAEOAAQBAQIXAwECBAEOAAIBDwAEAQECFwMBAgQBHwAEAQECFwMBAgQBHwAEAQECFwMBAgQBAgAFARIABAECAAQBAQIXAwECBAECAAEBAwIBARIAAwIBAQIABAEBAhcDAQIEAQIAAQEBAgEDAQIBARIAAQIBAwECAQECAAQBAQIXAwECBAECAAUBEgAEAQIABAEBAhcDAQIEAR8ABAEBAhcDAQIEAR8ABAEBAhcDAQIEAQ4AAgEPAAQBAQIXAwECBAENAAQBDgAEAQECFwMBAgQBDAACAQICAgENAAQBAQIXAwECBAEMAAIBAQIBAwIBDQAEAQECFwMBAgQBDAACAQICAgENAAQBAQIXAwECBAEOAAMBDgAEAQECFwMBAgQBHwAEAQECFwMBAgQBAgAFARIABAECAAQBAQIXAwECBAECAAEBAwIBARIAAwIBAQIABAEBAhcDAQIEAQIAAQEBAgEDAQIBARIAAQIBAwECAQECAAQBAQIXAwECBAECAAEBAwIBARIAAwIBAQIABAEBAhcDAQIEAQIABQESAAQBAgAEAQECFwMBAgQBHwAEAQECFwMBAgQBHwAEAQECDAM=",
         "spawns": [
           {
-            "x": 5,
+            "x": 4,
             "y": 8
           },
           {
@@ -19499,7 +19499,7 @@
             "y": 8
           },
           {
-            "x": 9,
+            "x": 8,
             "y": 8
           },
           {
@@ -19896,7 +19896,7 @@
       "deposits": 184,
       "decor": 8,
       "updated": "2026-10-20T23:08:10+08:00",
-      "downloads": 0,
+      "downloads": 5,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -20700,7 +20700,7 @@
       "deposits": 10,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 16,
+      "downloads": 17,
       "thumb": {
         "w": 64,
         "h": 64,
