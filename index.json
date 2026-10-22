@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-10-21T09:24:14.828Z",
+  "generated": "2026-10-22T02:42:49.340Z",
   "maps": [
     {
       "slug": "1v1v1v1",
@@ -144,7 +144,7 @@
       "deposits": 30,
       "decor": 0,
       "updated": "2026-10-21T10:15:28+08:00",
-      "downloads": 102,
+      "downloads": 107,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -434,7 +434,7 @@
       "deposits": 102,
       "decor": 4,
       "updated": "2026-10-20T23:06:27+08:00",
-      "downloads": 2,
+      "downloads": 3,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -1162,7 +1162,7 @@
       "deposits": 243,
       "decor": 35,
       "updated": "2026-10-13T09:07:48+08:00",
-      "downloads": 25,
+      "downloads": 26,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -2202,7 +2202,7 @@
       "deposits": 103,
       "decor": 18,
       "updated": "2026-10-21T09:59:44+08:00",
-      "downloads": 50,
+      "downloads": 52,
       "thumb": {
         "w": 64,
         "h": 35,
@@ -2682,7 +2682,7 @@
       "deposits": 48,
       "decor": 22,
       "updated": "2026-10-08T12:37:31+08:00",
-      "downloads": 32,
+      "downloads": 35,
       "thumb": {
         "w": 64,
         "h": 54,
@@ -2926,7 +2926,7 @@
       "deposits": 12,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 38,
+      "downloads": 39,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -3028,7 +3028,7 @@
       "deposits": 240,
       "decor": 0,
       "updated": "2026-10-20T23:10:11+08:00",
-      "downloads": 2,
+      "downloads": 3,
       "thumb": {
         "w": 50,
         "h": 30,
@@ -4056,7 +4056,7 @@
       "deposits": 265,
       "decor": 318,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 705,
+      "downloads": 723,
       "thumb": {
         "w": 56,
         "h": 64,
@@ -5184,7 +5184,7 @@
       "deposits": 46,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 60,
+      "downloads": 61,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -5712,7 +5712,7 @@
       "deposits": 52,
       "decor": 0,
       "updated": "2026-10-21T10:04:30+08:00",
-      "downloads": 130,
+      "downloads": 132,
       "thumb": {
         "w": 64,
         "h": 54,
@@ -5988,7 +5988,7 @@
       "deposits": 52,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 31,
+      "downloads": 32,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -6264,7 +6264,7 @@
       "deposits": 48,
       "decor": 1,
       "updated": "2026-10-08T12:37:34+08:00",
-      "downloads": 54,
+      "downloads": 55,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -6516,7 +6516,7 @@
       "deposits": 301,
       "decor": 271,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 435,
+      "downloads": 442,
       "thumb": {
         "w": 63,
         "h": 64,
@@ -7788,7 +7788,7 @@
       "deposits": 78,
       "decor": 0,
       "updated": "2026-10-08T12:37:44+08:00",
-      "downloads": 33,
+      "downloads": 34,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -8160,7 +8160,7 @@
       "deposits": 26,
       "decor": 0,
       "updated": "2026-10-21T10:04:30+08:00",
-      "downloads": 50,
+      "downloads": 51,
       "thumb": {
         "w": 64,
         "h": 59,
@@ -8316,7 +8316,7 @@
       "deposits": 108,
       "decor": 0,
       "updated": "2026-10-08T12:37:21+08:00",
-      "downloads": 60,
+      "downloads": 63,
       "thumb": {
         "w": 64,
         "h": 27,
@@ -9296,7 +9296,7 @@
       "deposits": 134,
       "decor": 65,
       "updated": "2026-10-13T08:54:22+08:00",
-      "downloads": 55,
+      "downloads": 58,
       "thumb": {
         "w": 58,
         "h": 64,
@@ -10072,7 +10072,7 @@
       "deposits": 52,
       "decor": 0,
       "updated": "2026-10-21T09:59:44+08:00",
-      "downloads": 161,
+      "downloads": 165,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -10500,7 +10500,7 @@
       "deposits": 35,
       "decor": 0,
       "updated": "2026-10-04T11:38:06+08:00",
-      "downloads": 109,
+      "downloads": 114,
       "thumb": {
         "w": 64,
         "h": 36,
@@ -10708,7 +10708,7 @@
       "deposits": 63,
       "decor": 0,
       "updated": "2026-10-04T11:37:40+08:00",
-      "downloads": 52,
+      "downloads": 54,
       "thumb": {
         "w": 64,
         "h": 34,
@@ -11028,7 +11028,7 @@
       "deposits": 83,
       "decor": 0,
       "updated": "2026-10-21T09:59:44+08:00",
-      "downloads": 97,
+      "downloads": 100,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -11428,7 +11428,7 @@
       "deposits": 324,
       "decor": 24,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 108,
+      "downloads": 112,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -12924,7 +12924,7 @@
       "deposits": 28,
       "decor": 13,
       "updated": "2026-10-04T11:48:40+08:00",
-      "downloads": 123,
+      "downloads": 130,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -13080,7 +13080,7 @@
       "deposits": 70,
       "decor": 0,
       "updated": "2026-10-04T11:37:31+08:00",
-      "downloads": 52,
+      "downloads": 54,
       "thumb": {
         "w": 64,
         "h": 36,
@@ -13428,7 +13428,7 @@
       "deposits": 52,
       "decor": 0,
       "updated": "2026-10-21T09:59:44+08:00",
-      "downloads": 34,
+      "downloads": 35,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -13774,7 +13774,7 @@
       "deposits": 14,
       "decor": 0,
       "updated": "2026-10-20T22:45:59+08:00",
-      "downloads": 1,
+      "downloads": 4,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -13874,7 +13874,7 @@
       "deposits": 129,
       "decor": 34,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 122,
+      "downloads": 124,
       "thumb": {
         "w": 64,
         "h": 40,
@@ -14458,7 +14458,7 @@
       "deposits": 271,
       "decor": 0,
       "updated": "2026-10-04T11:37:06+08:00",
-      "downloads": 73,
+      "downloads": 75,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -17230,7 +17230,7 @@
       "deposits": 126,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 106,
+      "downloads": 108,
       "thumb": {
         "w": 64,
         "h": 30,
@@ -17802,7 +17802,7 @@
       "deposits": 24,
       "decor": 10,
       "updated": "2026-10-21T10:04:30+08:00",
-      "downloads": 77,
+      "downloads": 81,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -18978,7 +18978,7 @@
       "deposits": 32,
       "decor": 0,
       "updated": "2026-10-21T10:15:28+08:00",
-      "downloads": 214,
+      "downloads": 216,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -19386,7 +19386,7 @@
       "deposits": 46,
       "decor": 0,
       "updated": "2026-10-21T10:15:28+08:00",
-      "downloads": 118,
+      "downloads": 121,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -19638,7 +19638,7 @@
       "deposits": 12,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 47,
+      "downloads": 49,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -19754,7 +19754,7 @@
       "deposits": 22,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 52,
+      "downloads": 54,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -19896,7 +19896,7 @@
       "deposits": 184,
       "decor": 8,
       "updated": "2026-10-20T23:08:10+08:00",
-      "downloads": 7,
+      "downloads": 11,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -20678,33 +20678,19 @@
     {
       "slug": "valley-pass-6p",
       "name": "Valley Pass",
-      "description": "Grassy valleys open onto a central passage, with rocky ridges and wooded ground along the side routes.",
-      "translations": {
-        "en": {
-          "name": "Valley Pass",
-          "description": "Grassy valleys open onto a central passage, with rocky ridges and wooded ground along the side routes."
-        },
-        "zh": {
-          "name": "山谷隘口",
-          "description": "草地山谷通向中央隘口，岩石山脊与林地分布在两侧通路旁。"
-        },
-        "ko": {
-          "name": "계곡 고개",
-          "description": "초원 계곡이 중앙 고개로 이어지고, 양옆 길을 따라 바위 능선과 숲이 자리한다."
-        }
-      },
+      "description": "A six-player valley battlefield with intersecting roads, forest cover and ten ore deposits. Fight across the central crossings and use the side approaches to flank.",
       "author": "Player",
       "w": 120,
       "h": 120,
       "spawns": 6,
       "deposits": 10,
       "decor": 0,
-      "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 17,
+      "updated": "2026-10-20T22:45:58+08:00",
+      "downloads": 18,
       "thumb": {
         "w": 64,
         "h": 64,
-        "terrain": "HwMCBT4DAgU+AwEFPwMBBS4DAwINAwMFLQMEAgwDAQUBAwEFLgMDAgwDAwUvAwICDAMCBTADBAIKAwIFMQMEAgkDAgURAwMCHQMEAgkDAwUNAwYCHgMDAgkDAwUHAwEEAwMHAiADAgIJAwMFCwMFAi4DBgUIAwMCEAMFAhQDBQUBAwUFAQMBBRoDBQIWAwUFAQMFBRoDBQIXAwIFIgMFAhUDAQQlAwQCPAMDAhUDAQRDAwECBgMCAhsDBQUDAxIFAwMBAgQDAQIDAwUFAQMXBQEDFgUHAwECBQMRBQEDBwUCAwgFAwMFBQQDAgUIAwICDAMCBQcDBgUeAwEEBAMBAg8DAQVXAwEEBAMBBBoDAQSbAwUCAgMBBTQDCgICAwEFJwMBAgQDBAIDAwcCAQUDAgcDBgUBAwEFAQMPBQEDAQUFAwUCAwMEAgMDCwIIAwgFAgMGBQEDBgUBAwEFAgMHAgMDBQIDAwsCBwMDBQEDCAUCAwYFAgMEBQwDBQIDAwoCIQMBBQ0DBAIDAwkCIQMCBQQDAQUJAwICBAMIAjgDBwIkAwECFAMBAigDAQIBAwECIgMCBEQDAQQbAwEFFwMEBQEDAwUdAwQFDwMDBQEDBQUBAwgFAQMHBQsDBgUBAwIFAgMLBQEDBAUCAwQFCgMGBQIDAwUPAwQFCgMGBTIDAQTpAwEFAQMBBQEDBAU4AwEFBAMCBQEDAQUCAwEFAgMBBDYDAgUSAwQCJwMDBREDBwITAwECEgMCBREDCQIPAwQCEQMCBREDAQIFAwQCDQMFAhEDAgUaAwECDQMFAgwDAQQEAwIFJwMFAhIDAgUnAwQCEwMCBT4DAgU+AwIFPgMCBT4DAwU9AwMFPQMBBQEDAQUeAw==",
+        "terrain": "HwMCBT4DAgU+AwEFPwMBBT4DAwU9AwEFAQMBBT0DAwU9AwIFPgMCBT4DAgU+AwMFPQMDBQcDAQQ1AwMFPgMGBTQDBQUBAwUFAQMBBTUDBQUBAwUFNgMCBTwDAQR9AwEEZwMFBQMDEgUMAwUFAQMXBQEDFgUNAxEFAQMHBQIDCAUDAwUFBAMCBRYDAgUHAwYFHgMBBBQDAQVXAwEEBAMBBBoDAQSiAwEFQAMBBToDAQUKAwYFAQMBBQEDDwUBAwEFJwMIBQIDBgUBAwYFAQMBBSYDAwUBAwgFAgMGBQIDBAU/AwEFPgMCBQQDAQXdAwIERAMBBBsDAQUXAwQFAQMDBR0DBAUPAwMFAQMFBQEDCAUBAwcFCwMGBQEDAgUCAwsFAQMEBQIDBAUKAwYFAgMDBQ8DBAUKAwYFMgMBBOkDAQUBAwEFAQMEBTgDAQUEAwIFAQMBBQIDAQUCAwEENgMCBT0DAwU+AwIFPgMCBT4DAgU5AwEEBAMCBT4DAgU+AwIFPgMCBT4DAgU+AwIFPgMDBT0DAwU9AwEFAQMBBR4D",
         "spawns": [
           {
             "x": 8,
