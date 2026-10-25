@@ -127,7 +127,7 @@ const DEFS = {
     radius: 8,
     weapons: [],
     body: { r: 8, len: 12 },
-    builds: ["extractor", "platform", "power", "factory", "factory3", "navyard", "navyard3", "airbase", "airbase3", "mgturret", "cannonturret", "aaturret", "interceptor", "repairtower", "sandbag", "landmine", "warlab", "radar", "veil", "reactor", "nukesilo", "hq"],
+    builds: ["extractor", "platform", "power", "factory", "factory3", "navyard", "navyard3", "airbase", "airbase3", "mgturret", "cannonturret", "aaturret", "flameturret", "interceptor", "repairtower", "sandbag", "landmine", "warlab", "radar", "veil", "reactor", "nukesilo", "hq"],
     buildRate: 30,
     trail: "tread",
     sprite: "u.engineer"
@@ -168,6 +168,7 @@ const DEFS = {
     power: -1,
     hp: 300,
     armor: "medium",
+    directionalArmor: { front: 0.8, side: 1, rear: 1.2 },
     speed: 75,
     turnRate: 4.5,
     vision: 7,
@@ -204,6 +205,7 @@ const DEFS = {
     power: -2,
     hp: 620,
     armor: "heavy",
+    directionalArmor: { front: 0.8, side: 1, rear: 1.2 },
     speed: 60,
     turnRate: 3.6,
     vision: 7,
@@ -220,6 +222,7 @@ const DEFS = {
       speed: 420,
       targets: ["ground", "ship"],
       turret: true,
+      recoil: 1.6,
       muzzleOffset: 35.7,
       splash: 12,
       sound: "cannon"
@@ -243,6 +246,7 @@ const DEFS = {
     power: -4,
     hp: 1900,
     armor: "heavy",
+    directionalArmor: { front: 0.8, side: 1, rear: 1.2 },
     speed: 42,
     turnRate: 2.6,
     vision: 7,
@@ -261,6 +265,7 @@ const DEFS = {
       targets: ["ground", "ship"],
       mult: { heavy: 1.1, structure: 1 },
       turret: true,
+      recoil: 2,
       muzzleOffset: 40.47,
       bores: 2,
       boreSpacing: 11.05,
@@ -471,8 +476,18 @@ const DEFS = {
       minRange: 4,
       projectile: "rocket",
       speed: 300,
+      // Inclined 2×3 muzzle face: pivot (512,520), columns x414/610,
+      // rows y291/431/584 on the 1024×1536 master. A 20×30 art frame
+      // at scale 1.5625; fire left/right pairs from front to rear.
       targets: ["ground", "ship"],
-      muzzleOffset: 23.4,
+      muzzlePoints: [
+        { forward: 6.988525390625, lateral: -2.99072265625 },
+        { forward: 6.988525390625, lateral: 2.99072265625 },
+        { forward: 2.716064453125, lateral: -2.99072265625 },
+        { forward: 2.716064453125, lateral: 2.99072265625 },
+        { forward: -1.953125, lateral: -2.99072265625 },
+        { forward: -1.953125, lateral: 2.99072265625 }
+      ],
       splash: 48,
       arc: true,
       burst: 8,
@@ -774,8 +789,8 @@ const DEFS = {
     // a pixel, and the length less the two round ends
     body: { r: 11, len: 14 },
     weapons: [w({
-      // the muzzle is 8.3 art px past the ring on `tur.gator` (the tip at a
-      // fifth of the sheet, the ring at three fifths), at the display scale
+      // tur.gator: measured pivot y=1000, muzzle y=300 on the 1536px
+      // master; 700/1536 * 21 art px * 1.5625 display scale
       id: "autocannon",
       cls: "autocannon",
       dmg: 20,
@@ -785,16 +800,15 @@ const DEFS = {
       speed: 520,
       targets: ["ground", "ship"],
       turret: true,
-      muzzleOffset: 13,
+      muzzleOffset: 14.95361328125,
       sound: "autocannon"
     })],
     trail: "tire",
     sprite: "u.gator",
     turretSprite: "tur.gator",
-    // the ring the sheet paints, an art px forward of the frame's centre
-    // (measured at 0.462 of the sheet's height; a body whose turret fires
-    // declares it here, not in the manifest)
-    turretMounts: [{ x: 0, y: -1 }]
+    // Aft ring at (512,880) on the 1024x1536 hull: (880/1536 - .5)*26.
+    // Rendering and firing share this mount; the hull's frame size stays put.
+    turretMounts: [{ x: 0, y: 1.8958333333333333 }]
   },
   // ------------------------------------------------------ the doctrines' own
   //
@@ -861,7 +875,16 @@ const DEFS = {
       mark: "cannon",
       sound: "expl"
     })],
-    sprite: "u.hornet"
+    sprite: "u.hornet",
+    // four props, one on each motor at the ends of its X (the code-drawn
+    // frame's motors, and the painted sheet's, measured), small, the
+    // diagonal pairs turning against each other as a quadcopter's do
+    rotors: [
+      { x: -7.3, y: -7.3, scale: 0.38, phase: 0, spin: 1, prop: true },
+      { x: 7.3, y: -7.3, scale: 0.38, phase: 0.7, spin: -1, prop: true },
+      { x: 7.3, y: 7.3, scale: 0.38, phase: 1.9, spin: 1, prop: true },
+      { x: -7.3, y: 7.3, scale: 0.38, phase: 2.6, spin: -1, prop: true }
+    ]
   },
   /**
    * **Anvil's recovery tank** (`fieldRecovery`): the armoured recovery
@@ -894,6 +917,7 @@ const DEFS = {
     body: { r: 13, len: 12 },
     weapons: [],
     repairRange: 4,
+    repairNavalRange: 6,
     repairRate: 12,
     repairTargets: 2,
     trail: "tread",
@@ -1050,9 +1074,9 @@ const DEFS = {
     vision: 10,
     sonar: 9,
     radius: 13,
-    // measured at the ship's display scale (core/metrics.ts): a beam of 42
+    // measured at the ship's display scale (core/metrics.ts): a beam of 46.2
     // world px, over a tile, so it needs two tiles of water abeam
-    body: { r: 21, len: 67.5 },
+    body: { r: 23.1, len: 74.25 },
     weapons: [
       w({
         // The deck gun works the surface; the forward VLS answers the sky.
@@ -1065,7 +1089,7 @@ const DEFS = {
         speed: 420,
         targets: ["ground", "ship"],
         turret: true,
-        muzzleOffset: 14.36,
+        muzzleOffset: 15.796,
         splash: 10,
         sound: "cannon"
       }),
@@ -1084,11 +1108,11 @@ const DEFS = {
         range: 8.5,
         projectile: "missile",
         speed: 430,
-        // Hatch grid centre: 8.2 art px forward at the hull's 2.625 scale.
+        // Hatch grid centre: 8.2 art px forward at the hull's 2.8875 scale.
         targets: ["air"],
         homing: true,
         vertical: true,
-        muzzleOffset: 21.525,
+        muzzleOffset: 23.6775,
         sound: "missile"
       }),
       w({
@@ -1114,6 +1138,7 @@ const DEFS = {
     turretMounts: [{ x: 0, y: -12.2 }]
   },
   // Retained for existing saves and authored scenarios; absent from yard menus.
+  // Ironworks supplies the buildable copy under its own ironworks-orca ID.
   destroyer: {
     id: "destroyer",
     kind: "unit",
@@ -1370,7 +1395,7 @@ const DEFS = {
   seatrans: {
     id: "seatrans",
     kind: "unit",
-    aliases: ["landingcraft", "lst"],
+    aliases: ["landingcraft", "lst", "lcac"],
     domain: "ship",
     tier: 1,
     cost: 220,
@@ -1382,12 +1407,13 @@ const DEFS = {
     speed: 70,
     turnRate: 2.8,
     vision: 8,
-    radius: 13,
-    transportCap: 4,
+    radius: 20,
+    transportCap: 8,
     // a ramp against a beach has more give than a hoist: a tenth more reach
     // to board it, collect with it, and come to the shore it unloads on
     cargoReach: 1.1,
-    body: { r: 10, len: 29 },
+    // The cushion skirt overhangs the firm hull; retain one-tile beach access.
+    body: { r: 14, len: 30 },
     weapons: [],
     trail: "wake",
     sprite: "u.seatrans"
@@ -1422,7 +1448,7 @@ const DEFS = {
     radius: 9,
     weapons: [],
     body: { r: 6, len: 18 },
-    builds: ["extractor", "platform", "power", "factory", "factory3", "navyard", "navyard3", "airbase", "airbase3", "mgturret", "cannonturret", "aaturret", "interceptor", "repairtower", "sandbag", "landmine", "watermine", "warlab", "radar", "veil", "reactor", "nukesilo", "hq"],
+    builds: ["extractor", "platform", "power", "factory", "factory3", "navyard", "navyard3", "airbase", "airbase3", "mgturret", "cannonturret", "aaturret", "flameturret", "interceptor", "repairtower", "sandbag", "landmine", "watermine", "warlab", "radar", "veil", "reactor", "nukesilo", "hq"],
     buildRate: 30,
     reach: 64,
     trail: "wake",
@@ -1629,7 +1655,8 @@ const DEFS = {
       ammo: 8,
       sound: "missile"
     })],
-    sprite: "u.heli"
+    sprite: "u.heli",
+    rotors: [{ x: 0, y: -2, scale: 1, phase: 0 }]
   },
   jet: {
     id: "jet",
@@ -1772,12 +1799,17 @@ const DEFS = {
     hovers: true,
     lowFlying: true,
     weapons: [],
-    sprite: "u.theli"
+    sprite: "u.theli",
+    // two in tandem, a step smaller, turning out of step
+    rotors: [
+      { x: 0, y: -6, scale: 0.9, phase: 0 },
+      { x: 0, y: 6, scale: 0.9, phase: Math.PI / 4 }
+    ]
   },
   c47: {
     id: "c47",
     kind: "unit",
-    aliases: ["skytrain", "dakota"],
+    aliases: ["condor", "cargoplane", "skytrain", "dakota"],
     domain: "air",
     tier: 2,
     cost: 650,
@@ -1791,7 +1823,8 @@ const DEFS = {
     vision: 9,
     radius: 15,
     altitude: 16,
-    transportCap: 5,
+    transportCap: 4,
+    transportMaxWeight: 2,
     landsForCargo: true,
     weapons: [],
     sprite: "u.c47"
@@ -1945,7 +1978,8 @@ const DEFS = {
       ammo: 2,
       sound: "torpedo"
     })],
-    sprite: "u.cormorant"
+    sprite: "u.cormorant",
+    rotors: [{ x: 0, y: -2, scale: 1, phase: 0 }]
   },
   /**
    * The nuclear warhead in flight. Not built at any factory: a silo or a
@@ -2069,7 +2103,7 @@ const DEFS = {
   /**
    * The headquarters defends itself, the way a tower does in a lane game:
    * a twin heavy machine gun on the roof ring where the helipad was, a
-   * shade stronger than the Gatling (79 dps to its 71) and reaching farther
+   * shade stronger than the Gatling (79 dps to its 76) and reaching farther
    * (7 tiles, measured from a centre that is already two
    * tiles from the wall, so five past it), so a buggy, a light tank, a
    * gunship or a machine-gun turret that comes for it pays while a howitzer
@@ -2671,8 +2705,8 @@ const DEFS = {
    * stands. The cyclic rate went up with it (0.35 → 0.25 s, about a third
    * more damage a second): a gun feeding two barrels in turn is faster than
    * one feeding a single barrel, and the pad wanted the help. It stops short
-   * of the Gatling it upgrades into, which reloads in 0.14 and has to stay
-   * worth the upgrade.
+   * of the Gatling it upgrades into, which fires fifteen rounds a second and
+   * has to stay worth the upgrade.
    */
   mgturret: {
     id: "mgturret",
@@ -2702,9 +2736,9 @@ const DEFS = {
       targets: ["ground", "ship", "air"],
       mult: { ship: 0.6, structure: 0.3 },
       turret: true,
-      muzzleOffset: 24.7,
+      muzzleOffset: 23.2,
       bores: 2,
-      boreSpacing: 5.75,
+      boreSpacing: 6.125,
       sound: "mg"
     })],
     upgradesTo: "gatling",
@@ -2713,8 +2747,19 @@ const DEFS = {
     sprite: "u.mgturret",
     turretSprite: "tur.mg",
     sound: "bld-cannonturret",
-    turretMounts: [{ x: 0, y: -4 }]
+    turretMounts: [{ x: 0, y: -2.5 }]
   },
+  /**
+   * The Gatling Turret: a rotary gun, and firing like one. Its barrels spin
+   * up for half a second before the first round (`spinUp`) and then it
+   * pours fifteen rounds a second, a round every other tick — `reload` sits
+   * just under two ticks because a cooldown runs out on the tick after it
+   * reaches nothing, and 0.14 had been firing every fifth (six a second).
+   * Lighter rounds, more of them: 76 dps by the book where 0.14 claimed 71,
+   * and 75 delivered where it delivered 60, the spin-up paid once an
+   * engagement. Its sound is the roar of the stream and the whine of the
+   * motor (`gatling` in `core/audio.ts`), not one report a round.
+   */
   gatling: {
     id: "gatling",
     kind: "building",
@@ -2736,21 +2781,22 @@ const DEFS = {
     weapons: [w({
       id: "gatling",
       cls: "mg",
-      dmg: 10,
-      reload: 0.14,
+      dmg: 5,
+      reload: 0.066,
       range: 6.5,
       projectile: "bullet",
       speed: 520,
       targets: ["ground", "ship", "air"],
       mult: { medium: 0.9, heavy: 0.5, air: 0.8, ship: 0.7, structure: 0.3 },
       turret: true,
-      muzzleOffset: 27.2,
-      sound: "mg"
+      muzzleOffset: 25.15,
+      spinUp: 0.5,
+      sound: "gatling"
     })],
     sprite: "u.gatling",
     turretSprite: "tur.gatling",
     sound: "bld-cannonturret",
-    turretMounts: [{ x: 0, y: -5 }]
+    turretMounts: [{ x: 0, y: -2.5 }]
   },
   cannonturret: {
     id: "cannonturret",
@@ -2781,7 +2827,8 @@ const DEFS = {
       targets: ["ground", "ship"],
       mult: { heavy: 1.1, structure: 0.6, ship: 1 },
       turret: true,
-      muzzleOffset: 29,
+      recoil: 1.8,
+      muzzleOffset: 27.6375,
       splash: 12,
       sound: "cannon"
     })],
@@ -2790,7 +2837,7 @@ const DEFS = {
     upgradeTime: 22,
     sprite: "u.cannonturret",
     turretSprite: "tur.cannon",
-    turretMounts: [{ x: 0, y: -4 }]
+    turretMounts: [{ x: 0, y: -2.5 }]
   },
   cannonturret2: {
     id: "cannonturret2",
@@ -2820,17 +2867,91 @@ const DEFS = {
       speed: 420,
       targets: ["ground", "ship"],
       mult: { heavy: 1.2, structure: 0.6, ship: 1.1 },
+      // Trunnions at y1296 of the 1120×2080 approval, tips at y13, bores
+      // 258.5 px apart; it is drawn in a 26×48 world-pixel frame.
       turret: true,
-      muzzleOffset: 40,
+      recoil: 2.2,
+      muzzleOffset: 29.6077,
       bores: 2,
-      boreSpacing: 7,
+      boreSpacing: 6.0009,
       splash: 14,
       burst: 2,
       burstDelay: 0.2,
       sound: "cannon"
     })],
     sprite: "u.cannonturret2",
-    turretSprite: "tur.cannon2"
+    turretSprite: "tur.cannon2",
+    turretMounts: [{ x: 0, y: -2.5 }]
+  },
+  /**
+   * The Drake's weapon on a gun pad. It pours rather than fires — a glob of
+   * burning fuel every tick for a second, sprayed across an arc and falling
+   * short of the aim by up to half — and the ground it washes over burns on
+   * for eight seconds under whoever stands in it, its own side included. It
+   * hits harder than any gun on a pad and reaches no further than the
+   * shortest of them: five tiles, the MG Turret's, past every tank's gun but
+   * the Mammoth's, so what takes it apart is what stands off — the Mammoth,
+   * the Viper's missiles, the guns that lob — while what closes is burned.
+   *
+   * - **The nozzle overheats.** After every pour it has to cool for two
+   *   seconds before the next (`overheat`): the reload, shown as the heat it
+   *   is. What it set alight fights for it meanwhile.
+   * - **Fireproof.** Whatever comes right up to it is burned on ground that
+   *   reaches the pad, so the pad takes none of its fire (`burnMult`), where
+   *   the Drake, which drives into its own, takes half.
+   * - **Soft on buildings**, like every gun on a pad, so it is no siege piece
+   *   for an engineer to creep forward.
+   *
+   * The AI does not build it, for the reason it does not field the Drake: a
+   * curtain laid where its own column fights burns the column.
+   */
+  flameturret: {
+    id: "flameturret",
+    kind: "building",
+    domain: "none",
+    tier: 1,
+    cost: 450,
+    buildTime: 22,
+    pop: 0,
+    hp: 900,
+    armor: "structure",
+    speed: 0,
+    turnRate: 0,
+    vision: 7,
+    radius: 14,
+    fw: 1,
+    fh: 1,
+    power: -4,
+    burnMult: 0,
+    weapons: [w({
+      // a glob a tick for a second, as the Drake pours, then two seconds of
+      // overheat: 110 dps over the cycle against the Drake's 90
+      id: "flametower",
+      cls: "he",
+      dmg: 11,
+      reload: 3,
+      range: 5,
+      projectile: "flame",
+      speed: 280,
+      targets: ["ground", "ship"],
+      mult: { light: 1.5, medium: 1.1, heavy: 0.5, ship: 0.5, structure: 0.5 },
+      // the nozzle's lip stands 846 px ahead of the trunnions on the
+      // 1040×1600 approval, drawn in a 26×40 world-pixel frame
+      turret: true,
+      muzzleOffset: 21.15,
+      splash: 38,
+      burst: 30,
+      burstDelay: 0.03,
+      fan: 0.24,
+      burn: 14,
+      burnLife: 8,
+      overheat: true,
+      sound: "flame"
+    })],
+    sprite: "u.flameturret",
+    turretSprite: "tur.flameturret",
+    sound: "bld-cannonturret",
+    turretMounts: [{ x: 0, y: -2.5 }]
   },
   aaturret: {
     id: "aaturret",
@@ -2859,7 +2980,7 @@ const DEFS = {
       speed: 480,
       targets: ["air"],
       turret: true,
-      muzzleOffset: 27.4,
+      muzzleOffset: 25.3875,
       sound: "flak"
     })],
     upgradesTo: "samsite",
@@ -2867,7 +2988,8 @@ const DEFS = {
     upgradeTime: 20,
     sprite: "u.aaturret",
     turretSprite: "tur.aa",
-    sound: "bld-cannonturret"
+    sound: "bld-cannonturret",
+    turretMounts: [{ x: 0, y: -2.5 }]
   },
   /**
    * The upgraded flak tower, and the one emplacement a nuclear warhead has to
@@ -2906,16 +3028,17 @@ const DEFS = {
       speed: 460,
       targets: ["air"],
       turret: true,
-      muzzleOffset: 20.5,
+      muzzleOffset: 19.95,
       bores: 4,
-      boreSpacing: 3.5,
+      boreSpacing: 3.6458,
       splash: 29,
       homing: true,
       sound: "missile"
     })],
     sprite: "u.samsite",
     turretSprite: "tur.samsite",
-    sound: "bld-cannonturret"
+    sound: "bld-cannonturret",
+    turretMounts: [{ x: 0, y: -2.5 }]
   },
   /**
    * Point defence. It cannot shoot at anything on the ground: its rounds are
@@ -2951,13 +3074,14 @@ const DEFS = {
     interceptRange: 7,
     interceptMag: 8,
     interceptReload: 0.75,
-    interceptMuzzleOffset: 19,
+    interceptMuzzleOffset: 13.9,
     upgradesTo: "interceptor2",
     upgradeCost: 650,
     upgradeTime: 36,
     sprite: "u.interceptor",
     turretSprite: "tur.interceptor",
-    sound: "bld-cannonturret"
+    sound: "bld-cannonturret",
+    turretMounts: [{ x: 0, y: -2.5 }]
   },
   interceptor2: {
     id: "interceptor2",
@@ -2981,10 +3105,11 @@ const DEFS = {
     interceptRange: 9,
     interceptMag: 12,
     interceptReload: 0.75,
-    interceptMuzzleOffset: 21.5,
+    interceptMuzzleOffset: 13.2,
     sprite: "u.interceptor2",
     turretSprite: "tur.interceptor2",
-    sound: "bld-cannonturret"
+    sound: "bld-cannonturret",
+    turretMounts: [{ x: 0, y: -2.5 }]
   },
   /**
    * The sandbag line: a tile of wall, and the cheapest hit points in the
@@ -3010,6 +3135,7 @@ const DEFS = {
     pop: 0,
     hp: 500,
     armor: "structure",
+    impactMaterial: "earth",
     speed: 0,
     turnRate: 0,
     vision: 3,
@@ -3107,6 +3233,8 @@ const DEFS = {
     weapons: [],
     power: -8,
     repairRange: 5.5,
+    repairAirRange: 8,
+    repairNavalRange: 8,
     repairRate: 20,
     repairTargets: 3,
     sprite: "u.repairtower"
@@ -3194,7 +3322,7 @@ const DEFS = {
     weapons: [],
     power: -20,
     requires: ["radar"],
-    jamRange: 8,
+    jamRange: 10,
     sprite: "u.veil",
     turretSprite: "tur.veil",
     turretSpins: true
@@ -3626,7 +3754,9 @@ function parseCustomMap(json, opts = {}) {
 const MAP_REGISTRY_REPO = "steel-tide/maps";
 const MAP_REGISTRY_WEB = `https://github.com/${MAP_REGISTRY_REPO}`;
 const MAP_REGISTRY_URL = `https://raw.githubusercontent.com/${MAP_REGISTRY_REPO}/main/index.json`;
+const MAP_CATALOG_URL = `https://raw.githubusercontent.com/${MAP_REGISTRY_REPO}/main/catalog.json`;
 const MAP_REGISTRY_DIR = "maps";
+const MAP_THUMB_DIR = "thumbs";
 const MAP_REGISTRY_RELEASE = "registry";
 const MAP_REGISTRY_COUNTS_URL = `https://api.github.com/repos/${MAP_REGISTRY_REPO}/releases/tags/${MAP_REGISTRY_RELEASE}`;
 function mapFileUrl(slug) {
@@ -3634,6 +3764,9 @@ function mapFileUrl(slug) {
 }
 function mapCountUrl(slug) {
   return `${MAP_REGISTRY_WEB}/releases/download/${MAP_REGISTRY_RELEASE}/${slug}${CUSTOM_MAP_EXT}`;
+}
+function mapThumbUrl(slug, hash) {
+  return `https://raw.githubusercontent.com/${MAP_REGISTRY_REPO}/main/${MAP_THUMB_DIR}/${slug}/${hash}.json`;
 }
 function mapPageUrl(slug) {
   return `${MAP_REGISTRY_WEB}/blob/main/${MAP_REGISTRY_DIR}/${slug}${CUSTOM_MAP_EXT}`;
@@ -3656,9 +3789,13 @@ function slugify(name) {
   return `map-${(h >>> 0).toString(16).padStart(8, "0").slice(0, 6)}`;
 }
 const THUMB_MAX = 64;
+const THUMB_HASH_RE = /^[0-9a-f]{16}$/;
+function thumbSize(w2, h) {
+  const scale = Math.min(1, THUMB_MAX / Math.max(w2, h));
+  return { w: Math.max(1, Math.round(w2 * scale)), h: Math.max(1, Math.round(h * scale)) };
+}
 function thumbOf(data) {
-  const scale = Math.min(1, THUMB_MAX / Math.max(data.w, data.h));
-  const w2 = Math.max(1, Math.round(data.w * scale)), h = Math.max(1, Math.round(data.h * scale));
+  const { w: w2, h } = thumbSize(data.w, data.h);
   const tiles = rleDecode(data.terrain, data.w * data.h);
   if (data.overlays) {
     const overlays = rleDecode(data.overlays, tiles.length);
@@ -3727,52 +3864,82 @@ function points(list, w2, h) {
   }
   return out;
 }
-function parseMapIndex(json) {
-  let raw = json;
-  if (typeof json === "string") {
-    try {
-      raw = JSON.parse(json);
-    } catch {
-      return null;
-    }
+function listingOf(m) {
+  if (!isPlainObject(m) || typeof m.slug !== "string" || !SLUG_RE.test(m.slug) || typeof m.name !== "string") return null;
+  if (!Number.isInteger(m.w) || !Number.isInteger(m.h) || !Number.isInteger(m.spawns)) return null;
+  if (m.w < MIN_MAP_SIDE || m.h < MIN_MAP_SIDE || m.w > MAX_MAP_SIDE || m.h > MAX_MAP_SIDE) return null;
+  const translations = cleanTranslations(m.translations);
+  return {
+    slug: m.slug,
+    name: cleanName(m.name),
+    ...typeof m.description === "string" && m.description ? { description: cleanDescription(m.description) } : {},
+    ...translations ? { translations } : {},
+    ...typeof m.author === "string" && m.author ? { author: m.author.slice(0, 80) } : {},
+    w: m.w,
+    h: m.h,
+    spawns: m.spawns,
+    deposits: Number.isInteger(m.deposits) ? m.deposits : 0,
+    decor: Number.isInteger(m.decor) ? m.decor : 0,
+    ...typeof m.updated === "string" ? { updated: m.updated } : {},
+    ...Number.isInteger(m.downloads) ? { downloads: m.downloads } : {}
+  };
+}
+function thumbOfJson(t) {
+  if (!isPlainObject(t) || !Number.isInteger(t.w) || !Number.isInteger(t.h) || typeof t.terrain !== "string") return null;
+  const tw = t.w, th = t.h;
+  if (tw < 1 || th < 1 || tw > THUMB_MAX || th > THUMB_MAX) return null;
+  let terrain;
+  try {
+    terrain = rleDecode(t.terrain, tw * th);
+  } catch {
+    return null;
   }
+  if (terrain.some((v) => v >= TERRAIN_KINDS)) return null;
+  const spawns = points(t.spawns, tw, th), deposits = points(t.deposits, tw, th);
+  if (!spawns || !deposits) return null;
+  return { w: tw, h: th, terrain: t.terrain, spawns, deposits };
+}
+function jsonOf(json) {
+  if (typeof json !== "string") return json;
+  try {
+    return JSON.parse(json);
+  } catch {
+    return void 0;
+  }
+}
+function parseMapIndex(json) {
+  const raw = jsonOf(json);
   if (!isPlainObject(raw) || raw.format !== "steel-tide-map-index" || !Array.isArray(raw.maps)) return null;
   const maps = [];
   for (const m of raw.maps) {
-    if (!isPlainObject(m) || typeof m.slug !== "string" || !SLUG_RE.test(m.slug) || typeof m.name !== "string") continue;
-    if (!Number.isInteger(m.w) || !Number.isInteger(m.h) || !Number.isInteger(m.spawns)) continue;
-    if (m.w < MIN_MAP_SIDE || m.h < MIN_MAP_SIDE || m.w > MAX_MAP_SIDE || m.h > MAX_MAP_SIDE) continue;
-    const t = m.thumb;
-    if (!isPlainObject(t) || !Number.isInteger(t.w) || !Number.isInteger(t.h) || typeof t.terrain !== "string") continue;
-    const tw = t.w, th = t.h;
-    if (tw < 1 || th < 1 || tw > THUMB_MAX || th > THUMB_MAX) continue;
-    let terrain;
-    try {
-      terrain = rleDecode(t.terrain, tw * th);
-    } catch {
-      continue;
-    }
-    if (terrain.some((v) => v >= TERRAIN_KINDS)) continue;
-    const spawns = points(t.spawns, tw, th), deposits = points(t.deposits, tw, th);
-    if (!spawns || !deposits) continue;
-    const translations = cleanTranslations(m.translations);
-    maps.push({
-      slug: m.slug,
-      name: cleanName(m.name),
-      ...typeof m.description === "string" && m.description ? { description: cleanDescription(m.description) } : {},
-      ...translations ? { translations } : {},
-      ...typeof m.author === "string" && m.author ? { author: m.author.slice(0, 80) } : {},
-      w: m.w,
-      h: m.h,
-      spawns: m.spawns,
-      deposits: Number.isInteger(m.deposits) ? m.deposits : 0,
-      decor: Number.isInteger(m.decor) ? m.decor : 0,
-      ...typeof m.updated === "string" ? { updated: m.updated } : {},
-      ...Number.isInteger(m.downloads) ? { downloads: m.downloads } : {},
-      thumb: { w: tw, h: th, terrain: t.terrain, spawns, deposits }
-    });
+    const listing = listingOf(m);
+    const thumb = listing && thumbOfJson(m.thumb);
+    if (listing && thumb) maps.push({ ...listing, thumb });
   }
   return { format: "steel-tide-map-index", v: 1, generated: typeof raw.generated === "string" ? raw.generated : "", maps };
+}
+function mapSummaryFor(entry, hash) {
+  const { thumb: _thumb, ...listing } = entry;
+  return { ...listing, thumb: hash };
+}
+function thumbFileFor(entry) {
+  return { slug: entry.slug, ...entry.thumb };
+}
+function parseMapCatalog(json) {
+  const raw = jsonOf(json);
+  if (!isPlainObject(raw) || raw.format !== "steel-tide-map-catalog" || raw.v !== 1 || !Array.isArray(raw.maps)) return null;
+  const maps = [];
+  for (const m of raw.maps) {
+    const listing = listingOf(m);
+    const thumb = m?.thumb;
+    if (listing && typeof thumb === "string" && THUMB_HASH_RE.test(thumb)) maps.push({ ...listing, thumb });
+  }
+  return { format: "steel-tide-map-catalog", v: 1, generated: typeof raw.generated === "string" ? raw.generated : "", maps };
+}
+function parseMapThumb(json, slug) {
+  const raw = jsonOf(json);
+  if (!isPlainObject(raw) || raw.slug !== slug) return null;
+  return thumbOfJson(raw);
 }
 function mapMatches(entry, query) {
   const words = query.toLowerCase().split(/\s+/).filter(Boolean);
@@ -3803,6 +3970,7 @@ export {
   CUSTOM_MAP_EXT,
   CUSTOM_MAP_FORMAT,
   CUSTOM_MAP_VERSION,
+  MAP_CATALOG_URL,
   MAP_LANG_RE,
   MAP_REGISTRY_COUNTS_URL,
   MAP_REGISTRY_DIR,
@@ -3810,12 +3978,14 @@ export {
   MAP_REGISTRY_REPO,
   MAP_REGISTRY_URL,
   MAP_REGISTRY_WEB,
+  MAP_THUMB_DIR,
   MAX_DESCRIPTION_LENGTH,
   MAX_MAP_FILE_BYTES,
   MAX_NAME_LENGTH,
   MAX_SLUG_LENGTH,
   MAX_TRANSLATIONS,
   SLUG_RE,
+  THUMB_HASH_RE,
   THUMB_MAX,
   checkMapFile,
   cleanDescription,
@@ -3830,10 +4000,16 @@ export {
   mapMatches,
   mapPageUrl,
   mapPublishUrl,
+  mapSummaryFor,
   mapText,
+  mapThumbUrl,
   parseCustomMap,
+  parseMapCatalog,
   parseMapIndex,
+  parseMapThumb,
   slugify,
+  thumbFileFor,
   thumbOf,
+  thumbSize,
   thumbToMap
 };

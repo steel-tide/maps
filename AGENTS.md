@@ -11,9 +11,11 @@ written by hand except this text.
   all of them: the game's parser, plus a name of its own, a description, at
   least two spawn points, a slug for a filename, under 512 KB, and no other
   map with the same name.
-- `node tools/build-index.mjs` rebuilds `index.json`. CI does this on every
-  push to `main` (and nightly, for the download counts); do not commit an
-  `index.json` you built unless asked to.
+- `node tools/build-index.mjs` rebuilds `catalog.json` (what the game
+  lists), `thumbs/<slug>/<hash>.json` (each map's thumbnail, fetched per
+  card) and `index.json` (everything in one file, for released games). CI
+  does this on every push to `main` (and nightly, for the download counts);
+  do not commit any of them you built unless asked to.
 - `tools/steel-tide-map.mjs` is generated from the game repository
   (`pnpm -C game/core maptools` there). Never edit it here.
 - `tools/sync-release.mjs` needs `gh` signed in; CI runs it. It keeps the

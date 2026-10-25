@@ -33,8 +33,8 @@ The check is the game's own parser plus what the registry asks: a name of its
 own (not *Untitled*), a description (a line or two on what kind of fight it
 is: it is what players read beside the map), at least two spawn points, a
 slug for a filename, under 512 KB, and a name no other map here has. CI runs
-the same check on every pull request; once merged, `index.json` is rebuilt on
-`main` and the map is in the game.
+the same check on every pull request; once merged, the catalogue is rebuilt
+on `main` and the map is in the game.
 
 To update a map, replace the file. Its download count carries over.
 
@@ -45,8 +45,8 @@ There is no database. Every map is attached as an asset to the rolling
 release assets, and the game fetches a map's asset URL when a player takes
 it. `tools/sync-release.mjs` keeps the release in step with `maps/` (a new
 file is uploaded, a changed one replaced with its count carried, a removed one
-taken down) and `tools/build-index.mjs` bakes the counts into `index.json`,
-nightly and on every push. The release is not for people: the game reads the
+taken down) and `tools/build-index.mjs` bakes the counts into `catalog.json`
+and `index.json`, nightly and on every push. The release is not for people: the game reads the
 file from `main`.
 
 ## What is here
@@ -54,9 +54,11 @@ file from `main`.
 | Path | What |
 | --- | --- |
 | `maps/<slug>.steel-tide-map` | one map each |
-| `index.json` | what the game and the website read: name, description and their translations, size, seats, author, downloads and a thumbnail per map; generated, never edited by hand |
+| `catalog.json` | what the game lists: name, description and their translations, size, seats, author, downloads and the name of its thumbnail per map; generated, never edited by hand |
+| `thumbs/<slug>/<hash>.json` | a map's thumbnail (its terrain at up to 64 cells a side, spawns and deposits), named by its content's hash and fetched only when its card is drawn; generated |
+| `index.json` | every entry with its thumbnail inline, in one file, for released games that read it; generated |
 | `tools/check.mjs` | validate one map or all of them |
-| `tools/build-index.mjs` | rebuild `index.json` (CI does this on `main`) |
+| `tools/build-index.mjs` | rebuild `catalog.json`, `thumbs/` and `index.json` (CI does this on `main`) |
 | `tools/sync-release.mjs` | the release the maps are counted on (CI) |
 | `tools/steel-tide-map.mjs` | the game's own map code: the parser, the check, the index entry and its thumbnail, bundled from the game repository; do not edit here |
 
