@@ -22,6 +22,7 @@ import { execFileSync } from 'node:child_process';
 import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { remapMapSlugs } from './map-renames.mjs';
 import {
   checkMapFile, CUSTOM_MAP_EXT, indexEntryFor, MAP_REGISTRY_DIR, MAP_THUMB_DIR, mapSummaryFor, parseMapCatalog, parseMapIndex, thumbFileFor,
 } from './steel-tide-map.mjs';
@@ -49,6 +50,7 @@ else if (existsSync(join(root, 'catalog.json')) || existsSync(join(root, 'index.
     : parseMapIndex(readFileSync(join(root, 'index.json'), 'utf8'));
   for (const m of last?.maps ?? []) if (m.downloads !== undefined) counts[m.slug] = m.downloads;
 }
+counts = remapMapSlugs(counts);
 
 const maps = [];
 for (const file of readdirSync(mapsDir).filter((f) => f.endsWith(CUSTOM_MAP_EXT)).sort()) {

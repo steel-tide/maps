@@ -22,6 +22,7 @@ import { mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'n
 import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { remapMapSlugs, renameMapAssets } from './map-renames.mjs';
 import { CUSTOM_MAP_EXT, MAP_REGISTRY_DIR, MAP_REGISTRY_RELEASE, MAP_REGISTRY_REPO } from './steel-tide-map.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -67,6 +68,11 @@ const remove = (name) => gh('release', 'delete-asset', MAP_REGISTRY_RELEASE, nam
 
 const counts = {};
 const files = readdirSync(mapsDir).filter((f) => f.endsWith(CUSTOM_MAP_EXT)).sort();
+renameMapAssets(assets, files, CUSTOM_MAP_EXT, (id, name) => {
+  console.log(`renaming release asset to ${name}`);
+  gh('api', '--method', 'PATCH', `repos/${MAP_REGISTRY_REPO}/releases/assets/${id}`, '-f', `name=${name}`);
+});
+carried = { carried: remapMapSlugs(carried.carried), sha: remapMapSlugs(carried.sha) };
 for (const file of files) {
   const slug = file.slice(0, -CUSTOM_MAP_EXT.length);
   const path = join(mapsDir, file);

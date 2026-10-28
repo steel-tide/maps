@@ -18,6 +18,7 @@ jobs:
         with:
           node-version: 22
       - run: node tools/check.mjs
+      - run: node tools/map-renames.test.mjs
 
   index:
     # the release and the index are rebuilt from what is on main, and the index committed back

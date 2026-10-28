@@ -38,6 +38,11 @@ on `main` and the map is in the game.
 
 To update a map, replace the file. Its download count carries over.
 
+When renaming a published map, add its old and new slugs to
+`tools/map-renames.mjs`. The release sync renames the existing asset and
+transfers its stored count and hash to the new slug, preserving download
+history. The index builder also recognizes old slugs in cached counts.
+
 ## Download counts
 
 There is no database. Every map is attached as an asset to the rolling
@@ -75,7 +80,7 @@ editor writes it; nothing needs to be written by hand.
 
 ## Map source credits
 
-- **Middle East** (`map-5e35d2`), by YYY: the original submission credits
+- **Middle East** (`middle-east`), by YYY: the original submission credits
   铁锈盒子 as the base-map source and includes the source label 末忆铁锈.
 - **Two Coast Lanes** (2v2, 3v3 and 4v4): inspired by the Rusted Warfare
   maps Across the Shore (隔岸之争) and Coastline (海岸线).
