@@ -98,6 +98,17 @@ editor writes it; nothing needs to be written by hand.
   Minami-Tori-shima is outside the frame. Roads, clearings, resource deposits
   and narrow straits are adapted for play.
 
+- **Indonesia** (`indonesia`): generated with the game's geography pipeline
+  (`pnpm -C game/core map:indonesia`) from [Natural Earth 1:10m vectors](https://www.naturalearthdata.com/downloads/10m-physical-vectors/)
+  (coastlines, islands, rivers, lakes and the continental shelf), its
+  [country outlines and populated places](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/),
+  and [NASA's GEBCO elevation raster](https://eoimages.gsfc.nasa.gov/images/imagerecords/73000/73934/gebco_08_rev_elev_21600x10800.png).
+  Uses an Albers equal-area projection opened almost to a cylinder (7°S and
+  8°N about 118°E) at about 10 km per tile, covering Weh to the Papua New
+  Guinea border and the Natuna Islands to Rote. Roads, clearings, resource
+  deposits and the Bali Strait are adapted for play; Madura joins Java at
+  Surabaya, where the strait narrows to the Suramadu bridge.
+
 - **Antarctic** (`antarctic`): generated from [Natural Earth 1:10m vectors](https://www.naturalearthdata.com/downloads/10m-physical-vectors/),
   [research-station coordinates](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/),
   and [NASA's GEBCO elevation raster](https://eoimages.gsfc.nasa.gov/images/imagerecords/73000/73934/gebco_08_rev_elev_21600x10800.png).
