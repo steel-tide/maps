@@ -59,7 +59,7 @@ const ARMOR_MATRIX = {
   rocket: { light: 1.4, medium: 1.4, heavy: 0.9, structure: 0.7, ship: 0.9 },
   // naval guns: general-purpose bombardment of shore and ship. Dual-purpose
   // mounts (the destroyer's) also fire on aircraft at a little over half;
-  // the Aegis's deck gun targets only the surface, with SAMs for the sky.
+  // the Aegis's deck gun fires on ships alone, with SAMs for the sky.
   navgun: { light: 1, medium: 1, heavy: 0.75, structure: 0.75, ship: 1, air: 0.6 },
   ashm: { ship: 1.6 },
   torpedo: { ship: 1.3, sub: 1.2 },
@@ -351,6 +351,8 @@ const DEFS = {
     radius: 9,
     body: { r: 14, len: 5 },
     weapons: [w({
+      // air ×1.1 (2026-10-26, every AA gun a tenth harder), the ground cells
+      // untouched: the sky got stronger, the light cannon it is down there did not
       id: "flakgun",
       cls: "aa",
       dmg: 24,
@@ -359,7 +361,7 @@ const DEFS = {
       projectile: "flak",
       speed: 460,
       targets: ["air", "ground", "ship"],
-      mult: { air: 1, light: 0.9, medium: 0.6, heavy: 0.25, structure: 0.3, ship: 0.4 },
+      mult: { air: 1.1, light: 0.9, medium: 0.6, heavy: 0.25, structure: 0.3, ship: 0.4 },
       turret: true,
       muzzleOffset: 19.3,
       sound: "flak"
@@ -385,15 +387,17 @@ const DEFS = {
     vision: 10,
     radius: 9,
     body: { r: 13, len: 11 },
-    // the blast is air-only, like every splash: it catches the flight round
-    // the target and nothing under it (sam.test.ts). 125 dmg at 10 tiles since
-    // 2026-09-17 (130 at 11.25 before): level with the SAM Site now, and still
-    // two tiles past the longest thing in the air, the Albatross's missile
+    // one missile, one aircraft: no blast since 2026-10-26 (24 px before).
+    // Aircraft never crowd each other off a spot the way hulls do, so a flight
+    // stacks into a knot a blast would take whole (sam.test.ts); the reload
+    // went 2.5 → 2.25 s the same day. 125 dmg at 10 tiles: level with the SAM
+    // Site, and still two tiles past the longest thing in the air, the
+    // Albatross's missile
     weapons: [w({
       id: "sam",
       cls: "aa",
       dmg: 125,
-      reload: 2.5,
+      reload: 2.25,
       range: 10,
       projectile: "missile",
       speed: 420,
@@ -402,7 +406,6 @@ const DEFS = {
       muzzleOffset: 21.7,
       bores: 2,
       boreSpacing: 7.44,
-      splash: 24,
       homing: true,
       sound: "missile"
     })],
@@ -460,7 +463,7 @@ const DEFS = {
     power: -3,
     hp: 380,
     armor: "medium",
-    speed: 45,
+    speed: 40,
     turnRate: 2.8,
     vision: 8,
     radius: 11,
@@ -470,7 +473,7 @@ const DEFS = {
     weapons: [w({
       id: "rockets",
       cls: "he",
-      dmg: 54,
+      dmg: 72,
       reload: 8,
       range: 13,
       minRange: 4,
@@ -478,7 +481,8 @@ const DEFS = {
       speed: 300,
       // Inclined 2×3 muzzle face: pivot (512,520), columns x414/610,
       // rows y291/431/584 on the 1024×1536 master. A 20×30 art frame
-      // at scale 1.5625; fire left/right pairs from front to rear.
+      // at scale 1.5625; fire left/right pairs from front to rear, one
+      // rocket a tube.
       targets: ["ground", "ship"],
       muzzlePoints: [
         { forward: 6.988525390625, lateral: -2.99072265625 },
@@ -490,7 +494,7 @@ const DEFS = {
       ],
       splash: 48,
       arc: true,
-      burst: 8,
+      burst: 6,
       burstDelay: 0.16,
       spread: 36,
       turret: true,
@@ -608,11 +612,10 @@ const DEFS = {
   /**
    * Point defence on tracks: the Interrupter's magazine on a hull and no gun
    * at all. Weaker than the tower on purpose — six rounds and one back every
-   * 1.5 s against the tower's eight and one every 0.75 s — so one Bulwark
-   * thins a Tempest's salvo (most of it down, never all of it: a rocket is
-   * inside its ring for under a second, and the reload cannot make up two)
-   * and two blank it; it never turns a bad fight into a good one alone
-   * (bulwark.test.ts). Shells still land.
+   * 1.5 s against the tower's eight and one every 0.75 s. Six rounds are a
+   * whole Tempest salvo, so one Bulwark stops all but the odd rocket of a
+   * lone launcher (the reload between salvos falls a round short), and two
+   * blank it (bulwark.test.ts). Shells still land.
    */
   bulwark: {
     id: "bulwark",
@@ -644,7 +647,7 @@ const DEFS = {
   /**
    * The fire curtain, and the glass cannon that lays it. The Drake's weapon
    * does not fire, it *pours*: a glob of burning fuel every tick for a full
-   * second, sprayed across an arc and falling short of the aim by up to half,
+   * second, swept across an arc and falling short of the aim by up to half,
    * so what leaves the nozzle is one continuous tongue of flame — and the
    * ground it washes over keeps burning for eight seconds afterwards. It is
    * the only unit that denies ground rather than killing what stands on it,
@@ -824,8 +827,10 @@ const DEFS = {
    * It never picks a target of its own (`kamikaze`): it hovers where it is
    * put until an order names a unit, a building or a spot on the ground,
    * then flies there and goes off. Cheap, quick and made of nothing: a Flak
-   * Track or a Hawk swats it, and so does a machine gun or an autocannon,
-   * since it comes in at treetop height (`lowFlying`); the charge is the
+   * Track swats it, and so does a machine gun or an autocannon, since it
+   * comes in at treetop height (`lowFlying`), but no guided anti-air
+   * missile holds it (`missileProof`): a Hawk, a SAM Site or a Falcon is
+   * no answer to it, and drone jammers are (`droneJammers`); the charge is the
    * anti-tank one (`at`), wasted on a jeep. Eight a faction at most, those on
    * a line's queue counted (`limit`): fifty of them, each a fair trade for
    * a third of a tank and each certain to arrive, deleted any army (the
@@ -858,6 +863,7 @@ const DEFS = {
     hovers: true,
     kamikaze: true,
     lowFlying: true,
+    missileProof: true,
     limit: 10,
     requires: ["suicideDrones"],
     remoteVision: true,
@@ -1000,7 +1006,7 @@ const DEFS = {
     turnRate: 3.4,
     vision: 9,
     radius: 9,
-    body: { r: 6, len: 20 },
+    body: { r: 6.1, len: 20.7 },
     weapons: [w({
       // the 30 mm reaches aircraft too, at a quarter (since 2026-09-27): the
       // first yard's one answer to the sky, enough to see off a helicopter
@@ -1015,7 +1021,7 @@ const DEFS = {
       targets: ["ground", "ship", "air"],
       mult: { ship: 0.8, air: 0.25 },
       turret: true,
-      muzzleOffset: 10.4,
+      muzzleOffset: 11.44,
       sound: "autocannon"
     })],
     trail: "wake",
@@ -1023,6 +1029,18 @@ const DEFS = {
     turretSprite: "tur.gunboat",
     turretMounts: [{ x: 0, y: -2 }]
   },
+  /**
+   * The missile boat hits a hull harder than any gun afloat and fires on
+   * nothing else. Its missiles are ordnance point defence shoots down
+   * (`interceptable`): the Aegis riding with a fleet takes the first of a
+   * salvo out of the air and thins the rest, so a pack of boats has to
+   * outnumber the escort's magazine to reach what it guards, and a Missile
+   * Interrupter on a harbour wall does the same for the ships moored under
+   * it. Since 2026-10-26 (a 3.5 s reload before, and nothing could stop the
+   * round): five boats sank two Aegis at equal metal with nine tenths of
+   * their own hull left. A Sovereign sailing alone still has no answer to
+   * them; its escort is what has one.
+   */
   mboat: {
     id: "mboat",
     kind: "unit",
@@ -1039,23 +1057,40 @@ const DEFS = {
     turnRate: 3,
     vision: 9,
     radius: 10,
-    body: { r: 8, len: 29 },
+    body: { r: 8.6, len: 27.3 },
     weapons: [w({
       id: "ashm",
       cls: "ashm",
       dmg: 170,
-      reload: 3.5,
+      reload: 5,
       range: 8,
       projectile: "missile",
       speed: 320,
       targets: ["ship"],
       homing: true,
+      interceptable: true,
       turret: true,
       sound: "missile"
     })],
     trail: "wake",
     sprite: "u.mboat"
   },
+  /**
+   * The fleet's eyes, as the Owl is the column's: it sees 16 tiles, the
+   * Owl's own circle, so the Sovereign's guns and the Kraken's missiles
+   * beside it have something to fire at out to their reach. It never turns
+   * its own gun on the shore — the deck gun fires on ships alone, as the
+   * missile boat's missiles do — so what it sees on land is for the guns it
+   * sails with.
+   *
+   * It carries the fleet's point defence, too: three ready rounds against
+   * guided ordnance, one back every three seconds, out to seven tiles — over
+   * the hulls beside it as well as its own. Small enough that a salvo is
+   * thinned rather than blanked: one Aegis just outlasts three missile boats
+   * and four sink it, and two of them see off five with most of their plate.
+   * The rounds go up from the deck; the gun's ring stays on its own target
+   * (`pdTrainsTurret`).
+   */
   frigate: {
     id: "frigate",
     kind: "unit",
@@ -1071,15 +1106,19 @@ const DEFS = {
     armor: "ship",
     speed: 65,
     turnRate: 2.6,
-    vision: 10,
+    vision: 16,
     sonar: 9,
     radius: 13,
+    interceptRange: 7,
+    interceptMag: 3,
+    interceptReload: 3,
+    interceptMuzzleOffset: 12,
     // measured at the ship's display scale (core/metrics.ts): a beam of 46.2
     // world px, over a tile, so it needs two tiles of water abeam
     body: { r: 23.1, len: 74.25 },
     weapons: [
       w({
-        // The deck gun works the surface; the forward VLS answers the sky.
+        // The deck gun works ships; the forward VLS answers the sky.
         id: "navgun",
         cls: "navgun",
         dmg: 40,
@@ -1087,7 +1126,7 @@ const DEFS = {
         range: 5.5,
         projectile: "shell",
         speed: 420,
-        targets: ["ground", "ship"],
+        targets: ["ship"],
         turret: true,
         muzzleOffset: 15.796,
         splash: 10,
@@ -1104,7 +1143,7 @@ const DEFS = {
         id: "navsam",
         cls: "aa",
         dmg: 80,
-        reload: 2,
+        reload: 1.8,
         range: 8.5,
         projectile: "missile",
         speed: 430,
@@ -1138,7 +1177,7 @@ const DEFS = {
     turretMounts: [{ x: 0, y: -12.2 }]
   },
   // Retained for existing saves and authored scenarios; absent from yard menus.
-  // Ironworks supplies the buildable copy under its own ironworks-orca ID.
+  // Steel Labs supplies the buildable copy under its own ironworks-orca ID.
   destroyer: {
     id: "destroyer",
     kind: "unit",
@@ -1297,20 +1336,24 @@ const DEFS = {
       mult: { heavy: 1, ship: 1.2 },
       // 1024 × 1536 turret master: pivot y=921.6, tips y=86, barrel centres
       // x=425/598, mapped to the original 10 × 16 art frame at scale 3.8.
+      // A broadside rippled down the deck: both barrels of A, then B, then X,
+      // far enough apart for each turret's report to be heard (`arty` holds
+      // 120 ms between plays in core/audio.ts).
       turret: true,
       muzzleOffset: 33.076,
       bores: 2,
       boreSpacing: 6.42,
       splash: 54,
       arc: true,
-      burst: 3,
-      burstDelay: 0.25,
+      burst: 6,
+      burstDelay: 0.2,
+      salvo: true,
       spread: 40,
       sound: "arty"
     }), w({
       id: "secondaries",
       cls: "aa",
-      dmg: 20,
+      dmg: 22,
       reload: 0.5,
       range: 6.5,
       projectile: "flak",
@@ -1372,7 +1415,7 @@ const DEFS = {
       id: "aam",
       cls: "aa",
       dmg: 40,
-      reload: 2,
+      reload: 1.8,
       range: 5,
       projectile: "missile",
       speed: 460,
@@ -1601,7 +1644,7 @@ const DEFS = {
       id: "aam",
       cls: "aa",
       dmg: 150,
-      reload: 2.2,
+      reload: 2,
       range: 6,
       projectile: "missile",
       speed: 480,
@@ -1626,6 +1669,7 @@ const DEFS = {
     aliases: ["cobra", "attackheli"],
     domain: "air",
     tier: 2,
+    ability: "flares",
     cost: 380,
     buildTime: 20,
     pop: 2,
@@ -1784,6 +1828,7 @@ const DEFS = {
     aliases: ["pelican", "transportheli"],
     domain: "air",
     tier: 1,
+    ability: "flares",
     cost: 280,
     buildTime: 16,
     pop: 1,
@@ -1835,6 +1880,7 @@ const DEFS = {
     aliases: ["spectre", "ac130"],
     domain: "air",
     tier: 3,
+    ability: "flares",
     cost: 1800,
     buildTime: 60,
     pop: 5,
@@ -1876,7 +1922,7 @@ const DEFS = {
    * a range: an enemy sees it only within 4 tiles of one of their units or
    * buildings, or 8 of their radar (`detect`), so AA elsewhere in the base
    * never joins in and whatever stands at the target gets its shots late.
-   * The counters are the cheap ones — flak and gatlings beside the things
+   * The counters are the cheap ones — flak and AA Turrets beside the things
    * worth keeping — and a Falcon patrol over them (wraith.test.ts).
    *
    * It also carries one nuclear gravity bomb (2026-09-27, `nukebomb`),
@@ -2103,7 +2149,7 @@ const DEFS = {
   /**
    * The headquarters defends itself, the way a tower does in a lane game:
    * a twin heavy machine gun on the roof ring where the helipad was, a
-   * shade stronger than the Gatling (79 dps to its 76) and reaching farther
+   * shade stronger than the Gatling (79 dps to the 76 it fires at) and reaching farther
    * (7 tiles, measured from a centre that is already two
    * tiles from the wall, so five past it), so a buggy, a light tank, a
    * gunship or a machine-gun turret that comes for it pays while a howitzer
@@ -2707,6 +2753,11 @@ const DEFS = {
    * one feeding a single barrel, and the pad wanted the help. It stops short
    * of the Gatling it upgrades into, which fires fifteen rounds a second and
    * has to stay worth the upgrade.
+   *
+   * It is a ground gun, and of the sky reaches only what flies low
+   * (`lowFlying`: the helicopters and the Hornet), as every machine gun that
+   * fires on the ground does (`weaponReaches`); a jet or a bomber is the AA
+   * Turret's. Its `air` cell (the class row's 0.7) is what it does to those.
    */
   mgturret: {
     id: "mgturret",
@@ -2733,7 +2784,7 @@ const DEFS = {
       range: 5,
       projectile: "bullet",
       speed: 500,
-      targets: ["ground", "ship", "air"],
+      targets: ["ground", "ship"],
       mult: { ship: 0.6, structure: 0.3 },
       turret: true,
       muzzleOffset: 23.2,
@@ -2755,10 +2806,21 @@ const DEFS = {
    * pours fifteen rounds a second, a round every other tick — `reload` sits
    * just under two ticks because a cooldown runs out on the tick after it
    * reaches nothing, and 0.14 had been firing every fifth (six a second).
-   * Lighter rounds, more of them: 76 dps by the book where 0.14 claimed 71,
-   * and 75 delivered where it delivered 60, the spin-up paid once an
-   * engagement. Its sound is the roar of the stream and the whine of the
-   * motor (`gatling` in `core/audio.ts`), not one report a round.
+   * Lighter rounds, more of them: 76 dps while it fires where 0.14 claimed
+   * 71, and 75 delivered where it delivered 60, the spin-up paid once an
+   * engagement — 50 over the whole cycle of fire, cooling and spinning up
+   * again (`weaponDps`), which is the figure the interface shows. A stream walks rather than threading one point (`spread`):
+   * its rounds scatter up to 20 px at full range, where about one in five
+   * goes past a light tank — under a twentieth at four and a half tiles, none
+   * close in, since a round lands on what is within ten of its body. And it
+   * cannot pour for ever (`heatLimit`): five seconds of unbroken fire and its
+   * barrels have overheated, so it falls silent for two while they cool and
+   * coast, and spins up again — a fight with a column of light tanks lasts
+   * long enough for that to come round, which is what lets six of them
+   * through two of these where five are stopped. Its sound is the roar of
+   * the stream and the whine of the motor (`gatling` in `core/audio.ts`), not
+   * one report a round. Like the MG Turret it reaches only the low flyers of
+   * the sky (`lowFlying`), at its `air` cell's 0.8.
    */
   gatling: {
     id: "gatling",
@@ -2786,11 +2848,14 @@ const DEFS = {
       range: 6.5,
       projectile: "bullet",
       speed: 520,
-      targets: ["ground", "ship", "air"],
+      targets: ["ground", "ship"],
       mult: { medium: 0.9, heavy: 0.5, air: 0.8, ship: 0.7, structure: 0.3 },
       turret: true,
       muzzleOffset: 25.15,
       spinUp: 0.5,
+      spread: 20,
+      heatLimit: 5,
+      coolTime: 2,
       sound: "gatling"
     })],
     sprite: "u.gatling",
@@ -2885,17 +2950,20 @@ const DEFS = {
   },
   /**
    * The Drake's weapon on a gun pad. It pours rather than fires — a glob of
-   * burning fuel every tick for a second, sprayed across an arc and falling
-   * short of the aim by up to half — and the ground it washes over burns on
+   * burning fuel every tick, swept across an arc and falling short of the aim
+   * by up to half — and the ground it washes over burns on
    * for eight seconds under whoever stands in it, its own side included. It
    * hits harder than any gun on a pad and reaches no further than the
    * shortest of them: five tiles, the MG Turret's, past every tank's gun but
    * the Mammoth's, so what takes it apart is what stands off — the Mammoth,
    * the Viper's missiles, the guns that lob — while what closes is burned.
    *
-   * - **The nozzle overheats.** After every pour it has to cool for two
-   *   seconds before the next (`overheat`): the reload, shown as the heat it
-   *   is. What it set alight fights for it meanwhile.
+   * - **The nozzle overheats.** It pours for as long as it has something to
+   *   burn and the heat to spare: a second and a half of unbroken pouring and
+   *   it has to cool for two before the next (`heatLimit`), the same gauge the
+   *   Gatling's barrels run on. A pour cut short by the target dying is the
+   *   heat it cost and no more, and drains between pours. What it set alight
+   *   fights for it meanwhile.
    * - **Fireproof.** Whatever comes right up to it is burned on ground that
    *   reaches the pad, so the pad takes none of its fire (`burnMult`), where
    *   the Drake, which drives into its own, takes half.
@@ -2924,12 +2992,14 @@ const DEFS = {
     power: -4,
     burnMult: 0,
     weapons: [w({
-      // a glob a tick for a second, as the Drake pours, then two seconds of
-      // overheat: 110 dps over the cycle against the Drake's 90
+      // a glob a tick — a reload of exactly one tick is the one whole number
+      // of ticks that comes round on time — for a second and a half, half as
+      // long again as the Drake pours, then two seconds cooling: 141 dps over
+      // the cycle against the Drake's 90
       id: "flametower",
       cls: "he",
       dmg: 11,
-      reload: 3,
+      reload: 1 / 30,
       range: 5,
       projectile: "flame",
       speed: 280,
@@ -2940,12 +3010,11 @@ const DEFS = {
       turret: true,
       muzzleOffset: 21.15,
       splash: 38,
-      burst: 30,
-      burstDelay: 0.03,
       fan: 0.24,
       burn: 14,
       burnLife: 8,
-      overheat: true,
+      heatLimit: 1.5,
+      coolTime: 2,
       sound: "flame"
     })],
     sprite: "u.flameturret",
@@ -2973,7 +3042,7 @@ const DEFS = {
     weapons: [w({
       id: "aaflak",
       cls: "aa",
-      dmg: 33,
+      dmg: 36,
       reload: 0.8,
       range: 8,
       projectile: "flak",
@@ -3019,10 +3088,12 @@ const DEFS = {
     power: -6,
     antiWarhead: true,
     weapons: [w({
+      // no blast and a 2.35 s reload (2026-10-26; 29 px and 2.6 s before), the
+      // Hawk's reasons: a stacked flight is no reason for one missile to kill two
       id: "samsite",
       cls: "aa",
       dmg: 170,
-      reload: 2.6,
+      reload: 2.35,
       range: 10,
       projectile: "missile",
       speed: 460,
@@ -3031,7 +3102,6 @@ const DEFS = {
       muzzleOffset: 19.95,
       bores: 4,
       boreSpacing: 3.6458,
-      splash: 29,
       homing: true,
       sound: "missile"
     })],
@@ -3046,11 +3116,11 @@ const DEFS = {
    * down. A nuclear warhead is not its business at either tier — that is an
    * aircraft, and anti-air (a veteran, or a SAM Site) shoots it down or
    * nothing does.
-   * The magazine is one Tempest salvo (8 rockets) so a barrage is absorbed
-   * whole, and the reload is what sets the duel: one launcher throws 8
-   * rockets every 8s (1/s) and one tower replaces 1.33 rounds a second,
-   * so a single Tempest never lands a rocket and a second one breaks
-   * through. Anything faster here makes the tower unanswerable; anything
+   * The magazine holds a Tempest salvo (6 rockets) with two to spare, so a
+   * barrage is absorbed whole, and the reload is what sets the duel: one
+   * launcher throws 6 rockets every 8s (0.75/s) and one tower replaces 1.33
+   * rounds a second, so a single Tempest never lands a rocket and a second
+   * one breaks through. Anything faster here makes the tower unanswerable; anything
    * slower and one launcher grinds it down alone. See interceptor.test.ts.
    */
   interceptor: {
@@ -3820,7 +3890,14 @@ function thumbOf(data) {
     x: Math.min(w2 - 1, Math.floor(p.x * w2 / data.w)),
     y: Math.min(h - 1, Math.floor(p.y * h / data.h))
   });
-  return { w: w2, h, terrain: rleEncode(terrain), spawns: data.spawns.map(at), deposits: data.deposits.map(at) };
+  return {
+    w: w2,
+    h,
+    terrain: rleEncode(terrain),
+    spawns: data.spawns.map(at),
+    deposits: data.deposits.map(at),
+    ...data.terrainVariants && Object.keys(data.terrainVariants).length ? { terrainVariants: { ...data.terrainVariants } } : {}
+  };
 }
 function thumbToMap(thumb, name) {
   return {
@@ -3829,7 +3906,8 @@ function thumbToMap(thumb, name) {
     h: thumb.h,
     terrain: rleDecode(thumb.terrain, thumb.w * thumb.h),
     deposits: thumb.deposits.map((d) => ({ ...d })),
-    spawns: thumb.spawns.map((s) => ({ ...s }))
+    spawns: thumb.spawns.map((s) => ({ ...s })),
+    ...thumb.terrainVariants ? { terrainVariants: { ...thumb.terrainVariants } } : {}
   };
 }
 function indexEntryFor(data, slug, extra = {}) {
@@ -3897,7 +3975,8 @@ function thumbOfJson(t) {
   if (terrain.some((v) => v >= TERRAIN_KINDS)) return null;
   const spawns = points(t.spawns, tw, th), deposits = points(t.deposits, tw, th);
   if (!spawns || !deposits) return null;
-  return { w: tw, h: th, terrain: t.terrain, spawns, deposits };
+  const terrainVariants = t.terrainVariants === void 0 ? void 0 : readTerrainAssignments(t.terrainVariants, "terrainVariants", []);
+  return { w: tw, h: th, terrain: t.terrain, spawns, deposits, ...terrainVariants ? { terrainVariants } : {} };
 }
 function jsonOf(json) {
   if (typeof json !== "string") return json;
