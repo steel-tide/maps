@@ -93,10 +93,6 @@ const ROOF_MG = w({
   mult: { air: 0.7, light: 0.7 },
   sound: "mg"
 });
-const WARHEAD_MOTOR = [
-  { sprite: "dec.afterburner", layer: "under", y: 12, scale: 0.6, when: "always" },
-  { sprite: "dec.afterburner", layer: "under", y: 12, scale: 0.6, when: "night" }
-];
 const DEFS = {
   // ================================================================= LAND
   //
@@ -1833,7 +1829,7 @@ const DEFS = {
     buildTime: 16,
     pop: 1,
     power: -1,
-    hp: 380,
+    hp: 280,
     armor: "air",
     speed: 100,
     turnRate: 3,
@@ -2044,6 +2040,8 @@ const DEFS = {
    * raise its missile and this goes up in step, or one site alone gets the
    * vote the pair was meant to have.
    * Its `requires` is what every launcher needs to fabricate or fire one.
+   * Its motor burns under the nozzle the whole way, drawn for every warhead
+   * that flies rather than worn as a decal (`render/rocketMotor.ts`).
    */
   warhead: {
     id: "warhead",
@@ -2064,8 +2062,7 @@ const DEFS = {
     altitude: 36,
     weapons: [],
     requires: ["radar", "reactor", "nuclearProgram"],
-    sprite: "u.warhead",
-    decals: WARHEAD_MOTOR
+    sprite: "u.warhead"
   },
   /**
    * The other thing a silo or a Kraken may put in the shaft: an
@@ -2103,8 +2100,7 @@ const DEFS = {
     weapons: [],
     requires: ["radar"],
     emp: { radius: 7, seconds: 12 },
-    sprite: "u.emp",
-    decals: WARHEAD_MOTOR
+    sprite: "u.emp"
   },
   /**
    * The Wraith's nuclear bomb (2026-09-27): a free-fall weapon, not a missile
@@ -3474,7 +3470,7 @@ function normalizeTerrainLayers(m) {
     m.terrain[i] = Terrain.Water;
   }
 }
-const DECOR = {
+const VANILLA_DECOR = {
   pole: { fw: 1, fh: 1, sprite: "d.pole", color: [96, 78, 58], hp: 20, shadow: 6 },
   tower: { fw: 1, fh: 1, sprite: "d.tower", color: [76, 80, 86], hp: 90, shadow: 14 },
   /** a date palm: the one tree that stands on sand, an obstacle a tile wide; three drawings, mixed */
@@ -3502,10 +3498,8 @@ const DECOR = {
    */
   freighter2: { fw: 4, fh: 2, sprite: "d.freighter2", water: true, color: [96, 60, 44], hp: 320 }
 };
+const DECOR = { ...VANILLA_DECOR };
 const RETIRED_DECOR = ["derrick"];
-function isDecorKind(k) {
-  return typeof k === "string" && Object.prototype.hasOwnProperty.call(DECOR, k);
-}
 function rleEncode(a) {
   const out = [];
   let i = 0;
@@ -3629,7 +3623,7 @@ function customMapToGameMap(data, lang) {
   normalizeTerrainLayers(map);
   return map;
 }
-function readDecor(list, w2, h) {
+function readDecor(list, w2, h, kinds = DECOR) {
   if (list === void 0) return [];
   if (!Array.isArray(list)) return "bad props";
   if (list.length > MAX_DECOR) return "too many props";
@@ -3639,8 +3633,8 @@ function readDecor(list, w2, h) {
     if (!item || typeof item !== "object") return "bad props";
     const { kind, x, y } = item;
     if (typeof kind === "string" && RETIRED_DECOR.includes(kind)) continue;
-    if (!isDecorKind(kind)) return "the map uses a prop this build does not know";
-    const def = DECOR[kind];
+    if (typeof kind !== "string" || !Object.hasOwn(kinds, kind)) return "the map uses a prop this build does not know";
+    const def = kinds[kind];
     if (!Number.isInteger(x) || !Number.isInteger(y) || x < 0 || y < 0 || x + def.fw > w2 || y + def.fh > h) {
       return "a prop lies outside the map";
     }
@@ -3793,7 +3787,7 @@ function parseCustomMap(json, opts = {}) {
   if (typeof deposits === "string") return { ok: false, error: deposits };
   const spawns = points2(r.spawns, MAX_PLAYERS, "spawns");
   if (typeof spawns === "string") return { ok: false, error: spawns };
-  const decor = readDecor(r.decor, w2, h);
+  const decor = readDecor(r.decor, w2, h, opts.decor);
   if (typeof decor === "string") return { ok: false, error: decor };
   const units = readUnits(r.units, w2, h, opts.only);
   if (typeof units === "string") return { ok: false, error: units };
@@ -4030,7 +4024,7 @@ function mapMatches(entry, query) {
 const MAX_MAP_FILE_BYTES = 512 * 1024;
 function checkMapFile(json, filename) {
   if (new TextEncoder().encode(json).byteLength > MAX_MAP_FILE_BYTES) return { ok: false, reason: "size", error: `the file is over ${MAX_MAP_FILE_BYTES / 1024} KB` };
-  const parsed = parseCustomMap(json, { only: VANILLA_DEF_IDS });
+  const parsed = parseCustomMap(json, { only: VANILLA_DEF_IDS, decor: VANILLA_DECOR });
   if (!parsed.ok) return { ok: false, reason: "parse", error: parsed.error };
   const data = parsed.data;
   if (data.name === "Untitled") return { ok: false, reason: "name", error: "the map needs a name of its own" };
