@@ -3536,6 +3536,20 @@ function rleDecodeInto(s, out) {
   if (oi < len) out.fill(0, oi);
   return out;
 }
+const ID_RE = /^[a-z0-9][a-z0-9_-]{1,39}$/;
+const LARGE_CONTENT_LIMITS = Object.freeze({
+  defs: 1024,
+  sprites: 2048,
+  sounds: 512,
+  manifestBytes: 4 * 1024 * 1024,
+  filesBytes: 256 * 1024 * 1024,
+  hp: 1e8,
+  extensionSourceBytes: 2 * 1024 * 1024,
+  extensionAssets: 2048,
+  maps: 16,
+  musicTracks: 64
+});
+LARGE_CONTENT_LIMITS.manifestBytes + LARGE_CONTENT_LIMITS.filesBytes;
 const TERRAIN_BASES = Object.freeze({
   grass: Terrain.Grass,
   sand: Terrain.Sand,
@@ -3547,7 +3561,6 @@ const TERRAIN_BASES = Object.freeze({
   ice: Terrain.Ice,
   city: Terrain.City
 });
-const VARIANT_ID_RE = /^[a-z0-9][a-z0-9_-]{1,39}$/;
 function readTerrainAssignments(value, path, issues) {
   if (value === void 0) return void 0;
   const start = issues.length;
@@ -3563,7 +3576,7 @@ function readTerrainAssignments(value, path, issues) {
   const out = {};
   for (const [base, id] of entries) {
     if (!Object.hasOwn(TERRAIN_BASES, base)) issues.push({ path: `${path}.${base}`, message: "unsupported terrain base" });
-    else if (typeof id !== "string" || !VARIANT_ID_RE.test(id) || !id.includes("-"))
+    else if (typeof id !== "string" || !ID_RE.test(id) || !id.includes("-"))
       issues.push({ path: `${path}.${base}`, message: "must be a namespaced terrain variant id, 2–40 characters" });
     else out[base] = id;
   }
@@ -3815,6 +3828,9 @@ function parseCustomMap(json, opts = {}) {
     }
   };
 }
+function isRecord(v) {
+  return !!v && typeof v === "object" && !Array.isArray(v);
+}
 const MAP_REGISTRY_REPO = "steel-tide/maps";
 const MAP_REGISTRY_WEB = `https://github.com/${MAP_REGISTRY_REPO}`;
 const MAP_REGISTRY_URL = `https://raw.githubusercontent.com/${MAP_REGISTRY_REPO}/main/index.json`;
@@ -3922,14 +3938,11 @@ function indexEntryFor(data, slug, extra = {}) {
     thumb: thumbOf(data)
   };
 }
-function isPlainObject(v) {
-  return !!v && typeof v === "object" && !Array.isArray(v);
-}
 function points(list, w2, h) {
   if (!Array.isArray(list)) return null;
   const out = [];
   for (const p of list) {
-    if (!isPlainObject(p) || !Number.isInteger(p.x) || !Number.isInteger(p.y)) return null;
+    if (!isRecord(p) || !Number.isInteger(p.x) || !Number.isInteger(p.y)) return null;
     const x = p.x, y = p.y;
     if (x < 0 || y < 0 || x >= w2 || y >= h) return null;
     out.push({ x, y });
@@ -3937,7 +3950,7 @@ function points(list, w2, h) {
   return out;
 }
 function listingOf(m) {
-  if (!isPlainObject(m) || typeof m.slug !== "string" || !SLUG_RE.test(m.slug) || typeof m.name !== "string") return null;
+  if (!isRecord(m) || typeof m.slug !== "string" || !SLUG_RE.test(m.slug) || typeof m.name !== "string") return null;
   if (!Number.isInteger(m.w) || !Number.isInteger(m.h) || !Number.isInteger(m.spawns)) return null;
   if (m.w < MIN_MAP_SIDE || m.h < MIN_MAP_SIDE || m.w > MAX_MAP_SIDE || m.h > MAX_MAP_SIDE) return null;
   const translations = cleanTranslations(m.translations);
@@ -3957,7 +3970,7 @@ function listingOf(m) {
   };
 }
 function thumbOfJson(t) {
-  if (!isPlainObject(t) || !Number.isInteger(t.w) || !Number.isInteger(t.h) || typeof t.terrain !== "string") return null;
+  if (!isRecord(t) || !Number.isInteger(t.w) || !Number.isInteger(t.h) || typeof t.terrain !== "string") return null;
   const tw = t.w, th = t.h;
   if (tw < 1 || th < 1 || tw > THUMB_MAX || th > THUMB_MAX) return null;
   let terrain;
@@ -3982,7 +3995,7 @@ function jsonOf(json) {
 }
 function parseMapIndex(json) {
   const raw = jsonOf(json);
-  if (!isPlainObject(raw) || raw.format !== "steel-tide-map-index" || !Array.isArray(raw.maps)) return null;
+  if (!isRecord(raw) || raw.format !== "steel-tide-map-index" || !Array.isArray(raw.maps)) return null;
   const maps = [];
   for (const m of raw.maps) {
     const listing = listingOf(m);
@@ -4000,7 +4013,7 @@ function thumbFileFor(entry) {
 }
 function parseMapCatalog(json) {
   const raw = jsonOf(json);
-  if (!isPlainObject(raw) || raw.format !== "steel-tide-map-catalog" || raw.v !== 1 || !Array.isArray(raw.maps)) return null;
+  if (!isRecord(raw) || raw.format !== "steel-tide-map-catalog" || raw.v !== 1 || !Array.isArray(raw.maps)) return null;
   const maps = [];
   for (const m of raw.maps) {
     const listing = listingOf(m);
@@ -4011,7 +4024,7 @@ function parseMapCatalog(json) {
 }
 function parseMapThumb(json, slug) {
   const raw = jsonOf(json);
-  if (!isPlainObject(raw) || raw.slug !== slug) return null;
+  if (!isRecord(raw) || raw.slug !== slug) return null;
   return thumbOfJson(raw);
 }
 function mapMatches(entry, query) {
