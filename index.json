@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-11-07T02:29:08.631Z",
+  "generated": "2026-11-07T02:31:21.782Z",
   "maps": [
     {
       "slug": "1v1v1v1",
@@ -2902,6 +2902,434 @@
       }
     },
     {
+      "slug": "beneath-the-cracks",
+      "name": "Beneath the Cracks",
+      "description": "Eight bases on scorched rock split by branching lava cracks; unbuildable mud fills two opposite corners.",
+      "translations": {
+        "en": {
+          "name": "Beneath the Cracks",
+          "description": "Eight bases on scorched rock split by branching lava cracks; unbuildable mud fills two opposite corners."
+        },
+        "zh": {
+          "name": "裂纹之下",
+          "description": "八个基地分布在被岩浆裂纹分割的焦土上；对角两处为不可建造的泥地。"
+        },
+        "ko": {
+          "name": "균열 아래",
+          "description": "갈라지는 용암 균열이 가로지르는 그을린 바위 위에 여덟 기지가 있고, 마주 보는 두 모서리는 건설할 수 없는 진흙이다."
+        }
+      },
+      "author": "长夜山猫",
+      "w": 266,
+      "h": 192,
+      "spawns": 8,
+      "deposits": 46,
+      "decor": 0,
+      "updated": "2026-11-07T10:30:18+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 46,
+        "terrain": "FwcpBhgHKAYXBykGFgcqBhYHKgYUBywGEwctBgwHNAYJBwEGAQc1BgoHNgYJBzcGCQcuBgELCAYIByUGAQsIBgELCQYIByUGBAsEBgELCgYIByUGAQsSBgYHMAYBCwkGBwclBgELCgYBCwgGBQcVBgELEAYBCxQGBQckBgILFQYFBzsGBAcVBgELEwYBCxMGAgcWBgELDQYBCwUGAQsrBgELCAYGCwUGAQsRBgEHGgYCCwgGAQsIBgELDwYDBxoGAQsSBgELDQYFBw4GAQsKBgILEgYBCwwGBgcOBgELAQYCCwcGAgsJBgELCAYBCwwGBgcNBgILCQYCCwoGAQsIBgELDgYEBwwGAQsKBgILCwYBCxYGBQcIBgELAwYBCwoGAQsiBgYHCgYCCwoGAQsWBgELCwYHBxYGAQshBggHCgYBCwoGAQsLBgELFgYIBxQGAQsjBggHFAYBCyMGCAc3BgkHCQYCCywGCQcIBgILAQYBCysGCQcHBgILAwYBCykGCgc1BgsHMwYNBzIGDgcxBg8HMQYPBy8GEQcxBg8H",
+        "spawns": [
+          {
+            "x": 48,
+            "y": 10
+          },
+          {
+            "x": 20,
+            "y": 23
+          },
+          {
+            "x": 41,
+            "y": 26
+          },
+          {
+            "x": 35,
+            "y": 17
+          },
+          {
+            "x": 6,
+            "y": 33
+          },
+          {
+            "x": 18,
+            "y": 30
+          },
+          {
+            "x": 31,
+            "y": 27
+          },
+          {
+            "x": 50,
+            "y": 17
+          }
+        ],
+        "deposits": [
+          {
+            "x": 36,
+            "y": 18
+          },
+          {
+            "x": 34,
+            "y": 18
+          },
+          {
+            "x": 34,
+            "y": 16
+          },
+          {
+            "x": 36,
+            "y": 16
+          },
+          {
+            "x": 46,
+            "y": 9
+          },
+          {
+            "x": 49,
+            "y": 9
+          },
+          {
+            "x": 46,
+            "y": 11
+          },
+          {
+            "x": 49,
+            "y": 11
+          },
+          {
+            "x": 19,
+            "y": 23
+          },
+          {
+            "x": 21,
+            "y": 23
+          },
+          {
+            "x": 19,
+            "y": 24
+          },
+          {
+            "x": 21,
+            "y": 24
+          },
+          {
+            "x": 39,
+            "y": 25
+          },
+          {
+            "x": 42,
+            "y": 25
+          },
+          {
+            "x": 39,
+            "y": 27
+          },
+          {
+            "x": 42,
+            "y": 27
+          },
+          {
+            "x": 5,
+            "y": 32
+          },
+          {
+            "x": 7,
+            "y": 32
+          },
+          {
+            "x": 5,
+            "y": 34
+          },
+          {
+            "x": 7,
+            "y": 34
+          },
+          {
+            "x": 17,
+            "y": 29
+          },
+          {
+            "x": 19,
+            "y": 29
+          },
+          {
+            "x": 17,
+            "y": 31
+          },
+          {
+            "x": 19,
+            "y": 31
+          },
+          {
+            "x": 30,
+            "y": 26
+          },
+          {
+            "x": 32,
+            "y": 26
+          },
+          {
+            "x": 30,
+            "y": 28
+          },
+          {
+            "x": 32,
+            "y": 28
+          },
+          {
+            "x": 49,
+            "y": 16
+          },
+          {
+            "x": 51,
+            "y": 16
+          },
+          {
+            "x": 49,
+            "y": 18
+          },
+          {
+            "x": 51,
+            "y": 18
+          },
+          {
+            "x": 10,
+            "y": 26
+          },
+          {
+            "x": 28,
+            "y": 15
+          },
+          {
+            "x": 43,
+            "y": 4
+          },
+          {
+            "x": 42,
+            "y": 20
+          },
+          {
+            "x": 18,
+            "y": 36
+          },
+          {
+            "x": 9,
+            "y": 40
+          },
+          {
+            "x": 25,
+            "y": 32
+          },
+          {
+            "x": 42,
+            "y": 14
+          },
+          {
+            "x": 34,
+            "y": 34
+          },
+          {
+            "x": 45,
+            "y": 40
+          },
+          {
+            "x": 47,
+            "y": 32
+          },
+          {
+            "x": 55,
+            "y": 13
+          },
+          {
+            "x": 16,
+            "y": 19
+          },
+          {
+            "x": 5,
+            "y": 28
+          }
+        ]
+      }
+    },
+    {
+      "slug": "blitzkrieg",
+      "name": "Blitzkrieg",
+      "description": "Strike fast, finish fast, and watch for mines: four bases on a chain of islands joined by mud causeways, each starting with forces already in the field.",
+      "translations": {
+        "en": {
+          "name": "Blitzkrieg",
+          "description": "Strike fast, finish fast, and watch for mines: four bases on a chain of islands joined by mud causeways, each starting with forces already in the field."
+        },
+        "zh": {
+          "name": "闪电战",
+          "description": "霹雳攻势，速战速决，小心地雷：四个基地分布在由泥泞堤道相连的岛链上，开局即有已部署的部队。"
+        },
+        "ko": {
+          "name": "전격전",
+          "description": "빠르게 치고 빠르게 끝내되 지뢰를 조심하라. 진흙 둑길로 이어진 섬들 위의 네 기지는 이미 전장에 배치된 병력을 갖고 시작한다."
+        }
+      },
+      "author": "牢玩家091",
+      "w": 168,
+      "h": 140,
+      "spawns": 4,
+      "deposits": 31,
+      "decor": 16,
+      "updated": "2026-11-07T10:30:34+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 53,
+        "terrain": "PwABAT8AAQE/AAEB/wCKABQCAQECAAEBHwIJAAECEgMBAgEBAgABAh8DCQABAhMDAQECAAECHwMJAAECEwMBAQIAAQIfAwkAAQITAwEBAgABAh8DCQABAhADAQIBAwICAgABAh8DCQABAhMDAQECAAICHgMJAAECEgMCEwIAARMDAwICGgMJAAECEgMHEwIDAQIaAwIAAQEGAAECEgMHEx8DAgIFAAECEgMHEyEDAQIEAAECEgMHEyIDAQIDAAECEgMHEyMDAQECAAECEgMHEyMDAQICAAECEgMHEyQDAgABAhIDAQIBAQIAAQIlAwMTEwMBAgEBAgABAiYDAhMTAwECAQECAAECJgMCAAECEgMBAgEBAgABAiUDAQICAAECEgMBAgEBAgABAiQDAQIBAQIAAQIRAwgTIQMBAgEBAwABAhEDCBMhAwEBBAABAhEDCBMdAwMBBgABAhEDCBMdAwkAAQIRAwgTHQMJAAECEQMIEx0DCQABAhEDCBMdAwkAAQIRAwgTHQMJAAECEgMBAgEBAgABAh8DCQABAhIDAQIBAQIAAQIfAwkAAQISAwECAQECAAECHwMJAAECEgMBAgEBAgABAh8DCQAUAgEBAgAgAgkAAQE1AAEB/wD/AIIA",
+        "spawns": [
+          {
+            "x": 1,
+            "y": 26
+          },
+          {
+            "x": 19,
+            "y": 23
+          },
+          {
+            "x": 19,
+            "y": 29
+          },
+          {
+            "x": 53,
+            "y": 27
+          }
+        ],
+        "deposits": [
+          {
+            "x": 5,
+            "y": 26
+          },
+          {
+            "x": 0,
+            "y": 31
+          },
+          {
+            "x": 0,
+            "y": 20
+          },
+          {
+            "x": 17,
+            "y": 25
+          },
+          {
+            "x": 17,
+            "y": 26
+          },
+          {
+            "x": 17,
+            "y": 27
+          },
+          {
+            "x": 17,
+            "y": 28
+          },
+          {
+            "x": 17,
+            "y": 25
+          },
+          {
+            "x": 17,
+            "y": 26
+          },
+          {
+            "x": 17,
+            "y": 27
+          },
+          {
+            "x": 17,
+            "y": 28
+          },
+          {
+            "x": 18,
+            "y": 25
+          },
+          {
+            "x": 18,
+            "y": 26
+          },
+          {
+            "x": 18,
+            "y": 27
+          },
+          {
+            "x": 18,
+            "y": 28
+          },
+          {
+            "x": 49,
+            "y": 26
+          },
+          {
+            "x": 49,
+            "y": 27
+          },
+          {
+            "x": 49,
+            "y": 28
+          },
+          {
+            "x": 49,
+            "y": 26
+          },
+          {
+            "x": 49,
+            "y": 26
+          },
+          {
+            "x": 49,
+            "y": 26
+          },
+          {
+            "x": 49,
+            "y": 27
+          },
+          {
+            "x": 49,
+            "y": 28
+          },
+          {
+            "x": 50,
+            "y": 26
+          },
+          {
+            "x": 50,
+            "y": 26
+          },
+          {
+            "x": 50,
+            "y": 28
+          },
+          {
+            "x": 50,
+            "y": 27
+          },
+          {
+            "x": 48,
+            "y": 26
+          },
+          {
+            "x": 48,
+            "y": 26
+          },
+          {
+            "x": 48,
+            "y": 27
+          },
+          {
+            "x": 48,
+            "y": 28
+          }
+        ]
+      }
+    },
+    {
       "slug": "bridges-over-lava-8p",
       "name": "Bridges over Lava",
       "description": "Road bridges link grassy ground across broad lava fields, with open approaches around the edges.",
@@ -4167,9 +4595,9 @@
       "w": 350,
       "h": 188,
       "spawns": 8,
-      "deposits": 63,
+      "deposits": 73,
       "decor": 0,
-      "updated": "2026-10-27T19:47:51-07:00",
+      "updated": "2026-11-07T10:31:00+08:00",
       "downloads": 99,
       "thumb": {
         "w": 64,
@@ -4461,6 +4889,46 @@
           {
             "x": 12,
             "y": 16
+          },
+          {
+            "x": 53,
+            "y": 15
+          },
+          {
+            "x": 48,
+            "y": 16
+          },
+          {
+            "x": 52,
+            "y": 20
+          },
+          {
+            "x": 48,
+            "y": 21
+          },
+          {
+            "x": 49,
+            "y": 19
+          },
+          {
+            "x": 59,
+            "y": 8
+          },
+          {
+            "x": 60,
+            "y": 30
+          },
+          {
+            "x": 6,
+            "y": 27
+          },
+          {
+            "x": 4,
+            "y": 9
+          },
+          {
+            "x": 55,
+            "y": 18
           }
         ]
       }
@@ -10778,6 +11246,298 @@
       }
     },
     {
+      "slug": "ice-rink",
+      "name": "Ice Rink",
+      "description": "Six bases on a ring of snow around a frozen lake, with ore lining the ring between neighbours.",
+      "translations": {
+        "en": {
+          "name": "Ice Rink",
+          "description": "Six bases on a ring of snow around a frozen lake, with ore lining the ring between neighbours."
+        },
+        "zh": {
+          "name": "溜冰场",
+          "description": "六个基地分布在环绕冰湖的雪地环带上，相邻基地之间的环带上排布着矿点。"
+        },
+        "ko": {
+          "name": "아이스링크",
+          "description": "얼어붙은 호수를 두른 눈의 고리에 여섯 기지가 자리하고, 이웃 기지 사이 고리를 따라 광석이 늘어서 있다."
+        }
+      },
+      "author": "壁垒",
+      "w": 200,
+      "h": 130,
+      "spawns": 6,
+      "deposits": 58,
+      "decor": 0,
+      "updated": "2026-11-07T10:29:38+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 42,
+        "terrain": "/wEZARAJLAEYCSUBHgkgASIJHAElCRoBKAkWASsJFAEOCRISDgkRAQsJGRIMCQ8BCgkeEgkJDwEJCSASCQkNAQgJIxIJCQwBBwklEggJCwEICSYSBwkLAQcJKBIHCQoBBwkoEgcJCgEGCSkSBwkKAQYJKRIHCQoBBwkoEgcJCgEHCSgSBwkKAQgJJhIHCQwBCAkkEggJDAEJCSISCAkOAQkJIBIJCQ8BCgkcEgoJEAEMCRcSDQkRAQ8JEBIPCRQBKgkXASgJGgEkCR4BIAkiARwJJwEWCS4BDQn/ARsB",
+        "spawns": [
+          {
+            "x": 6,
+            "y": 21
+          },
+          {
+            "x": 20,
+            "y": 7
+          },
+          {
+            "x": 43,
+            "y": 7
+          },
+          {
+            "x": 57,
+            "y": 21
+          },
+          {
+            "x": 43,
+            "y": 34
+          },
+          {
+            "x": 20,
+            "y": 34
+          }
+        ],
+        "deposits": [
+          {
+            "x": 8,
+            "y": 20
+          },
+          {
+            "x": 8,
+            "y": 21
+          },
+          {
+            "x": 10,
+            "y": 21
+          },
+          {
+            "x": 19,
+            "y": 8
+          },
+          {
+            "x": 22,
+            "y": 8
+          },
+          {
+            "x": 21,
+            "y": 9
+          },
+          {
+            "x": 6,
+            "y": 18
+          },
+          {
+            "x": 18,
+            "y": 7
+          },
+          {
+            "x": 23,
+            "y": 6
+          },
+          {
+            "x": 29,
+            "y": 5
+          },
+          {
+            "x": 29,
+            "y": 9
+          },
+          {
+            "x": 33,
+            "y": 5
+          },
+          {
+            "x": 33,
+            "y": 9
+          },
+          {
+            "x": 8,
+            "y": 17
+          },
+          {
+            "x": 15,
+            "y": 10
+          },
+          {
+            "x": 11,
+            "y": 13
+          },
+          {
+            "x": 54,
+            "y": 20
+          },
+          {
+            "x": 54,
+            "y": 21
+          },
+          {
+            "x": 53,
+            "y": 21
+          },
+          {
+            "x": 43,
+            "y": 8
+          },
+          {
+            "x": 41,
+            "y": 8
+          },
+          {
+            "x": 42,
+            "y": 9
+          },
+          {
+            "x": 56,
+            "y": 18
+          },
+          {
+            "x": 45,
+            "y": 7
+          },
+          {
+            "x": 40,
+            "y": 6
+          },
+          {
+            "x": 34,
+            "y": 5
+          },
+          {
+            "x": 34,
+            "y": 9
+          },
+          {
+            "x": 29,
+            "y": 5
+          },
+          {
+            "x": 29,
+            "y": 9
+          },
+          {
+            "x": 54,
+            "y": 17
+          },
+          {
+            "x": 48,
+            "y": 10
+          },
+          {
+            "x": 52,
+            "y": 13
+          },
+          {
+            "x": 19,
+            "y": 32
+          },
+          {
+            "x": 22,
+            "y": 33
+          },
+          {
+            "x": 21,
+            "y": 31
+          },
+          {
+            "x": 6,
+            "y": 22
+          },
+          {
+            "x": 18,
+            "y": 33
+          },
+          {
+            "x": 23,
+            "y": 35
+          },
+          {
+            "x": 29,
+            "y": 35
+          },
+          {
+            "x": 29,
+            "y": 32
+          },
+          {
+            "x": 33,
+            "y": 35
+          },
+          {
+            "x": 33,
+            "y": 32
+          },
+          {
+            "x": 8,
+            "y": 24
+          },
+          {
+            "x": 15,
+            "y": 31
+          },
+          {
+            "x": 11,
+            "y": 28
+          },
+          {
+            "x": 43,
+            "y": 32
+          },
+          {
+            "x": 41,
+            "y": 33
+          },
+          {
+            "x": 42,
+            "y": 31
+          },
+          {
+            "x": 56,
+            "y": 22
+          },
+          {
+            "x": 45,
+            "y": 33
+          },
+          {
+            "x": 40,
+            "y": 35
+          },
+          {
+            "x": 34,
+            "y": 35
+          },
+          {
+            "x": 34,
+            "y": 32
+          },
+          {
+            "x": 29,
+            "y": 35
+          },
+          {
+            "x": 29,
+            "y": 32
+          },
+          {
+            "x": 54,
+            "y": 24
+          },
+          {
+            "x": 48,
+            "y": 31
+          },
+          {
+            "x": 52,
+            "y": 28
+          }
+        ]
+      }
+    },
+    {
       "slug": "indonesia",
       "name": "Indonesia",
       "description": "The archipelago at one scale, Sumatra to New Guinea: rainforest over Borneo and Papua, volcanoes down Java, peat swamp on the low coasts and straits between the islands. Eight seats, a city each.",
@@ -11329,6 +12089,154 @@
           {
             "x": 11,
             "y": 15
+          }
+        ]
+      }
+    },
+    {
+      "slug": "island-raiders",
+      "name": "Island Raiders",
+      "description": "Four players build up from corner islands and raise fleets to fight over the central island and its ore. Each side has three sea mines laid in advance; mind your sea lanes and landing spots.",
+      "translations": {
+        "en": {
+          "name": "Island Raiders",
+          "description": "Four players build up from corner islands and raise fleets to fight over the central island and its ore. Each side has three sea mines laid in advance; mind your sea lanes and landing spots."
+        },
+        "zh": {
+          "name": "海島奇兵",
+          "description": "四人海岛对抗：从四角岛屿发展，建造舰队争夺中央岛屿与矿点。各方预设三枚水雷，注意航线与登陆位置。"
+        },
+        "ko": {
+          "name": "섬 기습대",
+          "description": "네 플레이어가 모서리 섬에서 성장해 함대를 꾸리고 중앙 섬과 그 광석을 두고 싸운다. 각 진영에 수뢰 세 개가 미리 깔려 있으니 항로와 상륙 지점을 조심하라."
+        }
+      },
+      "author": "猎狼",
+      "w": 96,
+      "h": 88,
+      "spawns": 4,
+      "deposits": 24,
+      "decor": 6,
+      "updated": "2026-11-07T10:30:01+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 59,
+        "terrain": "DAMoABgDJwAaAyYAGgMmABoDJgAbAyQAGwMmABoDJgAaAyYAGQMnABkDKAAXAyoAFAMtAAkDAgAHAy8ABwP/AP8AogAEAzoACAM3AAkDNwAKAzYACgM2AAoDNgAKAzYACQM4AAgDOQAGA/8A/wCjAAEDNQABAwYACAMuAAgDAQALAyoAFwMoABgDKAAZAyYAGgMmABoDJgAaAyUAGwMmABoDJgAaAyYAGgMmABkDKAAYAygADAM=",
+        "spawns": [
+          {
+            "x": 5,
+            "y": 5
+          },
+          {
+            "x": 58,
+            "y": 52
+          },
+          {
+            "x": 5,
+            "y": 52
+          },
+          {
+            "x": 58,
+            "y": 5
+          }
+        ],
+        "deposits": [
+          {
+            "x": 8,
+            "y": 47
+          },
+          {
+            "x": 10,
+            "y": 47
+          },
+          {
+            "x": 10,
+            "y": 50
+          },
+          {
+            "x": 2,
+            "y": 56
+          },
+          {
+            "x": 30,
+            "y": 32
+          },
+          {
+            "x": 26,
+            "y": 30
+          },
+          {
+            "x": 55,
+            "y": 47
+          },
+          {
+            "x": 52,
+            "y": 47
+          },
+          {
+            "x": 52,
+            "y": 50
+          },
+          {
+            "x": 61,
+            "y": 56
+          },
+          {
+            "x": 32,
+            "y": 32
+          },
+          {
+            "x": 36,
+            "y": 30
+          },
+          {
+            "x": 8,
+            "y": 10
+          },
+          {
+            "x": 10,
+            "y": 10
+          },
+          {
+            "x": 10,
+            "y": 7
+          },
+          {
+            "x": 2,
+            "y": 2
+          },
+          {
+            "x": 30,
+            "y": 26
+          },
+          {
+            "x": 26,
+            "y": 28
+          },
+          {
+            "x": 55,
+            "y": 10
+          },
+          {
+            "x": 52,
+            "y": 10
+          },
+          {
+            "x": 52,
+            "y": 7
+          },
+          {
+            "x": 61,
+            "y": 2
+          },
+          {
+            "x": 32,
+            "y": 26
+          },
+          {
+            "x": 36,
+            "y": 28
           }
         ]
       }
@@ -13642,6 +14550,114 @@
       }
     },
     {
+      "slug": "naval-battle",
+      "name": "Naval Battle",
+      "description": "Two bases on opposite corner coasts, with ore across the sea floor and iron hidden on two small islands; crush the other side with your navy.",
+      "translations": {
+        "en": {
+          "name": "Naval Battle",
+          "description": "Two bases on opposite corner coasts, with ore across the sea floor and iron hidden on two small islands; crush the other side with your navy."
+        },
+        "zh": {
+          "name": "海战",
+          "description": "双方位于对称的两处海岸，海底资源丰富，小岛上也暗藏大量铁矿，你要做的就是用海军将对方彻底击溃。"
+        },
+        "ko": {
+          "name": "해전",
+          "description": "마주 보는 두 모서리 해안에 기지가 있고, 바다 곳곳에 광석이, 작은 두 섬에는 철광이 숨어 있다. 해군으로 상대를 쓸어버려라."
+        }
+      },
+      "author": "重盾",
+      "w": 64,
+      "h": 64,
+      "spawns": 2,
+      "deposits": 16,
+      "decor": 10,
+      "updated": "2026-11-07T10:30:09+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 64,
+        "terrain": "DgMBEQMBLAACAQ4DAREDAS4ADgMBEQMBLgAOAwERAwEuAA4DAREDAS4ADgMBEQMBLgAOAwERAwEuAAQQCgMBEQMBLgAFBgkDAREDAS4AAgMCEAoDAREDAS4ADgMBEQMBLgAOAwERAwEuAA8RAwEuABIBLgASAS4AEgFZAAMBPAACAQERAgE7AAEBAREBAgERAgE4AAMBAREBAwECARECATcAAQECEQECAgMCAgIBDgABAScAAQEBEQUDAgIBATYAAQECEQQDAQIBEQEBNgACAQERAQICAwECARECATcAAgEBEQIDARECATkAAQEEEQEBOgAGAf8A/wCiAAYBOgABAQQRAQE5AAIBARECAwERAgE3AAIBAREBAgIDAQIBEQIBNgABAQERAQIEAwIRAQE2AAEBAgIFAwERAQEnAAEBDgACAQICAgMBAgIRAQE3AAIBAREBAgEDAREDATgAAgEBEQECAREBATsAAgEBEQIBPAADAVkAEgEuABIBLgASAS4AAwEPES4AAwEBEQ4DLgADAQERDgMuAAMBAREKAwIQAgMuAAMBAREJAwUGLgADAQERCgMEEC4AAwEBEQ4DLgADAQERDgMuAAMBAREOAy4AAwEBEQ4DLgADAQERDgMuAAMBAREOAwIBLAADAQERDgM=",
+        "spawns": [
+          {
+            "x": 57,
+            "y": 58
+          },
+          {
+            "x": 7,
+            "y": 5
+          }
+        ],
+        "deposits": [
+          {
+            "x": 45,
+            "y": 38
+          },
+          {
+            "x": 17,
+            "y": 40
+          },
+          {
+            "x": 20,
+            "y": 40
+          },
+          {
+            "x": 17,
+            "y": 43
+          },
+          {
+            "x": 20,
+            "y": 43
+          },
+          {
+            "x": 40,
+            "y": 36
+          },
+          {
+            "x": 61,
+            "y": 61
+          },
+          {
+            "x": 27,
+            "y": 58
+          },
+          {
+            "x": 18,
+            "y": 25
+          },
+          {
+            "x": 46,
+            "y": 23
+          },
+          {
+            "x": 43,
+            "y": 23
+          },
+          {
+            "x": 46,
+            "y": 20
+          },
+          {
+            "x": 43,
+            "y": 20
+          },
+          {
+            "x": 23,
+            "y": 27
+          },
+          {
+            "x": 2,
+            "y": 2
+          },
+          {
+            "x": 36,
+            "y": 5
+          }
+        ]
+      }
+    },
+    {
       "slug": "new-canyon-2v2",
       "name": "新峡谷 (2v2)",
       "description": "建议关闭建造范围",
@@ -13809,6 +14825,582 @@
           {
             "x": 63,
             "y": 3
+          }
+        ]
+      }
+    },
+    {
+      "slug": "peasant-uprising",
+      "name": "Peasant Uprising",
+      "description": "Six outer bases play as one team against two dug into a central fortress. Bomb the power plants and fight over the ore.",
+      "translations": {
+        "en": {
+          "name": "Peasant Uprising",
+          "description": "Six outer bases play as one team against two dug into a central fortress. Bomb the power plants and fight over the ore."
+        },
+        "zh": {
+          "name": "农民起义",
+          "description": "懂的都懂：周围六个基地是一队，中间两个是一队，躲在中央要塞里。轰炸发电厂，争夺矿场。"
+        },
+        "ko": {
+          "name": "농민 봉기",
+          "description": "바깥의 여섯 기지가 한 팀이 되어 중앙 요새에 틀어박힌 두 기지와 맞선다. 발전소를 폭격하고 광산을 차지하라."
+        }
+      },
+      "author": "The_Muyu",
+      "w": 128,
+      "h": 108,
+      "spawns": 8,
+      "deposits": 58,
+      "decor": 0,
+      "updated": "2026-11-07T10:30:42+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 54,
+        "terrain": "vAMCCggDAgo0AwIKCAMCCv8D/wOoAwEF6AMBAgEFAwIBBQMCAQUGAgEFAgIBBQMCAQUBAicDGQInAxkCJwMZAicDGQInAxkCJwMBAgEFAwIBDRMCJwMHAgEMEQInAxkCJwMHAgEOCQIBDgcCCQMDCggDAgoRAxkCJwMBAgEFFQIBBQECJwMZAicDGQInAxkCJwMZAicDAQIBBQMCAQUDAgEFBgIBBQICAQUDAgEFAQL+AwEF/wP/A9ADAgoGAwIK+QM=",
+        "spawns": [
+          {
+            "x": 4,
+            "y": 4
+          },
+          {
+            "x": 59,
+            "y": 49
+          },
+          {
+            "x": 34,
+            "y": 26
+          },
+          {
+            "x": 37,
+            "y": 26
+          },
+          {
+            "x": 58,
+            "y": 2
+          },
+          {
+            "x": 3,
+            "y": 50
+          },
+          {
+            "x": 2,
+            "y": 28
+          },
+          {
+            "x": 61,
+            "y": 27
+          }
+        ],
+        "deposits": [
+          {
+            "x": 31,
+            "y": 29
+          },
+          {
+            "x": 31,
+            "y": 30
+          },
+          {
+            "x": 33,
+            "y": 29
+          },
+          {
+            "x": 33,
+            "y": 30
+          },
+          {
+            "x": 35,
+            "y": 29
+          },
+          {
+            "x": 35,
+            "y": 30
+          },
+          {
+            "x": 37,
+            "y": 29
+          },
+          {
+            "x": 37,
+            "y": 30
+          },
+          {
+            "x": 39,
+            "y": 29
+          },
+          {
+            "x": 39,
+            "y": 30
+          },
+          {
+            "x": 31,
+            "y": 21
+          },
+          {
+            "x": 31,
+            "y": 23
+          },
+          {
+            "x": 32,
+            "y": 21
+          },
+          {
+            "x": 32,
+            "y": 23
+          },
+          {
+            "x": 34,
+            "y": 21
+          },
+          {
+            "x": 34,
+            "y": 23
+          },
+          {
+            "x": 36,
+            "y": 21
+          },
+          {
+            "x": 36,
+            "y": 23
+          },
+          {
+            "x": 38,
+            "y": 21
+          },
+          {
+            "x": 38,
+            "y": 23
+          },
+          {
+            "x": 39,
+            "y": 21
+          },
+          {
+            "x": 39,
+            "y": 23
+          },
+          {
+            "x": 59,
+            "y": 2
+          },
+          {
+            "x": 60,
+            "y": 3
+          },
+          {
+            "x": 61,
+            "y": 2
+          },
+          {
+            "x": 62,
+            "y": 3
+          },
+          {
+            "x": 32,
+            "y": 2
+          },
+          {
+            "x": 32,
+            "y": 3
+          },
+          {
+            "x": 34,
+            "y": 2
+          },
+          {
+            "x": 34,
+            "y": 3
+          },
+          {
+            "x": 35,
+            "y": 2
+          },
+          {
+            "x": 35,
+            "y": 3
+          },
+          {
+            "x": 27,
+            "y": 49
+          },
+          {
+            "x": 27,
+            "y": 50
+          },
+          {
+            "x": 29,
+            "y": 49
+          },
+          {
+            "x": 29,
+            "y": 50
+          },
+          {
+            "x": 31,
+            "y": 49
+          },
+          {
+            "x": 31,
+            "y": 50
+          },
+          {
+            "x": 5,
+            "y": 3
+          },
+          {
+            "x": 6,
+            "y": 4
+          },
+          {
+            "x": 7,
+            "y": 3
+          },
+          {
+            "x": 8,
+            "y": 4
+          },
+          {
+            "x": 61,
+            "y": 49
+          },
+          {
+            "x": 61,
+            "y": 50
+          },
+          {
+            "x": 62,
+            "y": 49
+          },
+          {
+            "x": 63,
+            "y": 50
+          },
+          {
+            "x": 4,
+            "y": 50
+          },
+          {
+            "x": 5,
+            "y": 51
+          },
+          {
+            "x": 6,
+            "y": 50
+          },
+          {
+            "x": 7,
+            "y": 50
+          },
+          {
+            "x": 3,
+            "y": 27
+          },
+          {
+            "x": 4,
+            "y": 28
+          },
+          {
+            "x": 5,
+            "y": 27
+          },
+          {
+            "x": 6,
+            "y": 28
+          },
+          {
+            "x": 56,
+            "y": 26
+          },
+          {
+            "x": 58,
+            "y": 27
+          },
+          {
+            "x": 58,
+            "y": 26
+          },
+          {
+            "x": 59,
+            "y": 27
+          }
+        ]
+      }
+    },
+    {
+      "slug": "quzhou",
+      "name": "Quzhou",
+      "description": "A one-on-one across farmland laced with narrow rivers, a flooded field to the north-east and a rocky ridge to the south; the bases sit in opposite corners.",
+      "translations": {
+        "en": {
+          "name": "Quzhou",
+          "description": "A one-on-one across farmland laced with narrow rivers, a flooded field to the north-east and a rocky ridge to the south; the bases sit in opposite corners."
+        },
+        "zh": {
+          "name": "曲周",
+          "description": "陆地小河战争：一对一，农田间小河纵横，东北有一片水泽，南面横着岩石山脊；双方基地位于对角。"
+        },
+        "ko": {
+          "name": "취저우",
+          "description": "좁은 강줄기가 얽힌 농지를 사이에 둔 일대일. 북동쪽에는 물에 잠긴 들판, 남쪽에는 바위 능선이 있고 기지는 서로 반대쪽 모서리에 있다."
+        }
+      },
+      "author": "中国",
+      "w": 128,
+      "h": 108,
+      "spawns": 2,
+      "deposits": 58,
+      "decor": 8,
+      "updated": "2026-11-07T10:30:26+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 54,
+        "terrain": "KAMCAD0DAwA2AwoAMQMJAAIDAgAsAwsABgMCAC4DAwADAwEABwMEACwDAgALAwQALgMCAAoDAgAxAwIACwMBADEDAgAMAwEADAMCAQYDDAEJAwkADQMBAAgDBAECAwYBBQMIAQ4DAgAOAwEADgMIAQEDAgEVAwEAEAMBAAkDAQECAwwBBgMDAQwDAQAQAwIACQMJAQIDAwEBAwEBAQMEAQIDAQELAwEADgMDAAcDAgEDAwkBAQMGAQUDAQEKAwIADQMDAAcDAQEDAwEBAgMEAQIDEQEWAwIACQMBAQMDAwEBAwMBAgMEAQEDBwEbAwIACgMBAQEDAgEEAwkBAgMBAR8DAQABAwIACAMBAQEDAQABAQcDAwEBAwEBAQMBASADAgAEAwIABgMCAAEDAQECAwEBBAMGAQEDCAEXAwIABgMIAAgBAgMBAQkDAwEZAwEABwMGAAIDAQEDAwMBKAMBAAgDBAADAwEBLgMBAAgDBAAyAwEACAMDAA4DBAABAwEAAQMCAAEDCAACAwEAAQMBAA4DAQAWAxsADAMCABMDCAALAwEAAwMHAAsDAwARAwYAEAMBAAUDAQABAwMACgMCABEDBAAUAwEAAwMHAAEDAQAHAwIAEAMEABQDDwABAwcAEAMDABIDDwAFAwYADwMEAA8DCwADAwMACQMEAA0DBAAGAwQOBgMHAAcDAQANAwQACwMEAAYDAQ4JAwYABwMCAA8DBQAJAwMABQMBDgoDBAAIAwIAFAMDAAcDAwAFAwEOCQMFAAcDAgAXAwIABQMEAA8DBAAjAwIAAwMCEwMADgMEACQDAgADAwEAAhMBAA4DAwArAwIAAhMOAwMACgMSAAMDBgABAwEABAMDAA8DAwAHAxUAAgMKAAMDAwAPAwUAAQMMAAMFAQAFBQcDAgAFAwIAAgMDABADDQADBQEDCwUHAwMABwMDABADBgAIBRcDAgAGAwIAEQMJBRYDAQAFAwIABQMDABEDBgUZAwQAAgMCAAUDAgASAwUFGgMBAAEDBgAFAwIAEQMFBRsDBAABAwMABQMCABEDBQUdAwMAAQMDAAQDAgARAwEFIwMCAAIDAwACAwIAEQMDBSIDAwABAwMAAQMBABIDBQUhAwgAEgMFBSIDCAAQAwQFHQM=",
+        "spawns": [
+          {
+            "x": 4,
+            "y": 4
+          },
+          {
+            "x": 59,
+            "y": 49
+          }
+        ],
+        "deposits": [
+          {
+            "x": 7,
+            "y": 4
+          },
+          {
+            "x": 4,
+            "y": 7
+          },
+          {
+            "x": 7,
+            "y": 7
+          },
+          {
+            "x": 56,
+            "y": 49
+          },
+          {
+            "x": 59,
+            "y": 46
+          },
+          {
+            "x": 56,
+            "y": 46
+          },
+          {
+            "x": 53,
+            "y": 49
+          },
+          {
+            "x": 61,
+            "y": 46
+          },
+          {
+            "x": 62,
+            "y": 50
+          },
+          {
+            "x": 51,
+            "y": 51
+          },
+          {
+            "x": 51,
+            "y": 49
+          },
+          {
+            "x": 58,
+            "y": 47
+          },
+          {
+            "x": 54,
+            "y": 48
+          },
+          {
+            "x": 60,
+            "y": 47
+          },
+          {
+            "x": 56,
+            "y": 48
+          },
+          {
+            "x": 54,
+            "y": 52
+          },
+          {
+            "x": 58,
+            "y": 52
+          },
+          {
+            "x": 60,
+            "y": 52
+          },
+          {
+            "x": 49,
+            "y": 53
+          },
+          {
+            "x": 46,
+            "y": 52
+          },
+          {
+            "x": 48,
+            "y": 51
+          },
+          {
+            "x": 49,
+            "y": 47
+          },
+          {
+            "x": 47,
+            "y": 48
+          },
+          {
+            "x": 52,
+            "y": 45
+          },
+          {
+            "x": 55,
+            "y": 44
+          },
+          {
+            "x": 59,
+            "y": 44
+          },
+          {
+            "x": 62,
+            "y": 45
+          },
+          {
+            "x": 41,
+            "y": 53
+          },
+          {
+            "x": 45,
+            "y": 50
+          },
+          {
+            "x": 4,
+            "y": 2
+          },
+          {
+            "x": 1,
+            "y": 2
+          },
+          {
+            "x": 8,
+            "y": 1
+          },
+          {
+            "x": 11,
+            "y": 1
+          },
+          {
+            "x": 10,
+            "y": 3
+          },
+          {
+            "x": 14,
+            "y": 1
+          },
+          {
+            "x": 15,
+            "y": 3
+          },
+          {
+            "x": 17,
+            "y": 0
+          },
+          {
+            "x": 1,
+            "y": 10
+          },
+          {
+            "x": 13,
+            "y": 7
+          },
+          {
+            "x": 5,
+            "y": 11
+          },
+          {
+            "x": 16,
+            "y": 6
+          },
+          {
+            "x": 24,
+            "y": 2
+          },
+          {
+            "x": 17,
+            "y": 3
+          },
+          {
+            "x": 28,
+            "y": 1
+          },
+          {
+            "x": 27,
+            "y": 8
+          },
+          {
+            "x": 19,
+            "y": 10
+          },
+          {
+            "x": 26,
+            "y": 11
+          },
+          {
+            "x": 21,
+            "y": 9
+          },
+          {
+            "x": 2,
+            "y": 16
+          },
+          {
+            "x": 10,
+            "y": 17
+          },
+          {
+            "x": 5,
+            "y": 16
+          },
+          {
+            "x": 5,
+            "y": 21
+          },
+          {
+            "x": 12,
+            "y": 20
+          },
+          {
+            "x": 1,
+            "y": 20
+          },
+          {
+            "x": 3,
+            "y": 26
+          },
+          {
+            "x": 12,
+            "y": 23
+          },
+          {
+            "x": 6,
+            "y": 25
+          },
+          {
+            "x": 1,
+            "y": 24
           }
         ]
       }
@@ -15949,6 +17541,494 @@
           {
             "x": 46,
             "y": 16
+          }
+        ]
+      }
+    },
+    {
+      "slug": "snowfield-bridges",
+      "name": "Snowfield Bridges",
+      "description": "Armies gather on either side of a frozen canyon crossed by three bridges; four corner bases, west against east, with the richer ore to the north.",
+      "translations": {
+        "en": {
+          "name": "Snowfield Bridges",
+          "description": "Armies gather on either side of a frozen canyon crossed by three bridges; four corner bases, west against east, with the richer ore to the north."
+        },
+        "zh": {
+          "name": "雪原战桥",
+          "description": "冰原大裂谷的两侧，军队正在集结：三座桥横跨峡谷，四角各有基地，西对东，北侧矿藏更丰富。"
+        },
+        "ko": {
+          "name": "설원의 다리",
+          "description": "세 다리가 가로지르는 얼어붙은 협곡 양쪽에서 군대가 집결한다. 네 모서리 기지가 서쪽 대 동쪽으로 맞서고, 광석은 북쪽이 더 풍부하다."
+        }
+      },
+      "author": "时空旅萧萧",
+      "w": 128,
+      "h": 108,
+      "spawns": 4,
+      "deposits": 52,
+      "decor": 10,
+      "updated": "2026-11-07T10:29:52+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 54,
+        "terrain": "HwkBDwISAQ08CQEPAhIBDT0JAQ8BEgENPQkBDwESAQ0tCQQGDAkBDwESAQ0JCQQGIAkNBgIJAhMBEgITAQkLBiAJDQYHEwwGIAkNBgEJAhMCEgITAQkLBiAJBAYLCQEPAhIBDQkJBAYvCQEPAQkBDT4JAhIBDT0JAQ8BEgENPQkBDwESAQ09CQEPARIBDT0JAQ8BEgENPQkBDwESAQ09CQEPARIBDT0JAQ8BEgENPQkBDwENPgkBDwINLAkEBg0JAQ8BEgENCgkEBh4JDgYCCQITARIBEwEJDQYeCQ8GBhMNBh4JDwYGEw0GHgkEBgwJAQ8CEgENCgkEBh8JAwYMCQEPAhIBDQoJAwYwCQEPARIBDT0JAQ8BEgENPQkBDwESAQ08CQIPARIBDTwJAQ8BEgEJAQ08CQEPARIBDT0JAQ8BEgENPQkBDwEJAQ09CQEPAg09CQEPAQ0uCQQGDAkBDwENDAkEBh4JBAYMCQEPARIBDQsJBAYeCQQGDAkBDwESAQ0LCQQGHgkOBgcTDQYeCQ4GBxMNBh4JDgYBCQETAQ8BEgETAgkNBh4JBAYMCQIPAQ0LCQQGHgkEBg0JAQ8BDQsJBAYvCQEPARIBDT0JAQ8BEgENPAkBDwISAQ08CQEPAhIBDTwJAQ8CEgENPAkBDwISAQ08CQIPARIBDT0JAQ8BDT4JAQ8BDT4JAQ8BDR4J",
+        "spawns": [
+          {
+            "x": 4,
+            "y": 4
+          },
+          {
+            "x": 59,
+            "y": 46
+          },
+          {
+            "x": 5,
+            "y": 46
+          },
+          {
+            "x": 60,
+            "y": 4
+          }
+        ],
+        "deposits": [
+          {
+            "x": 7,
+            "y": 4
+          },
+          {
+            "x": 4,
+            "y": 7
+          },
+          {
+            "x": 7,
+            "y": 7
+          },
+          {
+            "x": 7,
+            "y": 43
+          },
+          {
+            "x": 5,
+            "y": 43
+          },
+          {
+            "x": 7,
+            "y": 45
+          },
+          {
+            "x": 1,
+            "y": 20
+          },
+          {
+            "x": 1,
+            "y": 21
+          },
+          {
+            "x": 3,
+            "y": 20
+          },
+          {
+            "x": 3,
+            "y": 21
+          },
+          {
+            "x": 3,
+            "y": 23
+          },
+          {
+            "x": 1,
+            "y": 23
+          },
+          {
+            "x": 4,
+            "y": 21
+          },
+          {
+            "x": 4,
+            "y": 20
+          },
+          {
+            "x": 4,
+            "y": 23
+          },
+          {
+            "x": 1,
+            "y": 24
+          },
+          {
+            "x": 3,
+            "y": 24
+          },
+          {
+            "x": 4,
+            "y": 24
+          },
+          {
+            "x": 24,
+            "y": 31
+          },
+          {
+            "x": 26,
+            "y": 31
+          },
+          {
+            "x": 24,
+            "y": 33
+          },
+          {
+            "x": 26,
+            "y": 33
+          },
+          {
+            "x": 23,
+            "y": 12
+          },
+          {
+            "x": 26,
+            "y": 12
+          },
+          {
+            "x": 23,
+            "y": 14
+          },
+          {
+            "x": 26,
+            "y": 14
+          },
+          {
+            "x": 56,
+            "y": 4
+          },
+          {
+            "x": 59,
+            "y": 7
+          },
+          {
+            "x": 56,
+            "y": 7
+          },
+          {
+            "x": 56,
+            "y": 43
+          },
+          {
+            "x": 58,
+            "y": 43
+          },
+          {
+            "x": 56,
+            "y": 45
+          },
+          {
+            "x": 62,
+            "y": 20
+          },
+          {
+            "x": 62,
+            "y": 21
+          },
+          {
+            "x": 60,
+            "y": 20
+          },
+          {
+            "x": 60,
+            "y": 21
+          },
+          {
+            "x": 60,
+            "y": 23
+          },
+          {
+            "x": 62,
+            "y": 23
+          },
+          {
+            "x": 59,
+            "y": 21
+          },
+          {
+            "x": 59,
+            "y": 20
+          },
+          {
+            "x": 59,
+            "y": 23
+          },
+          {
+            "x": 62,
+            "y": 24
+          },
+          {
+            "x": 60,
+            "y": 24
+          },
+          {
+            "x": 59,
+            "y": 24
+          },
+          {
+            "x": 39,
+            "y": 31
+          },
+          {
+            "x": 37,
+            "y": 31
+          },
+          {
+            "x": 39,
+            "y": 33
+          },
+          {
+            "x": 37,
+            "y": 33
+          },
+          {
+            "x": 40,
+            "y": 12
+          },
+          {
+            "x": 37,
+            "y": 12
+          },
+          {
+            "x": 40,
+            "y": 14
+          },
+          {
+            "x": 37,
+            "y": 14
+          }
+        ]
+      }
+    },
+    {
+      "slug": "snowflake",
+      "name": "Snowflake",
+      "description": "Six bases sit on the arms of a great snowflake over deep water, with ore on the branches; the arms meet at a hub around a small central lake.",
+      "translations": {
+        "en": {
+          "name": "Snowflake",
+          "description": "Six bases sit on the arms of a great snowflake over deep water, with ore on the branches; the arms meet at a hub around a small central lake."
+        },
+        "zh": {
+          "name": "雪花",
+          "description": "六个基地分踞巨大雪花的六条主臂，矿点散布在枝杈上；各臂在中央小湖周围的枢纽交汇。"
+        },
+        "ko": {
+          "name": "눈송이",
+          "description": "깊은 바다 위 거대한 눈송이의 여섯 팔에 기지가 하나씩 자리하고, 가지마다 광석이 있다. 팔들은 가운데 작은 호수를 두른 중심부에서 만난다."
+        }
+      },
+      "author": "壁垒",
+      "w": 204,
+      "h": 170,
+      "spawns": 6,
+      "deposits": 42,
+      "decor": 0,
+      "updated": "2026-11-07T10:29:24+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 53,
+        "terrain": "/wEUAQIJBAECCQoBAgkEAQIJJQEECQIBBAkIAQQJAgEECSUBAgkEAQIJCgECCQQBAgknAQIJAgECCQwBAgkCAQIJKQEECQ4BBAkmAQEJAwEECQ4BBAkDAQEJIAEQCQIBEAkfAQIJAgEGCQEBAwkEAQMJAQEGCQIBAgklAQQJDgEECSoBBQkMAQUJKAECCQMBAwkKAQMJAwECCSUBBAkCAQMJCgEDCQIBBAklAQIJAwEECQIBBAkCAQQJAwECCSwBAwkDAQIJAwEDCTMBAwkGAQMJNQECCQYBAgklAQIJBAECCQkBAwkEAQMJCQECCQQBAgkTAQMJAwEDCQUBAgkDAQgJAwECCQUBAwkDAQMJEwECCQQBAgkEAQQJAgEICQIBBAkEAQMJAwECCRUBAgkCAQEJCgEMCQoBAQkCAQIJFwEECQsBCgkLAQQJEwECCQIBFgkBARMJAgECCQ0BFwkBAQQJAQEXCQ0BAgkCARYJAQETCQIBAgkTAQQJCwEKCQsBBAkXAQIJAgEBCQoBDAkKAQEJAgECCRUBAgkEAQIJBAEECQIBCAkCAQQJBAEDCQMBAgkTAQMJAwEDCQUBAgkDAQgJAwECCQUBAwkDAQMJEwECCQQBAgkJAQMJBAEDCQkBAgkEAQIJJQECCQYBAgk1AQMJBgEDCTMBAwkDAQIJAwEDCSwBAgkDAQQJAgEECQIBBAkDAQIJJQEECQIBAwkKAQMJAgEECSUBAgkDAQMJCgEDCQMBAgkoAQUJDAEFCSoBBAkOAQQJJQECCQIBBgkBAQMJBAEDCQEBBgkCAQIJHwEQCQIBEAkgAQEJAwEECQ4BBAkDAQEJJgEECQ4BBAkpAQIJAgECCQwBAgkCAQIJJwECCQQBAgkKAQIJBAECCSUBBAkCAQQJCAEECQIBBAklAQIJBAECCQoBAgkEAQIJ/wEUAQ==",
+        "spawns": [
+          {
+            "x": 41,
+            "y": 10
+          },
+          {
+            "x": 50,
+            "y": 26
+          },
+          {
+            "x": 41,
+            "y": 42
+          },
+          {
+            "x": 22,
+            "y": 42
+          },
+          {
+            "x": 13,
+            "y": 26
+          },
+          {
+            "x": 22,
+            "y": 10
+          }
+        ],
+        "deposits": [
+          {
+            "x": 7,
+            "y": 26
+          },
+          {
+            "x": 10,
+            "y": 21
+          },
+          {
+            "x": 16,
+            "y": 21
+          },
+          {
+            "x": 23,
+            "y": 21
+          },
+          {
+            "x": 20,
+            "y": 15
+          },
+          {
+            "x": 16,
+            "y": 10
+          },
+          {
+            "x": 25,
+            "y": 5
+          },
+          {
+            "x": 19,
+            "y": 5
+          },
+          {
+            "x": 28,
+            "y": 10
+          },
+          {
+            "x": 32,
+            "y": 17
+          },
+          {
+            "x": 30,
+            "y": 24
+          },
+          {
+            "x": 29,
+            "y": 26
+          },
+          {
+            "x": 56,
+            "y": 26
+          },
+          {
+            "x": 53,
+            "y": 21
+          },
+          {
+            "x": 47,
+            "y": 21
+          },
+          {
+            "x": 40,
+            "y": 21
+          },
+          {
+            "x": 43,
+            "y": 15
+          },
+          {
+            "x": 47,
+            "y": 10
+          },
+          {
+            "x": 38,
+            "y": 5
+          },
+          {
+            "x": 44,
+            "y": 5
+          },
+          {
+            "x": 35,
+            "y": 10
+          },
+          {
+            "x": 33,
+            "y": 24
+          },
+          {
+            "x": 34,
+            "y": 26
+          },
+          {
+            "x": 10,
+            "y": 31
+          },
+          {
+            "x": 16,
+            "y": 31
+          },
+          {
+            "x": 23,
+            "y": 31
+          },
+          {
+            "x": 20,
+            "y": 37
+          },
+          {
+            "x": 16,
+            "y": 42
+          },
+          {
+            "x": 25,
+            "y": 47
+          },
+          {
+            "x": 19,
+            "y": 47
+          },
+          {
+            "x": 28,
+            "y": 42
+          },
+          {
+            "x": 32,
+            "y": 35
+          },
+          {
+            "x": 30,
+            "y": 28
+          },
+          {
+            "x": 53,
+            "y": 31
+          },
+          {
+            "x": 47,
+            "y": 31
+          },
+          {
+            "x": 40,
+            "y": 31
+          },
+          {
+            "x": 43,
+            "y": 37
+          },
+          {
+            "x": 47,
+            "y": 42
+          },
+          {
+            "x": 38,
+            "y": 47
+          },
+          {
+            "x": 44,
+            "y": 47
+          },
+          {
+            "x": 35,
+            "y": 42
+          },
+          {
+            "x": 33,
+            "y": 28
           }
         ]
       }
@@ -20905,6 +22985,650 @@
           {
             "x": 45,
             "y": 12
+          }
+        ]
+      }
+    },
+    {
+      "slug": "wrath-of-fire",
+      "name": "Wrath of Fire",
+      "description": "Two rows of four bases face each other across a rocky ridge with one muddy pass. Every base starts built up with extractors, power, flame throwers and SAMs, and ore covers the ground.",
+      "translations": {
+        "en": {
+          "name": "Wrath of Fire",
+          "description": "Two rows of four bases face each other across a rocky ridge with one muddy pass. Every base starts built up with extractors, power, flame throwers and SAMs, and ore covers the ground."
+        },
+        "zh": {
+          "name": "火力天谴",
+          "description": "两排各四个基地隔着岩石山脊对峙，中间只有一条泥泞隘口。每个基地开局即有采矿场、电站、火焰塔和防空导弹，满地都是矿。"
+        },
+        "ko": {
+          "name": "화력의 천벌",
+          "description": "네 기지씩 두 줄이 진흙 고갯길 하나뿐인 바위 능선을 사이에 두고 마주 본다. 모든 기지는 채굴기, 발전소, 화염 방사탑, 대공 미사일을 갖추고 시작하며 땅은 광석으로 덮여 있다."
+        }
+      },
+      "author": "花光光",
+      "w": 98,
+      "h": 88,
+      "spawns": 8,
+      "deposits": 144,
+      "decor": 8,
+      "updated": "2026-11-07T10:29:45+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 57,
+        "terrain": "/wP/A/8D/wMEAwIFPAMJBTEDEgUsAxkFIQMiBRsDKwUPAzQFCQM5BQYTOgUGEzoFBhM6BQYTOgUGEzoFBhM6BQYTOgUGEzoFBhM6BQYTOAUJAzIFEwMpBRwDHwUlAxcFLQMPBTUDBwU9AwIF/wP/A/8D/wNEAw==",
+        "spawns": [
+          {
+            "x": 50,
+            "y": 47
+          },
+          {
+            "x": 38,
+            "y": 47
+          },
+          {
+            "x": 25,
+            "y": 47
+          },
+          {
+            "x": 13,
+            "y": 47
+          },
+          {
+            "x": 13,
+            "y": 7
+          },
+          {
+            "x": 25,
+            "y": 7
+          },
+          {
+            "x": 38,
+            "y": 7
+          },
+          {
+            "x": 50,
+            "y": 7
+          }
+        ],
+        "deposits": [
+          {
+            "x": 1,
+            "y": 1
+          },
+          {
+            "x": 3,
+            "y": 1
+          },
+          {
+            "x": 5,
+            "y": 1
+          },
+          {
+            "x": 7,
+            "y": 1
+          },
+          {
+            "x": 9,
+            "y": 1
+          },
+          {
+            "x": 11,
+            "y": 1
+          },
+          {
+            "x": 13,
+            "y": 1
+          },
+          {
+            "x": 15,
+            "y": 1
+          },
+          {
+            "x": 16,
+            "y": 1
+          },
+          {
+            "x": 18,
+            "y": 1
+          },
+          {
+            "x": 20,
+            "y": 1
+          },
+          {
+            "x": 22,
+            "y": 1
+          },
+          {
+            "x": 24,
+            "y": 1
+          },
+          {
+            "x": 26,
+            "y": 1
+          },
+          {
+            "x": 28,
+            "y": 1
+          },
+          {
+            "x": 30,
+            "y": 1
+          },
+          {
+            "x": 12,
+            "y": 3
+          },
+          {
+            "x": 14,
+            "y": 3
+          },
+          {
+            "x": 9,
+            "y": 3
+          },
+          {
+            "x": 9,
+            "y": 7
+          },
+          {
+            "x": 9,
+            "y": 10
+          },
+          {
+            "x": 12,
+            "y": 10
+          },
+          {
+            "x": 14,
+            "y": 10
+          },
+          {
+            "x": 17,
+            "y": 7
+          },
+          {
+            "x": 17,
+            "y": 10
+          },
+          {
+            "x": 17,
+            "y": 3
+          },
+          {
+            "x": 24,
+            "y": 3
+          },
+          {
+            "x": 26,
+            "y": 3
+          },
+          {
+            "x": 24,
+            "y": 10
+          },
+          {
+            "x": 26,
+            "y": 10
+          },
+          {
+            "x": 20,
+            "y": 10
+          },
+          {
+            "x": 20,
+            "y": 7
+          },
+          {
+            "x": 20,
+            "y": 3
+          },
+          {
+            "x": 29,
+            "y": 10
+          },
+          {
+            "x": 29,
+            "y": 7
+          },
+          {
+            "x": 29,
+            "y": 3
+          },
+          {
+            "x": 62,
+            "y": 1
+          },
+          {
+            "x": 60,
+            "y": 1
+          },
+          {
+            "x": 58,
+            "y": 1
+          },
+          {
+            "x": 56,
+            "y": 1
+          },
+          {
+            "x": 54,
+            "y": 1
+          },
+          {
+            "x": 52,
+            "y": 1
+          },
+          {
+            "x": 50,
+            "y": 1
+          },
+          {
+            "x": 48,
+            "y": 1
+          },
+          {
+            "x": 46,
+            "y": 1
+          },
+          {
+            "x": 44,
+            "y": 1
+          },
+          {
+            "x": 42,
+            "y": 1
+          },
+          {
+            "x": 40,
+            "y": 1
+          },
+          {
+            "x": 38,
+            "y": 1
+          },
+          {
+            "x": 36,
+            "y": 1
+          },
+          {
+            "x": 34,
+            "y": 1
+          },
+          {
+            "x": 32,
+            "y": 1
+          },
+          {
+            "x": 50,
+            "y": 3
+          },
+          {
+            "x": 48,
+            "y": 3
+          },
+          {
+            "x": 54,
+            "y": 3
+          },
+          {
+            "x": 54,
+            "y": 7
+          },
+          {
+            "x": 54,
+            "y": 10
+          },
+          {
+            "x": 50,
+            "y": 10
+          },
+          {
+            "x": 48,
+            "y": 10
+          },
+          {
+            "x": 45,
+            "y": 7
+          },
+          {
+            "x": 45,
+            "y": 10
+          },
+          {
+            "x": 45,
+            "y": 3
+          },
+          {
+            "x": 39,
+            "y": 3
+          },
+          {
+            "x": 37,
+            "y": 3
+          },
+          {
+            "x": 39,
+            "y": 10
+          },
+          {
+            "x": 37,
+            "y": 10
+          },
+          {
+            "x": 42,
+            "y": 10
+          },
+          {
+            "x": 42,
+            "y": 7
+          },
+          {
+            "x": 42,
+            "y": 3
+          },
+          {
+            "x": 33,
+            "y": 10
+          },
+          {
+            "x": 33,
+            "y": 7
+          },
+          {
+            "x": 33,
+            "y": 3
+          },
+          {
+            "x": 1,
+            "y": 54
+          },
+          {
+            "x": 3,
+            "y": 54
+          },
+          {
+            "x": 5,
+            "y": 54
+          },
+          {
+            "x": 7,
+            "y": 54
+          },
+          {
+            "x": 9,
+            "y": 54
+          },
+          {
+            "x": 11,
+            "y": 54
+          },
+          {
+            "x": 13,
+            "y": 54
+          },
+          {
+            "x": 15,
+            "y": 54
+          },
+          {
+            "x": 16,
+            "y": 54
+          },
+          {
+            "x": 18,
+            "y": 54
+          },
+          {
+            "x": 20,
+            "y": 54
+          },
+          {
+            "x": 22,
+            "y": 54
+          },
+          {
+            "x": 24,
+            "y": 54
+          },
+          {
+            "x": 26,
+            "y": 54
+          },
+          {
+            "x": 28,
+            "y": 54
+          },
+          {
+            "x": 30,
+            "y": 54
+          },
+          {
+            "x": 12,
+            "y": 51
+          },
+          {
+            "x": 14,
+            "y": 51
+          },
+          {
+            "x": 9,
+            "y": 51
+          },
+          {
+            "x": 9,
+            "y": 48
+          },
+          {
+            "x": 9,
+            "y": 45
+          },
+          {
+            "x": 12,
+            "y": 45
+          },
+          {
+            "x": 14,
+            "y": 45
+          },
+          {
+            "x": 17,
+            "y": 48
+          },
+          {
+            "x": 17,
+            "y": 45
+          },
+          {
+            "x": 17,
+            "y": 51
+          },
+          {
+            "x": 24,
+            "y": 51
+          },
+          {
+            "x": 26,
+            "y": 51
+          },
+          {
+            "x": 24,
+            "y": 45
+          },
+          {
+            "x": 26,
+            "y": 45
+          },
+          {
+            "x": 20,
+            "y": 45
+          },
+          {
+            "x": 20,
+            "y": 48
+          },
+          {
+            "x": 20,
+            "y": 51
+          },
+          {
+            "x": 29,
+            "y": 45
+          },
+          {
+            "x": 29,
+            "y": 48
+          },
+          {
+            "x": 29,
+            "y": 51
+          },
+          {
+            "x": 62,
+            "y": 54
+          },
+          {
+            "x": 60,
+            "y": 54
+          },
+          {
+            "x": 58,
+            "y": 54
+          },
+          {
+            "x": 56,
+            "y": 54
+          },
+          {
+            "x": 54,
+            "y": 54
+          },
+          {
+            "x": 52,
+            "y": 54
+          },
+          {
+            "x": 50,
+            "y": 54
+          },
+          {
+            "x": 48,
+            "y": 54
+          },
+          {
+            "x": 46,
+            "y": 54
+          },
+          {
+            "x": 44,
+            "y": 54
+          },
+          {
+            "x": 42,
+            "y": 54
+          },
+          {
+            "x": 40,
+            "y": 54
+          },
+          {
+            "x": 38,
+            "y": 54
+          },
+          {
+            "x": 36,
+            "y": 54
+          },
+          {
+            "x": 34,
+            "y": 54
+          },
+          {
+            "x": 32,
+            "y": 54
+          },
+          {
+            "x": 50,
+            "y": 51
+          },
+          {
+            "x": 48,
+            "y": 51
+          },
+          {
+            "x": 54,
+            "y": 51
+          },
+          {
+            "x": 54,
+            "y": 48
+          },
+          {
+            "x": 54,
+            "y": 45
+          },
+          {
+            "x": 50,
+            "y": 45
+          },
+          {
+            "x": 48,
+            "y": 45
+          },
+          {
+            "x": 45,
+            "y": 48
+          },
+          {
+            "x": 45,
+            "y": 45
+          },
+          {
+            "x": 45,
+            "y": 51
+          },
+          {
+            "x": 39,
+            "y": 51
+          },
+          {
+            "x": 37,
+            "y": 51
+          },
+          {
+            "x": 39,
+            "y": 45
+          },
+          {
+            "x": 37,
+            "y": 45
+          },
+          {
+            "x": 42,
+            "y": 45
+          },
+          {
+            "x": 42,
+            "y": 48
+          },
+          {
+            "x": 42,
+            "y": 51
+          },
+          {
+            "x": 33,
+            "y": 45
+          },
+          {
+            "x": 33,
+            "y": 48
+          },
+          {
+            "x": 33,
+            "y": 51
           }
         ]
       }
