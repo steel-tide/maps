@@ -1,24 +1,24 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-11-16T12:49:52.361Z",
+  "generated": "2026-11-16T15:15:39.391Z",
   "maps": [
     {
       "slug": "1v1v1v1",
-      "name": "Ring (FFA)",
-      "description": "A narrow ring of grass lies between a central lake and a wall of mountains.",
+      "name": "Ring",
+      "description": "Four lone bases on a narrow grass ring between a central lake and a wall of mountains, each with three ore fields at its back and one out in front.",
       "translations": {
         "en": {
-          "name": "Ring (FFA)",
-          "description": "A narrow ring of grass lies between a central lake and a wall of mountains."
+          "name": "Ring",
+          "description": "Four lone bases on a narrow grass ring between a central lake and a wall of mountains, each with three ore fields at its back and one out in front."
         },
         "zh": {
-          "name": "环形战场（自由混战）",
-          "description": "狭窄的草地环绕中央湖泊，外围群山围成高墙。"
+          "name": "环形战场",
+          "description": "四座孤立的驻地分布在中央湖泊与外围群山之间的狭窄草环上，每座身后有三处矿点，身前还有一处。"
         },
         "ko": {
-          "name": "환형 전장 (개인전)",
-          "description": "중앙 호수와 산으로 둘러싸인 외곽 사이에 좁은 초원 고리가 놓여 있다."
+          "name": "환형 전장",
+          "description": "중앙 호수와 산벽 사이의 좁은 초원 고리에 네 기지가 홀로 자리하고, 기지마다 뒤에 광석 세 곳, 앞에 한 곳이 있다."
         }
       },
       "author": "进水",
@@ -27,7 +27,7 @@
       "spawns": 4,
       "deposits": 16,
       "decor": 0,
-      "updated": "2026-10-03T11:34:45+08:00",
+      "updated": "2026-11-16T15:15:06Z",
       "downloads": 33,
       "thumb": {
         "w": 64,
@@ -293,19 +293,19 @@
     },
     {
       "slug": "2v2v2v2",
-      "name": "Ring",
+      "name": "Ring: Paired Bases",
       "description": "Paired bases occupy a narrow grass ring between a central lake and the surrounding mountains.",
       "translations": {
         "en": {
-          "name": "Ring",
+          "name": "Ring: Paired Bases",
           "description": "Paired bases occupy a narrow grass ring between a central lake and the surrounding mountains."
         },
         "zh": {
-          "name": "环形战场",
+          "name": "环形战场：双驻地",
           "description": "成对的驻地分布在狭窄草环上，内侧是湖泊，外侧是群山。"
         },
         "ko": {
-          "name": "환형 전장",
+          "name": "환형 전장: 쌍둥이 기지",
           "description": "중앙 호수와 주변 산 사이의 좁은 초원 고리에 기지가 쌍으로 자리 잡고 있다."
         }
       },
@@ -315,7 +315,7 @@
       "spawns": 8,
       "deposits": 16,
       "decor": 0,
-      "updated": "2026-10-21T10:15:28+08:00",
+      "updated": "2026-11-16T15:15:06Z",
       "downloads": 35,
       "thumb": {
         "w": 64,
@@ -434,7 +434,7 @@
       "deposits": 102,
       "decor": 4,
       "updated": "2026-10-20T23:06:27+08:00",
-      "downloads": 43,
+      "downloads": 44,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -1162,7 +1162,7 @@
       "deposits": 243,
       "decor": 35,
       "updated": "2026-10-13T09:07:48+08:00",
-      "downloads": 83,
+      "downloads": 84,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -3178,7 +3178,7 @@
       "deposits": 31,
       "decor": 16,
       "updated": "2026-11-07T10:30:34+08:00",
-      "downloads": 14,
+      "downloads": 15,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -3470,7 +3470,7 @@
       "deposits": 265,
       "decor": 318,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 2079,
+      "downloads": 2089,
       "thumb": {
         "w": 56,
         "h": 64,
@@ -5858,7 +5858,7 @@
       "deposits": 83,
       "decor": 0,
       "updated": "2026-10-27T19:47:51-07:00",
-      "downloads": 215,
+      "downloads": 216,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -6810,7 +6810,7 @@
       "deposits": 129,
       "decor": 34,
       "updated": "2026-10-27T19:47:51-07:00",
-      "downloads": 382,
+      "downloads": 384,
       "thumb": {
         "w": 64,
         "h": 40,
@@ -7646,7 +7646,7 @@
       "deposits": 70,
       "decor": 0,
       "updated": "2026-10-27T19:47:51-07:00",
-      "downloads": 151,
+      "downloads": 152,
       "thumb": {
         "w": 64,
         "h": 36,
@@ -7994,7 +7994,7 @@
       "deposits": 301,
       "decor": 271,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 1158,
+      "downloads": 1163,
       "thumb": {
         "w": 63,
         "h": 64,
@@ -9926,7 +9926,7 @@
       "deposits": 108,
       "decor": 0,
       "updated": "2026-10-08T12:37:21+08:00",
-      "downloads": 197,
+      "downloads": 198,
       "thumb": {
         "w": 64,
         "h": 27,
@@ -10426,7 +10426,7 @@
       "deposits": 35,
       "decor": 0,
       "updated": "2026-10-27T19:47:51-07:00",
-      "downloads": 447,
+      "downloads": 448,
       "thumb": {
         "w": 64,
         "h": 36,
@@ -10970,7 +10970,7 @@
       "deposits": 28,
       "decor": 13,
       "updated": "2026-10-27T19:47:51-07:00",
-      "downloads": 469,
+      "downloads": 472,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -12118,7 +12118,7 @@
       "deposits": 24,
       "decor": 6,
       "updated": "2026-11-07T10:30:01+08:00",
-      "downloads": 19,
+      "downloads": 21,
       "thumb": {
         "w": 64,
         "h": 59,
@@ -12266,7 +12266,7 @@
       "deposits": 134,
       "decor": 65,
       "updated": "2026-10-13T08:54:22+08:00",
-      "downloads": 277,
+      "downloads": 280,
       "thumb": {
         "w": 58,
         "h": 64,
@@ -16618,7 +16618,7 @@
       "deposits": 52,
       "decor": 0,
       "updated": "2026-10-27T19:47:51-07:00",
-      "downloads": 521,
+      "downloads": 523,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -16878,7 +16878,7 @@
       "deposits": 52,
       "decor": 0,
       "updated": "2026-10-27T19:47:51-07:00",
-      "downloads": 74,
+      "downloads": 75,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -17138,7 +17138,7 @@
       "deposits": 91,
       "decor": 0,
       "updated": "2026-10-08T12:37:24+08:00",
-      "downloads": 209,
+      "downloads": 210,
       "thumb": {
         "w": 64,
         "h": 25,
@@ -17570,7 +17570,7 @@
       "deposits": 52,
       "decor": 10,
       "updated": "2026-11-07T10:29:52+08:00",
-      "downloads": 15,
+      "downloads": 17,
       "thumb": {
         "w": 64,
         "h": 54,
@@ -18058,7 +18058,7 @@
       "deposits": 271,
       "decor": 0,
       "updated": "2026-10-27T19:47:51-07:00",
-      "downloads": 242,
+      "downloads": 244,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -19396,7 +19396,7 @@
       "deposits": 126,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 213,
+      "downloads": 214,
       "thumb": {
         "w": 64,
         "h": 30,
@@ -19968,7 +19968,7 @@
       "deposits": 24,
       "decor": 10,
       "updated": "2026-10-21T10:04:30+08:00",
-      "downloads": 144,
+      "downloads": 145,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -20116,7 +20116,7 @@
       "deposits": 240,
       "decor": 0,
       "updated": "2026-10-21T09:59:44+08:00",
-      "downloads": 98,
+      "downloads": 100,
       "thumb": {
         "w": 50,
         "h": 30,
@@ -21144,7 +21144,7 @@
       "deposits": 32,
       "decor": 0,
       "updated": "2026-10-21T10:15:28+08:00",
-      "downloads": 538,
+      "downloads": 539,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -21804,7 +21804,7 @@
       "deposits": 12,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 111,
+      "downloads": 112,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -21920,7 +21920,7 @@
       "deposits": 22,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 137,
+      "downloads": 138,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -22062,7 +22062,7 @@
       "deposits": 184,
       "decor": 8,
       "updated": "2026-10-20T23:08:10+08:00",
-      "downloads": 98,
+      "downloads": 99,
       "thumb": {
         "w": 64,
         "h": 64,
