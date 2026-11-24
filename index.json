@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-11-23T14:45:08.600Z",
+  "generated": "2026-11-24T14:55:30.744Z",
   "maps": [
     {
       "slug": "1v1v1v1",
@@ -28,7 +28,7 @@
       "deposits": 16,
       "decor": 0,
       "updated": "2026-11-16T15:15:06Z",
-      "downloads": 46,
+      "downloads": 48,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -144,7 +144,7 @@
       "deposits": 30,
       "decor": 0,
       "updated": "2026-10-21T10:15:28+08:00",
-      "downloads": 308,
+      "downloads": 311,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -434,7 +434,7 @@
       "deposits": 102,
       "decor": 4,
       "updated": "2026-10-20T23:06:27+08:00",
-      "downloads": 50,
+      "downloads": 51,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -1162,7 +1162,7 @@
       "deposits": 243,
       "decor": 35,
       "updated": "2026-10-13T09:07:48+08:00",
-      "downloads": 105,
+      "downloads": 106,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -2202,7 +2202,7 @@
       "deposits": 103,
       "decor": 18,
       "updated": "2026-10-21T09:59:44+08:00",
-      "downloads": 180,
+      "downloads": 183,
       "thumb": {
         "w": 64,
         "h": 35,
@@ -2682,7 +2682,7 @@
       "deposits": 48,
       "decor": 22,
       "updated": "2026-10-08T12:37:31+08:00",
-      "downloads": 82,
+      "downloads": 83,
       "thumb": {
         "w": 64,
         "h": 54,
@@ -3178,7 +3178,7 @@
       "deposits": 31,
       "decor": 16,
       "updated": "2026-11-07T10:30:34+08:00",
-      "downloads": 28,
+      "downloads": 31,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -3354,7 +3354,7 @@
       "deposits": 12,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 93,
+      "downloads": 94,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -3470,7 +3470,7 @@
       "deposits": 265,
       "decor": 318,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 2522,
+      "downloads": 2556,
       "thumb": {
         "w": 56,
         "h": 64,
@@ -4958,7 +4958,7 @@
       "deposits": 76,
       "decor": 0,
       "updated": "2026-11-07T10:28:47+08:00",
-      "downloads": 38,
+      "downloads": 39,
       "thumb": {
         "w": 48,
         "h": 64,
@@ -5330,7 +5330,7 @@
       "deposits": 46,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 231,
+      "downloads": 237,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -5858,7 +5858,7 @@
       "deposits": 83,
       "decor": 0,
       "updated": "2026-10-27T19:47:51-07:00",
-      "downloads": 236,
+      "downloads": 238,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -6258,7 +6258,7 @@
       "deposits": 52,
       "decor": 0,
       "updated": "2026-10-21T10:04:30+08:00",
-      "downloads": 377,
+      "downloads": 383,
       "thumb": {
         "w": 64,
         "h": 54,
@@ -6534,7 +6534,7 @@
       "deposits": 52,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 71,
+      "downloads": 73,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -6810,7 +6810,7 @@
       "deposits": 129,
       "decor": 34,
       "updated": "2026-10-27T19:47:51-07:00",
-      "downloads": 457,
+      "downloads": 463,
       "thumb": {
         "w": 64,
         "h": 40,
@@ -7394,7 +7394,7 @@
       "deposits": 48,
       "decor": 1,
       "updated": "2026-10-08T12:37:34+08:00",
-      "downloads": 181,
+      "downloads": 184,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -7646,7 +7646,7 @@
       "deposits": 70,
       "decor": 0,
       "updated": "2026-10-27T19:47:51-07:00",
-      "downloads": 194,
+      "downloads": 196,
       "thumb": {
         "w": 64,
         "h": 36,
@@ -7994,7 +7994,7 @@
       "deposits": 301,
       "decor": 271,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 1384,
+      "downloads": 1393,
       "thumb": {
         "w": 63,
         "h": 64,
@@ -9262,7 +9262,7 @@
       "deposits": 119,
       "decor": 112,
       "updated": "2026-11-21T14:19:19Z",
-      "downloads": 13,
+      "downloads": 20,
       "thumb": {
         "w": 47,
         "h": 64,
@@ -9806,7 +9806,7 @@
       "deposits": 78,
       "decor": 0,
       "updated": "2026-10-08T12:37:44+08:00",
-      "downloads": 99,
+      "downloads": 102,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -10466,7 +10466,7 @@
       "deposits": 108,
       "decor": 0,
       "updated": "2026-10-08T12:37:21+08:00",
-      "downloads": 243,
+      "downloads": 245,
       "thumb": {
         "w": 64,
         "h": 27,
@@ -10966,7 +10966,7 @@
       "deposits": 35,
       "decor": 0,
       "updated": "2026-10-27T19:47:51-07:00",
-      "downloads": 569,
+      "downloads": 582,
       "thumb": {
         "w": 64,
         "h": 36,
@@ -11510,7 +11510,7 @@
       "deposits": 28,
       "decor": 13,
       "updated": "2026-10-27T19:47:51-07:00",
-      "downloads": 576,
+      "downloads": 586,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -12806,7 +12806,7 @@
       "deposits": 134,
       "decor": 65,
       "updated": "2026-10-13T08:54:22+08:00",
-      "downloads": 367,
+      "downloads": 377,
       "thumb": {
         "w": 58,
         "h": 64,
@@ -13410,7 +13410,7 @@
       "deposits": 29,
       "decor": 7,
       "updated": "2026-10-27T19:47:51-07:00",
-      "downloads": 109,
+      "downloads": 111,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -13578,7 +13578,7 @@
       "deposits": 26,
       "decor": 0,
       "updated": "2026-10-27T19:47:51-07:00",
-      "downloads": 53,
+      "downloads": 54,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -13750,7 +13750,7 @@
       "deposits": 324,
       "decor": 24,
       "updated": "2026-10-27T19:47:51-07:00",
-      "downloads": 342,
+      "downloads": 345,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -15114,7 +15114,7 @@
       "deposits": 16,
       "decor": 10,
       "updated": "2026-11-07T10:30:09+08:00",
-      "downloads": 24,
+      "downloads": 25,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -15222,7 +15222,7 @@
       "deposits": 30,
       "decor": 0,
       "updated": "2026-10-27T19:52:38-07:00",
-      "downloads": 46,
+      "downloads": 47,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -15394,7 +15394,7 @@
       "deposits": 58,
       "decor": 0,
       "updated": "2026-11-07T10:30:42+08:00",
-      "downloads": 49,
+      "downloads": 51,
       "thumb": {
         "w": 64,
         "h": 54,
@@ -15694,7 +15694,7 @@
       "deposits": 58,
       "decor": 8,
       "updated": "2026-11-07T10:30:26+08:00",
-      "downloads": 31,
+      "downloads": 32,
       "thumb": {
         "w": 64,
         "h": 54,
@@ -15970,7 +15970,7 @@
       "deposits": 280,
       "decor": 0,
       "updated": "2026-10-08T12:37:40+08:00",
-      "downloads": 181,
+      "downloads": 183,
       "thumb": {
         "w": 64,
         "h": 45,
@@ -17158,7 +17158,7 @@
       "deposits": 52,
       "decor": 0,
       "updated": "2026-10-27T19:47:51-07:00",
-      "downloads": 650,
+      "downloads": 660,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -17418,7 +17418,7 @@
       "deposits": 52,
       "decor": 0,
       "updated": "2026-10-27T19:47:51-07:00",
-      "downloads": 86,
+      "downloads": 88,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -17678,7 +17678,7 @@
       "deposits": 91,
       "decor": 0,
       "updated": "2026-10-08T12:37:24+08:00",
-      "downloads": 261,
+      "downloads": 266,
       "thumb": {
         "w": 64,
         "h": 25,
@@ -18110,7 +18110,7 @@
       "deposits": 52,
       "decor": 10,
       "updated": "2026-11-07T10:29:52+08:00",
-      "downloads": 26,
+      "downloads": 28,
       "thumb": {
         "w": 64,
         "h": 54,
@@ -18598,7 +18598,7 @@
       "deposits": 271,
       "decor": 0,
       "updated": "2026-10-27T19:47:51-07:00",
-      "downloads": 288,
+      "downloads": 290,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -19836,7 +19836,7 @@
       "deposits": 14,
       "decor": 0,
       "updated": "2026-10-27T19:47:51-07:00",
-      "downloads": 41,
+      "downloads": 43,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -19936,7 +19936,7 @@
       "deposits": 126,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 270,
+      "downloads": 272,
       "thumb": {
         "w": 64,
         "h": 30,
@@ -20508,7 +20508,7 @@
       "deposits": 24,
       "decor": 10,
       "updated": "2026-10-21T10:04:30+08:00",
-      "downloads": 181,
+      "downloads": 184,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -20656,7 +20656,7 @@
       "deposits": 240,
       "decor": 0,
       "updated": "2026-10-21T09:59:44+08:00",
-      "downloads": 120,
+      "downloads": 125,
       "thumb": {
         "w": 50,
         "h": 30,
@@ -21684,7 +21684,7 @@
       "deposits": 32,
       "decor": 0,
       "updated": "2026-10-21T10:15:28+08:00",
-      "downloads": 635,
+      "downloads": 640,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -21864,7 +21864,7 @@
       "deposits": 42,
       "decor": 0,
       "updated": "2026-10-21T10:15:28+08:00",
-      "downloads": 51,
+      "downloads": 54,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -22092,7 +22092,7 @@
       "deposits": 46,
       "decor": 0,
       "updated": "2026-10-21T10:15:28+08:00",
-      "downloads": 221,
+      "downloads": 223,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -22344,7 +22344,7 @@
       "deposits": 12,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 140,
+      "downloads": 145,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -22460,7 +22460,7 @@
       "deposits": 22,
       "decor": 0,
       "updated": "2026-10-03T11:34:45+08:00",
-      "downloads": 175,
+      "downloads": 180,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -22602,7 +22602,7 @@
       "deposits": 184,
       "decor": 8,
       "updated": "2026-10-20T23:08:10+08:00",
-      "downloads": 135,
+      "downloads": 138,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -23406,7 +23406,7 @@
       "deposits": 22,
       "decor": 0,
       "updated": "2026-10-08T12:37:26+08:00",
-      "downloads": 50,
+      "downloads": 51,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -23554,7 +23554,7 @@
       "deposits": 144,
       "decor": 8,
       "updated": "2026-11-07T10:29:45+08:00",
-      "downloads": 80,
+      "downloads": 84,
       "thumb": {
         "w": 64,
         "h": 57,
